@@ -1,16 +1,17 @@
 <?php
 
+//Default includes
 include 'config.php';
 include 'framework-jin/jin/launcher.php';
+include 'polarisapi/polariscore.php';
 
-include 'polarisapi/data/view.php';
-include 'polarisapi/data/attribut/attribut.php';
-include 'polarisapi/data/attribut/carac.php';
-
+//Default GMT
+date_default_timezone_set('GMT');
 
 //Gestion des erreurs
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
+spl_autoload_register(array('PolarisCore', 'autoload'));
 
 //Connexion BDD
 use jin\db\DbConnexion;

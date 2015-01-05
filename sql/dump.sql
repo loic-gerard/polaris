@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.10
+-- version 4.2.7
 -- http://www.phpmyadmin.net
 --
--- Client :  localhost:8889
--- Généré le :  Lun 05 Janvier 2015 à 13:01
--- Version du serveur :  5.5.38
--- Version de PHP :  5.6.2
+-- Host: localhost:8889
+-- Generation Time: Jan 05, 2015 at 02:56 PM
+-- Server version: 5.6.17-debug-log
+-- PHP Version: 5.5.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,16 +17,16 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de données :  `polaris`
+-- Database: `polaris`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `attribut`
+-- Table structure for table `attribut`
 --
 
-CREATE TABLE `attribut` (
+CREATE TABLE IF NOT EXISTS `attribut` (
 `pk_attribut` int(11) NOT NULL,
   `tt_code` varchar(255) NOT NULL,
   `tt_designation` varchar(255) NOT NULL,
@@ -34,10 +34,10 @@ CREATE TABLE `attribut` (
   `fk_categorie` int(11) NOT NULL,
   `in_order` int(11) NOT NULL,
   `tt_type` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
--- Contenu de la table `attribut`
+-- Dumping data for table `attribut`
 --
 
 INSERT INTO `attribut` (`pk_attribut`, `tt_code`, `tt_designation`, `fk_entitetype`, `fk_categorie`, `in_order`, `tt_type`) VALUES
@@ -50,23 +50,24 @@ INSERT INTO `attribut` (`pk_attribut`, `tt_code`, `tt_designation`, `fk_entitety
 (7, 'AG', 'Agilité', 1, 2, 7, 'Carac'),
 (8, 'SGFD', 'Sang-froid', 1, 2, 8, 'Carac'),
 (9, 'INS', 'Instinct', 1, 2, 9, 'Carac'),
-(10, 'RAP', 'Rapidité', 1, 2, 10, 'Carac');
+(10, 'RAP', 'Rapidité', 1, 2, 10, 'Carac'),
+(11, 'NOM', 'Nom', 1, 1, 1, 'Simple');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `categorie`
+-- Table structure for table `categorie`
 --
 
-CREATE TABLE `categorie` (
+CREATE TABLE IF NOT EXISTS `categorie` (
 `pk_categorie` int(11) NOT NULL,
   `tt_designation` varchar(255) NOT NULL,
   `in_order` int(11) NOT NULL,
   `tt_code` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
--- Contenu de la table `categorie`
+-- Dumping data for table `categorie`
 --
 
 INSERT INTO `categorie` (`pk_categorie`, `tt_designation`, `in_order`, `tt_code`) VALUES
@@ -76,16 +77,16 @@ INSERT INTO `categorie` (`pk_categorie`, `tt_designation`, `in_order`, `tt_code`
 -- --------------------------------------------------------
 
 --
--- Structure de la table `entite`
+-- Table structure for table `entite`
 --
 
-CREATE TABLE `entite` (
+CREATE TABLE IF NOT EXISTS `entite` (
 `pk_entite` int(11) NOT NULL,
   `fk_entitetype` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
--- Contenu de la table `entite`
+-- Dumping data for table `entite`
 --
 
 INSERT INTO `entite` (`pk_entite`, `fk_entitetype`) VALUES
@@ -95,17 +96,17 @@ INSERT INTO `entite` (`pk_entite`, `fk_entitetype`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `entitetype`
+-- Table structure for table `entitetype`
 --
 
-CREATE TABLE `entitetype` (
+CREATE TABLE IF NOT EXISTS `entitetype` (
 `pk_entitetype` int(11) NOT NULL,
   `tt_code` varchar(255) NOT NULL,
   `tt_designation` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
--- Contenu de la table `entitetype`
+-- Dumping data for table `entitetype`
 --
 
 INSERT INTO `entitetype` (`pk_entitetype`, `tt_code`, `tt_designation`) VALUES
@@ -114,104 +115,112 @@ INSERT INTO `entitetype` (`pk_entitetype`, `tt_code`, `tt_designation`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `modificateur`
+-- Table structure for table `modificateur`
 --
 
-CREATE TABLE `modificateur` (
+CREATE TABLE IF NOT EXISTS `modificateur` (
 `pk_modificateur` int(11) NOT NULL,
   `fk_entite` int(11) NOT NULL,
   `fk_attribut` int(11) NOT NULL,
   `tt_designation` varchar(255) NOT NULL,
   `fL_modificateur` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `valeur`
+-- Table structure for table `valeur`
 --
 
-CREATE TABLE `valeur` (
+CREATE TABLE IF NOT EXISTS `valeur` (
 `pk_valeur` int(11) NOT NULL,
   `fk_attribut` int(11) NOT NULL,
   `tt_valeur` text NOT NULL,
   `fk_entite` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
--- Index pour les tables exportées
+-- Dumping data for table `valeur`
+--
+
+INSERT INTO `valeur` (`pk_valeur`, `fk_attribut`, `tt_valeur`, `fk_entite`) VALUES
+(1, 11, 'perso 1', 1),
+(2, 11, 'perso 2', 2);
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `attribut`
+-- Indexes for table `attribut`
 --
 ALTER TABLE `attribut`
  ADD PRIMARY KEY (`pk_attribut`), ADD UNIQUE KEY `tt_code` (`tt_code`);
 
 --
--- Index pour la table `categorie`
+-- Indexes for table `categorie`
 --
 ALTER TABLE `categorie`
  ADD PRIMARY KEY (`pk_categorie`), ADD UNIQUE KEY `tt_code` (`tt_code`);
 
 --
--- Index pour la table `entite`
+-- Indexes for table `entite`
 --
 ALTER TABLE `entite`
  ADD PRIMARY KEY (`pk_entite`);
 
 --
--- Index pour la table `entitetype`
+-- Indexes for table `entitetype`
 --
 ALTER TABLE `entitetype`
  ADD PRIMARY KEY (`pk_entitetype`), ADD UNIQUE KEY `tt_code` (`tt_code`);
 
 --
--- Index pour la table `modificateur`
+-- Indexes for table `modificateur`
 --
 ALTER TABLE `modificateur`
  ADD PRIMARY KEY (`pk_modificateur`);
 
 --
--- Index pour la table `valeur`
+-- Indexes for table `valeur`
 --
 ALTER TABLE `valeur`
  ADD PRIMARY KEY (`pk_valeur`);
 
 --
--- AUTO_INCREMENT pour les tables exportées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `attribut`
+-- AUTO_INCREMENT for table `attribut`
 --
 ALTER TABLE `attribut`
-MODIFY `pk_attribut` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+MODIFY `pk_attribut` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 --
--- AUTO_INCREMENT pour la table `categorie`
+-- AUTO_INCREMENT for table `categorie`
 --
 ALTER TABLE `categorie`
 MODIFY `pk_categorie` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT pour la table `entite`
+-- AUTO_INCREMENT for table `entite`
 --
 ALTER TABLE `entite`
 MODIFY `pk_entite` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT pour la table `entitetype`
+-- AUTO_INCREMENT for table `entitetype`
 --
 ALTER TABLE `entitetype`
 MODIFY `pk_entitetype` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT pour la table `modificateur`
+-- AUTO_INCREMENT for table `modificateur`
 --
 ALTER TABLE `modificateur`
 MODIFY `pk_modificateur` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT pour la table `valeur`
+-- AUTO_INCREMENT for table `valeur`
 --
 ALTER TABLE `valeur`
-MODIFY `pk_valeur` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `pk_valeur` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -35,7 +35,7 @@ class View{
             foreach ($attributs AS $attribut){
                 $type = StringTools::firstCarToUpperCase($r['type_'.$attribut]);
                 $className = 'polarisapi\data\attribut\\' . $type;
-		$c = new $className($r['pk_entite'], $attribut);
+		$c = new $className($r['pk_entite'], $attribut, $r['val_'.$attribut]);
                 $l[$attribut] = $c->getFinalValue();
             }
             
