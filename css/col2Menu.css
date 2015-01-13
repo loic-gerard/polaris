@@ -1,0 +1,33 @@
+#col2Menu{
+    width:20vw;
+    background-color: #494a4a;
+    height: calc(100vh - 65px);
+    position: fixed;
+    top:65px;
+    left:calc(20vw + 1px);
+    padding-right: 1px;
+    border-top:1px solid #262626;
+}
+
+#col2Menu .item{
+    font-size: 12px;
+    display: block;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #919191;
+    
+}
+
+#col2Menu .on{
+    background-color: #63718a;
+    border-right: 10px solid #718fc8;
+}
+
+#col2Menu .off{
+    
+}
+
+#col2Menu .off:hover{
+    background-color: #63718a;
+}

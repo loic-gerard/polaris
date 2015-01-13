@@ -1,0 +1,29 @@
+.categorie{
+    
+}
+
+.categorie .nom{
+    color:#718fc8;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.categorie .content{ 
+    border: 1px dashed #718fc8;
+    background-color: white;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.categorie .content .insideContent{
+    padding: 20px;
+}
+
+.categorie .content .categorieHeader{
+    text-align: right;
+ 
+    height: 37px;
+    background-color: #b8cfe6;
+    padding-top: 20px;
+    padding-right: 10px;
+}

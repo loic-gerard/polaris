@@ -1,0 +1,980 @@
+{
+    "ARMEDISTANCE": {
+        "designation": "Armes à distance",
+        "attributs": {
+            "ARMEDISTANCE_DESIGNATION": {
+                "designation": "Désignation",
+                "type": "Simple"
+            },
+            "ARMEDISTANCE_TYPE": {
+                "designation": "Type",
+                "type": "Simple"
+            },
+            "ARMEDISTANCE_MILIEU": {
+                "designation": "Milieu",
+                "type": "Simple"
+            },
+            "ARMEDISTANCE_DEGATSPHYS": {
+                "designation": "Dégats physiques",
+                "type": "Simple"
+            },
+            "ARMEDISTANCE_DEGATSCHOC": {
+                "designation": "Dégats de choc",
+                "type": "Simple"
+            },
+            "ARMEDISTANCE_MUNITIONS": {
+                "designation": "Munitions",
+                "type": "Simple",
+                "defaultValue": 0
+            },
+            "ARMEDISTANCE_EQUIPED": {
+                "designation": "Equipé",
+                "type": "Simple",
+                "defaultValue": 0
+            }
+        }
+    },
+    "REF_ARMEDISTANCE": {
+        "designation": "Armes à distance",
+        "attributs": {
+            "REF_ARMEDISTANCE_DESIGNATION": {
+                "designation": "Désignation",
+                "type": "Simple"
+            },
+            "REF_ARMEDISTANCE_TYPE": {
+                "designation": "Type",
+                "type": "Simple"
+            },
+            "REF_ARMEDISTANCE_MILIEU": {
+                "designation": "Milieu",
+                "type": "Simple"
+            },
+            "REF_ARMEDISTANCE_DEGATSPHYS": {
+                "designation": "Dégats physiques",
+                "type": "Simple"
+            },
+            "REF_ARMEDISTANCE_DEGATSCHOC": {
+                "designation": "Dégats de choc",
+                "type": "Simple"
+            }
+
+
+        },
+        "entites": [
+            {
+                "REF_ARMEDISTANCE_DESIGNATION": "Pistolet",
+                "REF_ARMEDISTANCE_TYPE": "Armes de poing",
+                "REF_ARMEDISTANCE_MILIEU": "Surface",
+                "REF_ARMEDISTANCE_DEGATSPHYS": "3",
+                "REF_ARMEDISTANCE_DEGATSCHOC": "0"
+            },
+            {
+                "REF_ARMEDISTANCE_DESIGNATION": "Pistolet choc",
+                "REF_ARMEDISTANCE_TYPE": "Armes de poing",
+                "REF_ARMEDISTANCE_MILIEU": "Surface",
+                "REF_ARMEDISTANCE_DEGATSPHYS": "0",
+                "REF_ARMEDISTANCE_DEGATSCHOC": "6"
+            }
+        ]
+    },
+    "CONTACT": {
+        "designation": "Contacts",
+        "categories": {
+            "CONTACTS": {
+                "designation": "Contacts",
+                "attributs": {
+                    "CONTACT_NOM": {
+                        "designation": "Nom",
+                        "type": "Simple"
+                    },
+                    "CONTACT_LOCALISATION": {
+                        "designation": "Dernière localisation connue",
+                        "type": "Simple"
+                    },
+                    "CONTACT_TYPE": {
+                        "designation": "Type de contact",
+                        "type": "Simple"
+                    },
+                    "CONTACT_DETAILS": {
+                        "designation": "Détails divers",
+                        "type": "Simple"
+                    }
+                }
+            }
+        }
+
+    },
+    "MODIFICATEUR": {
+        "designation": "Modificateur",
+        "categories": {
+            "MODIFICATEUR": {
+                "designation": "Modificateur",
+                "attributs": {
+                    "MODIFICATEUR_TYPE": {
+                        "designation": "Type de modificateur",
+                        "type": "Simple"
+                    },
+                    "MODIFICATEUR_LABEL": {
+                        "designation": "Label",
+                        "type": "Simple"
+                    },
+                    "MODIFICATEUR_CATEGORIE": {
+                        "designation": "Catégorie",
+                        "type": "Simple"
+                    },
+                    "MODIFICATEUR_CATEGORIE_ID": {
+                        "designation": "Form ID cat",
+                        "type": "Simple"
+                    },
+                    "MODIFICATEUR_DEFAUT": {
+                        "designation": "Defaut",
+                        "type": "Simple",
+                        "defaultValue": 0
+                    },
+                    "MODIFICATEUR_VALUE": {
+                        "designation": "Valeur",
+                        "type": "Simple"
+                    }
+                }
+            }
+        },
+        "entites": [
+            {
+                "MODIFICATEUR_TYPE": "ECOUTER",
+                "MODIFICATEUR_CATEGORIE": "Bruit à percevoir",
+                "MODIFICATEUR_LABEL": "Murmure",
+                "MODIFICATEUR_CATEGORIE_ID": "mod_bruit",
+                "MODIFICATEUR_VALUE": "6"
+            },
+            {
+                "MODIFICATEUR_TYPE": "ECOUTER",
+                "MODIFICATEUR_CATEGORIE": "Bruit à percevoir",
+                "MODIFICATEUR_LABEL": "Voix basse",
+                "MODIFICATEUR_CATEGORIE_ID": "mod_bruit",
+                "MODIFICATEUR_VALUE": "2"
+            },
+            {
+                "MODIFICATEUR_TYPE": "ECOUTER",
+                "MODIFICATEUR_CATEGORIE": "Bruit à percevoir",
+                "MODIFICATEUR_LABEL": "Voix normale",
+                "MODIFICATEUR_CATEGORIE_ID": "mod_bruit",
+                "MODIFICATEUR_VALUE": "0",
+                "MODIFICATEUR_DEFAUT": 1
+            },
+            {
+                "MODIFICATEUR_TYPE": "ECOUTER",
+                "MODIFICATEUR_CATEGORIE": "Bruit à percevoir",
+                "MODIFICATEUR_LABEL": "Crier",
+                "MODIFICATEUR_CATEGORIE_ID": "mod_bruit",
+                "MODIFICATEUR_VALUE": "-6"
+            },
+            {
+                "MODIFICATEUR_TYPE": "ECOUTER",
+                "MODIFICATEUR_CATEGORIE": "Bruit à percevoir",
+                "MODIFICATEUR_LABEL": "Haut-parleur",
+                "MODIFICATEUR_CATEGORIE_ID": "mod_bruit",
+                "MODIFICATEUR_VALUE": "-12"
+            },
+            {
+                "MODIFICATEUR_TYPE": "ECOUTER",
+                "MODIFICATEUR_CATEGORIE": "Bruit de fond",
+                "MODIFICATEUR_CATEGORIE_ID": "mod_bruitdefond",
+                "MODIFICATEUR_LABEL": "Silence",
+                "MODIFICATEUR_VALUE": "0",
+                "MODIFICATEUR_DEFAUT": 1
+            },
+            {
+                "MODIFICATEUR_TYPE": "ECOUTER",
+                "MODIFICATEUR_CATEGORIE": "Bruit de fond",
+                "MODIFICATEUR_CATEGORIE_ID": "mod_bruitdefond",
+                "MODIFICATEUR_LABEL": "Ronronnement de machine",
+                "MODIFICATEUR_VALUE": "2"
+            },
+            {
+                "MODIFICATEUR_TYPE": "ECOUTER",
+                "MODIFICATEUR_CATEGORIE": "Bruit de fond",
+                "MODIFICATEUR_CATEGORIE_ID": "mod_bruitdefond",
+                "MODIFICATEUR_LABEL": "Discussion animée",
+                "MODIFICATEUR_VALUE": "4"
+            },
+            {
+                "MODIFICATEUR_TYPE": "ECOUTER",
+                "MODIFICATEUR_CATEGORIE": "Bruit de fond",
+                "MODIFICATEUR_CATEGORIE_ID": "mod_bruitdefond",
+                "MODIFICATEUR_LABEL": "Ambiance de bar",
+                "MODIFICATEUR_VALUE": "6"
+            },
+            {
+                "MODIFICATEUR_TYPE": "ECOUTER",
+                "MODIFICATEUR_CATEGORIE": "Bruit de fond",
+                "MODIFICATEUR_CATEGORIE_ID": "mod_bruitdefond",
+                "MODIFICATEUR_LABEL": "Machinerie bruyante",
+                "MODIFICATEUR_VALUE": "12"
+            },
+            {
+                "MODIFICATEUR_TYPE": "ECOUTER",
+                "MODIFICATEUR_CATEGORIE": "Terrain",
+                "MODIFICATEUR_CATEGORIE_ID": "mod_terrain",
+                "MODIFICATEUR_LABEL": "Dégagé",
+                "MODIFICATEUR_VALUE": "0",
+                "MODIFICATEUR_DEFAUT": 1
+            },
+            {
+                "MODIFICATEUR_TYPE": "ECOUTER",
+                "MODIFICATEUR_CATEGORIE": "Terrain",
+                "MODIFICATEUR_CATEGORIE_ID": "mod_terrain",
+                "MODIFICATEUR_LABEL": "Obstrué",
+                "MODIFICATEUR_VALUE": "4"
+            },
+            {
+                "MODIFICATEUR_TYPE": "ECOUTER",
+                "MODIFICATEUR_CATEGORIE": "Terrain",
+                "MODIFICATEUR_CATEGORIE_ID": "mod_terrain",
+                "MODIFICATEUR_LABEL": "Endroit clos",
+                "MODIFICATEUR_VALUE": "-3"
+            },
+            {
+                "MODIFICATEUR_TYPE": "ECOUTER",
+                "MODIFICATEUR_CATEGORIE": "Terrain",
+                "MODIFICATEUR_CATEGORIE_ID": "mod_terrain",
+                "MODIFICATEUR_LABEL": "Endroit résonnant",
+                "MODIFICATEUR_VALUE": "-6"
+            },
+            {
+                "MODIFICATEUR_TYPE": "PERCEPTION",
+                "MODIFICATEUR_CATEGORIE": "Difficulté de base",
+                "MODIFICATEUR_CATEGORIE_ID": "difficultebase",
+                "MODIFICATEUR_LABEL": "Le joueur somnole",
+                "MODIFICATEUR_VALUE": "24"
+            },
+            {
+                "MODIFICATEUR_TYPE": "PERCEPTION",
+                "MODIFICATEUR_CATEGORIE": "Difficulté de base",
+                "MODIFICATEUR_CATEGORIE_ID": "difficultebase",
+                "MODIFICATEUR_LABEL": "Le joueur ne fait pas attention",
+                "MODIFICATEUR_VALUE": "18",
+                "MODIFICATEUR_DEFAUT": 1
+            },
+            {
+                "MODIFICATEUR_TYPE": "PERCEPTION",
+                "MODIFICATEUR_CATEGORIE": "Difficulté de base",
+                "MODIFICATEUR_CATEGORIE_ID": "difficultebase",
+                "MODIFICATEUR_LABEL": "Le joueur est attentif (sans se concentrer sur un sens)",
+                "MODIFICATEUR_VALUE": "12"
+            },
+            {
+                "MODIFICATEUR_TYPE": "PERCEPTION",
+                "MODIFICATEUR_CATEGORIE": "Difficulté de base",
+                "MODIFICATEUR_CATEGORIE_ID": "difficultebase",
+                "MODIFICATEUR_LABEL": "Le joueur est attentif (se concentre sur un sens)",
+                "MODIFICATEUR_VALUE": "8"
+            },
+            {
+                "MODIFICATEUR_TYPE": "PERCEPTION",
+                "MODIFICATEUR_CATEGORIE": "Difficulté de base",
+                "MODIFICATEUR_CATEGORIE_ID": "difficultebase",
+                "MODIFICATEUR_LABEL": "Le joueur est très attentif (sans se concentrer sur un sens)",
+                "MODIFICATEUR_VALUE": "10"
+            },
+            {
+                "MODIFICATEUR_TYPE": "PERCEPTION",
+                "MODIFICATEUR_CATEGORIE": "Difficulté de base",
+                "MODIFICATEUR_CATEGORIE_ID": "difficultebase",
+                "MODIFICATEUR_LABEL": "Le joueur est très attentif (se concentre sur un sens)",
+                "MODIFICATEUR_VALUE": "6"
+            },
+            {
+                "MODIFICATEUR_TYPE": "VOIR",
+                "MODIFICATEUR_CATEGORIE": "Terrain",
+                "MODIFICATEUR_CATEGORIE_ID": "mod1",
+                "MODIFICATEUR_LABEL": "Dégagé",
+                "MODIFICATEUR_VALUE": "-3"
+            },
+            {
+                "MODIFICATEUR_TYPE": "VOIR",
+                "MODIFICATEUR_CATEGORIE": "Terrain",
+                "MODIFICATEUR_CATEGORIE_ID": "mod1",
+                "MODIFICATEUR_LABEL": "Partiellement obstrué (peu de végétation, relief bas, quelques personnes)",
+                "MODIFICATEUR_VALUE": "0",
+                "MODIFICATEUR_DEFAUT": 1
+            },
+            {
+                "MODIFICATEUR_TYPE": "VOIR",
+                "MODIFICATEUR_CATEGORIE": "Terrain",
+                "MODIFICATEUR_CATEGORIE_ID": "mod1",
+                "MODIFICATEUR_LABEL": "Obstrué (feuillage fourni, relief varié, petite foule, eau sale)",
+                "MODIFICATEUR_VALUE": "3"
+            },
+            {
+                "MODIFICATEUR_TYPE": "VOIR",
+                "MODIFICATEUR_CATEGORIE": "Terrain",
+                "MODIFICATEUR_CATEGORIE_ID": "mod1",
+                "MODIFICATEUR_LABEL": "Très obstrué (végétatuin dense, bcp de relief, rues Equinoxe, foule importante, eau egouts)",
+                "MODIFICATEUR_VALUE": "6"
+            },
+            {
+                "MODIFICATEUR_TYPE": "VOIR",
+                "MODIFICATEUR_CATEGORIE": "Luminosité",
+                "MODIFICATEUR_CATEGORIE_ID": "mod2",
+                "MODIFICATEUR_LABEL": "Forte (projecteurs, lumière solaire)",
+                "MODIFICATEUR_VALUE": "-3"
+            },
+            {
+                "MODIFICATEUR_TYPE": "VOIR",
+                "MODIFICATEUR_CATEGORIE": "Luminosité",
+                "MODIFICATEUR_CATEGORIE_ID": "mod2",
+                "MODIFICATEUR_LABEL": "Normale (Eclairage d'une cité)",
+                "MODIFICATEUR_VALUE": "0",
+                "MODIFICATEUR_DEFAUT": 1
+            },
+            {
+                "MODIFICATEUR_TYPE": "VOIR",
+                "MODIFICATEUR_CATEGORIE": "Luminosité",
+                "MODIFICATEUR_CATEGORIE_ID": "mod2",
+                "MODIFICATEUR_LABEL": "Moyenne (Torches, lampes électriques)",
+                "MODIFICATEUR_VALUE": "3"
+            },
+            {
+                "MODIFICATEUR_TYPE": "VOIR",
+                "MODIFICATEUR_CATEGORIE": "Luminosité",
+                "MODIFICATEUR_CATEGORIE_ID": "mod2",
+                "MODIFICATEUR_LABEL": "Faible (veilleuse, fumigènes, tempête)",
+                "MODIFICATEUR_VALUE": "6"
+            },
+            {
+                "MODIFICATEUR_TYPE": "VOIR",
+                "MODIFICATEUR_CATEGORIE": "Luminosité",
+                "MODIFICATEUR_CATEGORIE_ID": "mod2",
+                "MODIFICATEUR_LABEL": "Très faible (ombre, ténèbre partielles, tempête de sable)",
+                "MODIFICATEUR_VALUE": "9"
+            }
+
+        ]
+    },
+    "PROGRESSION": {
+        "designation": "Progression",
+        "categories": {
+            "PROGRESSION": {
+                "designation": "Progression",
+                "attributs": {
+                    "PROGRESSION_TALENT": {
+                        "designation": "Talent concerné",
+                        "type": "Simple"
+                    },
+                    "PROGRESSION_VALEUR": {
+                        "designation": "% de progression",
+                        "type": "Simple"
+                    },
+                    "PROGRESSION_RAISON": {
+                        "designation": "Raison de la progression",
+                        "type": "Simple"
+                    },
+                    "PROGRESSION_LIBRE": {
+                        "designation": "Progression libre",
+                        "type": "Simple"
+                    }
+                }
+            }
+        }
+    },
+    "JOURNAL": {
+        "designation": "Entrée du journal",
+        "categories": {
+            "JOURNAL": {
+                "designation": "Journal",
+                "attributs": {
+                    "JOURNAL_TEXTE": {
+                        "designation": "Texte",
+                        "type": "Simple"
+                    },
+                    "JOURNAL_DATE": {
+                        "designation": "Texte",
+                        "type": "Simple"
+                    }
+                }
+            }
+        }
+    },
+    "PJ": {
+        "designation": "Personnage joueur",
+        "categories": {
+            "HEMORRAGIE": {
+                "designation": "Hémorragies",
+                "attributs": {
+                    "HEMORRAGIE_TYPE": {
+                        "designation": "Code du type d'hémorragie",
+                        "type": "Simple"
+                    }
+                }
+            },
+            "POISON": {
+                "designation": "Poisons",
+                "attributs": {
+                    "POISON_DESIGNATION": {
+                        "designation": "Désignation",
+                        "type": "Simple"
+                    },
+                    "POISON_INTENSITE": {
+                        "designation": "Intensité",
+                        "type": "Simple"
+                    },
+                    "POISON_EFFETS": {
+                        "designation": "Effets",
+                        "type": "Simple"
+                    }
+                }
+            },
+            "MALADIE": {
+                "designation": "Maladies",
+                "attributs": {
+                    "MALADIE_DESIGNATION": {
+                        "designation": "Désignation",
+                        "type": "Simple"
+                    },
+                    "MALADIE_INTENSITE": {
+                        "designation": "Intensité",
+                        "type": "Simple"
+                    },
+                    "MALADIE_EFFETS": {
+                        "designation": "Effets",
+                        "type": "Simple"
+                    }
+                }
+            },
+            "FATIGUE": {
+                "designation": "Fatigue",
+                "attributs": {
+                    "FATIGUE": {
+                        "designation": "Fatigue",
+                        "type": "cells",
+                        "data": {
+                            "max": "({ATTR:FO}+{ATTR:RES}+{ATTR:VOL})/3"
+                        },
+                        "defaultValue": 1,
+                        "jet": 0
+                    }
+                }
+            },
+            "EQUIPEMENTCOMBAT": {
+                "designation": "Equipements de combat",
+                "attributs": {
+                    "PROTECTION_JAMBEDROITE": {
+                        "designation": "Jambe droite",
+                        "type": "Equipement",
+                        "data": {
+                            "localStart": 1,
+                            "localEnd": 11
+                        },
+                        "defaultValue": {
+                            "equipement": "",
+                            "usure": "",
+                            "protection": 0,
+                            "resistance": ""
+                        },
+                        "jet": 0
+                    }
+                }
+            },
+            "BLESSURES": {
+                "designation": "Blessures",
+                "attributs": {
+                    "BLESSURE_INCONSCIENCE": {
+                        "designation": "Inconscience",
+                        "type": "cells",
+                        "data": {
+                            "max": "12"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 0,
+                        "jet": 0
+                    },
+                    "BLESSURE_LEGERE": {
+                        "designation": "Blessures légères",
+                        "type": "cells",
+                        "data": {
+                            "max": "8"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 0,
+                        "jet": 0
+                    },
+                    "BLESSURE_GRAVE": {
+                        "designation": "Blessures graves",
+                        "type": "cells",
+                        "data": {
+                            "max": "6"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 0,
+                        "jet": 0
+                    },
+                    "BLESSURE_CRITIQUE": {
+                        "designation": "Blessures critiques",
+                        "type": "cells",
+                        "data": {
+                            "max": "4"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 0,
+                        "jet": 0
+                    },
+                    "BLESSURE_FATAL": {
+                        "designation": "Blessures fatales",
+                        "type": "cells",
+                        "data": {
+                            "max": "2"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 0,
+                        "jet": 0
+                    },
+                    "BLESSURE_MORT": {
+                        "designation": "Mort",
+                        "type": "cells",
+                        "data": {
+                            "max": "1"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 0,
+                        "jet": 0
+                    }
+                }
+            },
+            "SEUILSBLESSURES": {
+                "designation": "Seuils de blessure",
+                "attributs": {
+                    "SEUIL_INCONSCIENCE": {
+                        "designation": "Inconscience",
+                        "type": "caracsec",
+                        "data": {
+                            "total": "round(({ATTR:RES}+{ATTR:GAB}+{ATTR:VOL})/4)"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 0,
+                        "modifiable": 0,
+                        "jet": 0
+                    },
+                    "SEUIL_LEGERE": {
+                        "designation": "Blessure légère",
+                        "type": "caracsec",
+                        "data": {
+                            "total": "round(({ATTR:RES}+{ATTR:GAB}+{ATTR:VOL})/6)"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 0,
+                        "modifiable": 0,
+                        "jet": 0
+                    },
+                    "SEUIL_GRAVE": {
+                        "designation": "Blessure grave",
+                        "type": "caracsec",
+                        "data": {
+                            "total": "round(({ATTR:RES}+{ATTR:GAB}+{ATTR:VOL})/3)"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 0,
+                        "modifiable": 0,
+                        "jet": 0
+                    },
+                    "SEUIL_CRITIQUE": {
+                        "designation": "Inconscience",
+                        "type": "caracsec",
+                        "data": {
+                            "total": "round(({ATTR:RES}+{ATTR:GAB}+{ATTR:VOL})/2)"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 0,
+                        "modifiable": 0,
+                        "jet": 0
+                    },
+                    "SEUIL_FATAL": {
+                        "designation": "Fatal",
+                        "type": "caracsec",
+                        "data": {
+                            "total": "round(({ATTR:RES}+{ATTR:GAB}+{ATTR:VOL})/1)"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 0,
+                        "modifiable": 0,
+                        "jet": 0
+                    },
+                    "SEUIL_MORT": {
+                        "designation": "Mort",
+                        "type": "caracsec",
+                        "data": {
+                            "total": "round(({ATTR:RES}+{ATTR:GAB}+{ATTR:VOL})*1.5)"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 0,
+                        "modifiable": 0,
+                        "jet": 0
+                    }
+
+                }
+            },
+            "GENERAL": {
+                "designation": "Informations générales",
+                "attributs": {
+                    "NOM": {
+                        "designation": "Nom",
+                        "type": "Simple",
+                        "jet": 0
+                    },
+                    "DATENAISSANCE": {
+                        "designation": "Date de naissance",
+                        "type": "Simple",
+                        "jet": 0
+                    },
+                    "AGE": {
+                        "designation": "Age",
+                        "type": "Simple",
+                        "jet": 0
+                    },
+                    "SEXE": {
+                        "designation": "Sexe",
+                        "type": "Simple",
+                        "jet": 0
+                    },
+                    "YEUX": {
+                        "designation": "Yeux",
+                        "type": "Simple",
+                        "jet": 0
+                    },
+                    "CHEVEUX": {
+                        "designation": "Cheveux",
+                        "type": "Simple",
+                        "jet": 0
+                    },
+                    "RACE": {
+                        "designation": "Race",
+                        "type": "Simple",
+                        "jet": 0
+                    },
+                    "TAILLE": {
+                        "designation": "Taille",
+                        "type": "Simple",
+                        "jet": 0
+                    },
+                    "POIDS": {
+                        "designation": "Poids",
+                        "type": "Simple",
+                        "jet": 0
+                    },
+                    "LIEUNAISSANCE": {
+                        "designation": "Lieu de naissance",
+                        "type": "Simple",
+                        "jet": 0
+                    }
+                }
+            },
+            "CARACTERISTIQUES": {
+                "designation": "Caractéristiques",
+                "attributs": {
+                    "FO": {
+                        "designation": "Force",
+                        "type": "Carac",
+                        "data": {
+                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "GAB": {
+                        "designation": "Gabarit",
+                        "type": "Carac",
+                        "data": {
+                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "CHA": {
+                        "designation": "Charisme",
+                        "type": "Carac",
+                        "data": {
+                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "INT": {
+                        "designation": "Intelligence",
+                        "type": "Carac",
+                        "data": {
+                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "VOL": {
+                        "designation": "Volonté",
+                        "type": "Carac",
+                        "data": {
+                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "RES": {
+                        "designation": "Résistance",
+                        "type": "Carac",
+                        "data": {
+                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "AG": {
+                        "designation": "Agilité",
+                        "type": "Carac",
+                        "data": {
+                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "SGF": {
+                        "designation": "Sang-froid",
+                        "type": "Carac",
+                        "data": {
+                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "INS": {
+                        "designation": "Instinct",
+                        "type": "Carac",
+                        "data": {
+                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "RAP": {
+                        "designation": "Rapidité",
+                        "type": "Carac",
+                        "data": {
+                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    }
+                }
+            },
+            "CARACSEC": {
+                "designation": "Caractéristiques secondaires",
+                "attributs": {
+                    "PERCEPTION": {
+                        "designation": "Perception",
+                        "type": "caracsec",
+                        "data": {
+                            "total": "round(({ATTR:INT}+{ATTR:INS})/2)+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 1,
+                        "modifiable": 0,
+                        "jet": 0
+                    },
+                    "BONUSDEGATS": {
+                        "designation": "Bonus aux dégats",
+                        "type": "caracsec",
+                        "data": {
+                            "total": "round({ATTR:FO}+({ATTR:GAB}/2))+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 1,
+                        "modifiable": 0,
+                        "jet": 0
+                    }
+                }
+            },
+            "TALENTS": {
+                "designation": "Talents",
+                "attributs": {
+                    "TALENT_ABSENCE": {
+                        "designation": "Absence",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "{ATTR:AG}+{ATTR:FO}",
+                            "total": "({VAL:niveau}*10)+{VAL:initial}+{DATA:bonus}+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": {
+                            "niveau": 3,
+                            "initial": 7
+                        },
+                        "modificateur": 1
+                    }
+                }
+            }
+        },
+        "entites": [
+            {
+                "NOM": "Joueur 1",
+                "FO": {
+                    "initial": 15
+                },
+                "GAB": {
+                    "initial": 17
+                },
+                "CHA": {
+                    "initial": 19
+                },
+                "INT": {
+                    "initial": 13
+                },
+                "VOL": {
+                    "initial": 17
+                },
+                "RES": {
+                    "initial": 11
+                },
+                "AG": {
+                    "initial": 14
+                },
+                "SGF": {
+                    "initial": 13
+                },
+                "INS": {
+                    "initial": 9
+                },
+                "RAP": {
+                    "initial": 10
+                }
+            },
+            {
+                "NOM": "Joueur 2",
+                "FO": {
+                    "initial": 20
+                },
+                "AG": {
+                    "initial": 10
+                }
+            }
+        ]
+    },
+    "MAINMENU": {
+        "designation": "Menu principal",
+        "attributs": {
+            "NOMMENU": {
+                "designation": "Nom affiché du menu",
+                "type": "Simple"
+            },
+            "CODEAPPZ": {
+                "designation": "Code de l'applicatif",
+                "type": "Simple"
+            }
+        },
+        "entites": [
+            {
+                "NOMMENU": "Gestion du jeu",
+                "CODEAPPZ": "gestion"
+            },
+            {
+                "NOMMENU": "Joueurs",
+                "CODEAPPZ": "game"
+            },
+            {
+                "NOMMENU": "Combats sous-marin",
+                "CODEAPPZ": "submarine"
+            },
+            {
+                "NOMMENU": "Journal",
+                "CODEAPPZ": "journal"
+            },
+            {
+                "NOMMENU": "Aventure",
+                "CODEAPPZ": "aventure"
+            },
+            {
+                "NOMMENU": "Encyclopédie sous-marine",
+                "CODEAPPZ": "encyclopedie"
+            }
+        ]
+
+
+    },
+    "ACTIONMENU": {
+        "designation": "Menu d'action (GAME)",
+        "attributs": {
+            "ACTIONMENU_NOM": {
+                "designation": "Nom affiché du menu",
+                "type": "Simple"
+            },
+            "ACTIONMENU_CODE": {
+                "designation": "Code du panel",
+                "type": "Simple"
+            }
+        },
+        "entites": [
+            {
+                "ACTIONMENU_NOM": "Caractéristiques principales",
+                "ACTIONMENU_CODE": "caracs"
+            },
+            {
+                "ACTIONMENU_NOM": "Caractéristiques secondaires",
+                "ACTIONMENU_CODE": "caracssec"
+            },
+            {
+                "ACTIONMENU_NOM": "Talents",
+                "ACTIONMENU_CODE": "talents"
+            },
+            {
+                "ACTIONMENU_NOM": "Modificateurs",
+                "ACTIONMENU_CODE": "modificateurs"
+            },
+            {
+                "ACTIONMENU_NOM": "Etat de santé",
+                "ACTIONMENU_CODE": "blessures"
+            },
+            {
+                "ACTIONMENU_NOM": "Aventure",
+                "ACTIONMENU_CODE": "aventure"
+            },
+            {
+                "ACTIONMENU_NOM": "Historique",
+                "ACTIONMENU_CODE": "historique"
+            },
+            {
+                "ACTIONMENU_NOM": "Equipement",
+                "ACTIONMENU_CODE": "equipement"
+            },
+            {
+                "ACTIONMENU_NOM": "Inventaire",
+                "ACTIONMENU_CODE": "inventaire"
+            },
+            {
+                "ACTIONMENU_NOM": "Ennemis / alliés / contacts",
+                "ACTIONMENU_CODE": "contacts"
+            },
+            {
+                "ACTIONMENU_NOM": "Notes",
+                "ACTIONMENU_CODE": "notes"
+            }
+
+        ]
+
+
+    }
+
+}

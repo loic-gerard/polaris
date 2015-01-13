@@ -1,0 +1,363 @@
+body{
+    border:0px;
+    padding:0px;
+    margin: 0px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 11px;
+    color: #303030;
+    background-color:#e4e4e4;
+}
+
+.transition{
+  
+}
+
+.clear{
+    clear: both;
+}
+
+/*---------------------------------------------------------------------------*/
+/* Header */
+
+header{
+    height: 65px;
+    background-color: #395b9c;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+}
+
+header .titre{
+    width:200px;
+    position: absolute;
+    top:10px;
+    left: 10px;
+    color:white;
+}
+
+header .titre .main{
+    text-transform: uppercase;
+    font-size: 23px;
+    letter-spacing: 5px;
+}
+
+header .titre .sub{
+    letter-spacing: 12px;
+}
+
+header .mainMenu{
+    position: absolute;
+    top:23px;
+    right:10px;
+    text-align: right;
+}
+
+header .mainMenu .item{
+    font-size: 14px;
+    color: #395b9c;
+    font-weight: bold;
+    padding: 13px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+header .mainMenu .on{
+    background-color: white;
+}
+
+header .mainMenu .off{
+    background-color: #b1c3e6;
+}
+
+header .mainMenu .off:hover{
+    background-color: white;
+}
+
+/*---------------------------------------------------------------------------*/
+/* MAIN */
+    
+main{
+    padding: 20px;
+    padding-top: 85px;
+}
+
+/*---------------------------------------------------------------------------*/
+/* Table */
+
+table{
+    width:100%;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 12px;
+    border: none;
+    border-spacing: 0px;
+    border-collapse: separate;
+}
+
+table tr{
+    border:none;
+    background-color: #e4e4e4;
+}
+
+table tr:nth-child(even) {
+    background-color: white;
+}
+
+table td:first-child,
+table th:first-child{
+    font-weight: bold;
+    text-align: left;
+}
+
+table td:last-child{
+    color:#63718a;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+table td,
+table th{
+    border:none;
+    padding: 4px;
+    text-align: center;
+}
+
+table .header{
+    background-color: #63718a !important;
+    font-weight: bold !important;
+    color:white !important;
+}
+
+table .header td{
+    color:white;
+    font-size: 12px;
+}
+
+table .header th{
+    background-color: #63718a;
+    font-weight: bold;
+    color:white;
+}
+
+table .header th{
+    color:white;
+    font-size: 12px;
+}
+
+.modifiable:hover{
+    background-color: #fffaaa;
+    cursor: pointer;
+}
+
+table .smallColumn{
+    width: 10px;
+}
+
+table .normalCell{
+    color:black !important;
+    font-weight: normal !important;
+    font-size: 12px !important;
+}
+
+table .leftCell{
+    text-align: left;
+}
+
+table .centerCell{
+    text-align: center;
+}
+
+table .rightCell{
+    text-align: right;
+}
+
+/*---------------------------------------------------------------------------*/
+/* Buttons */
+
+.greenButton{
+    background-color: #359500;
+    padding: 10px;
+    color:white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.redButton{
+    background-color: #c50505;
+    padding: 10px;
+    color:white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.smallGreenButton{
+    background-color: #359500;
+    padding: 5px;
+    color:white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.smallRedButton{
+    background-color: #c50505;
+    padding: 5px;
+    color:white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.smallOrangeButton{
+    background-color: #ffb24e;
+    padding: 5px;
+    color:white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.smallBlueButton{
+    background-color: #395b9c;
+    padding: 5px;
+    color:white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.smallButtonsHeadTableContainer{
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.smallButtonsContainer{
+    margin-bottom: 5px;
+    margin-top: 3px;
+    text-align: right;
+}
+
+.bigActionButton{
+    color:white;
+    font-weight: bold;
+    font-size: 13px;
+    width:calc(33% - 20px);
+    background-color: #395b9c;
+    text-decoration: none;
+    display: block;
+    text-align:center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+/*---------------------------------------------------------------------------*/
+/* Forms */
+
+input,
+select{
+    width: 100%;
+    border:1px solid #d2d2d2;
+    padding: 6px;
+    margin-top: 3px;
+    
+}
+
+input:focus,
+select:focus{
+    background-color: #fffaaa;
+    
+}
+
+.editItem .label{
+    font-weight: bold;
+    color:#718fc8;
+    font-size: 13px;
+}
+
+.editItem{
+    margin-bottom: 10px;
+}
+
+textArea{
+    width: 100%;
+    height: 300px;
+}
+
+/*---------------------------------------------------------------------------*/
+/* SimpleItem */
+
+.simpleItem{
+    float: left;
+    width: calc(33% - 14px);
+    
+    padding: 7px;
+}
+
+.simpleItem .label{
+    font-weight: bold;
+    color:#718fc8;
+    padding-right: 15px;
+    font-size: 13px;
+}
+
+.simpleItem.modifiable:hover{
+    background-color: #fffaaa;
+    
+    cursor: pointer;
+}
+
+/*---------------------------------------------------------------------------*/
+/* CellsItem */
+
+.cellsItem .cell{
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    float:left;
+    margin-right: 5px;
+    margin-bottom: 5px; 
+}
+
+.cellsItem .selected{
+    background-color: #63718a;
+}
+
+.cellsItem .label{
+    font-weight: bold;
+    color:#718fc8;
+    padding-right: 15px;
+    font-size: 13px;
+}
+
+.cellsItem .clear{
+    margin-bottom: 2px;
+}
+
+/*---------------------------------------------------------------------------*/
+/* Line */
+
+.line{
+    clear:both;
+}
+
+/*---------------------------------------------------------------------------*/
+/* customWindow */
+
+#customWindow{
+    background-color: white;
+    width: 900px;
+    height: 550px;
+    position: fixed;
+    top:50%;
+    left:50%;
+    margin-top: -295px;
+    margin-left: -470px;
+    z-index: 1000;
+    overflow: scroll;
+    padding: 20px;
+}

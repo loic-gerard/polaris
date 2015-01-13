@@ -1,0 +1,100 @@
+/*---------------------------------------------------------------------------*/
+/* PlayerPanel */
+
+#playerPanel{
+    width:33vw;
+    background-color: #323333;
+    height: calc(100vh - 65px);
+    position: fixed;
+    top:65px;
+    left:0px;
+    padding-right: 1px;
+    border-top:1px solid #262626;
+    overflow: scroll;
+    border-right: 1px solid white;
+        
+}
+
+#playerPanel .title{
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    margin-bottom:15px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#playerPanel .player{
+    background-color:white;
+    margin: 10px;
+    padding: 10px;
+}
+
+.gestionPanel{
+    margin-left:25vw;
+}
+
+/*---------------------------------------------------------------------------*/
+/* ennemisPanel */
+
+#ennemisPanel{
+    width:33vw;
+    background-color: #323333;
+    height: calc(100vh - 65px);
+    position: fixed;
+    top:65px;
+    left:0px;
+    padding-right: 1px;
+    border-top:1px solid #262626;
+    overflow: scroll;
+    left: calc(33vw + 2px);
+    border-right: 1px solid white;
+}
+
+#ennemisPanel .title{
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    margin-bottom:15px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/*---------------------------------------------------------------------------*/
+/* Actions */
+
+#actionsPanel{
+    width:33vw;
+    background-color: white;
+    height: calc(100vh - 65px);
+    position: fixed;
+    top:65px;
+    left:calc(67vw + 4px - 20px);
+    padding-right: 1px;
+    border-top:1px solid #262626;
+    overflow: scroll;
+    padding: 10px;
+
+}
+
+#actionsPanel .categorie{
+    font-weight: bold;
+    color: #395b9c;
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+#actionsPanel .boutons{
+    margin-bottom: 15px;
+}
+
+#actionsPanel a{
+    text-decoration: none;
+    color:white;
+    padding: 3px;
+    background-color: #395b9c;
+    margin-bottom: 20px;
+    line-height: 23px;
+        
+}

@@ -1,0 +1,1 @@
+<div class="smallButtonsContainer"><a href="%value%" class="smallRedButton">Supprimer</a></a>

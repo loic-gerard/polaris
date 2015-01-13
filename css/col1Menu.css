@@ -1,0 +1,33 @@
+#col1Menu{
+    width:20vw;
+    background-color: #323333;
+    height: calc(100vh - 65px);
+    position: fixed;
+    top:65px;
+    left:0px;
+    padding-right: 1px;
+    border-top:1px solid #262626;
+}
+
+#col1Menu .item{
+    font-size: 12px;
+    display: block;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #919191;
+    
+}
+
+#col1Menu .on{
+    background-color: #63718a;
+    border-right: 10px solid #718fc8;
+}
+
+#col1Menu .off{
+    
+}
+
+#col1Menu .off:hover{
+    background-color: #63718a;
+}

@@ -1,0 +1,38 @@
+<?php
+
+use \PolarisCore;
+
+?>
+
+<div class="categorie">Combat</div>
+<div class="boutons">
+//<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'combat_addennemi/actpane.php'), true, array('panel')); ?>">Ajouter un ennemi</a>
+//<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'combat_distance/actpane.php'), true, array('panel')); ?>">Attaque à distance</a>
+//<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'combat_corpsacorps/actpane.php'), true, array('panel')); ?>">Attaque au corps à corps</a>
+//<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'combat_parer/actpane.php'), true, array('panel')); ?>">Parer</a>
+//<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'combat_equiver/actpane.php'), true, array('panel')); ?>">Equiver</a>
+//<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'combat_charger/actpane.php'), true, array('panel')); ?>">Charger</a>
+
+
+
+</div>
+
+<div class="categorie">Santé</div>
+<div class="boutons">
+<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'blessure/actpane.php'), true, array('panel')); ?>">Blessure</a>
+</div>
+
+<div class="categorie">Jets</div>
+<div class="boutons">
+<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'jettalent/actpane.php', 'windowType' => 'jetWindow'), true, array('panel')); ?>">Jet de talent</a>
+<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'jetcarac/actpane.php', 'windowType' => 'jetWindow'), true, array('panel')); ?>">Jet de caractéristiques</a>
+<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'perception_ecouter/actpane.php', 'windowType' => 'jetWindow'), true, array('panel')); ?>">Perception : écouter</a>
+<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'perception_sentir/actpane.php', 'windowType' => 'jetWindow'), true, array('panel')); ?>">Perception : sentir</a>
+<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'perception_voir/actpane.php', 'windowType' => 'jetWindow'), true, array('panel')); ?>">Perception : voir</a>
+</div>
+
+<div class="categorie">Aventure</div>
+<div class="boutons">
+<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'aventure/actpane.php', 'windowType' => 'jetWindow'), true, array('panel')); ?>">Ajouter une entrée au journal</a>
+</div>
+

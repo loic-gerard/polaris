@@ -6,11 +6,19 @@ use jin\query\Query;
 use jin\query\QueryResult;
 use jin\lang\StringTools;
 use jin\log\Debug;
+use \Iterator;
 
-class View{
+class View implements Iterator{
     private $datas = array();
+    private $attributs = array();
+    private $entiteType;
+    private $parent;
     
-    public function __construct($entiteType, $orderBy, $orderBySens = 'ASC', $condition = '', $attributs = array()) {
+    public function __construct($entiteType, $orderBy = null, $orderBySens = 'ASC', $condition = '', $attributs = array(), $parentEntite = null) {
+        $this->attributs = $attributs;
+        $this->entiteType = $entiteType;
+        $this->parent = $parentEntite;
+        
         $q = new Query();
         $q->setRequest('SELECT e.pk_entite ');
         foreach($attributs AS $attribut){
@@ -23,10 +31,18 @@ class View{
             $q->addToRequest('LEFT JOIN attribut AS a_'.$attribut.' ON a_'.$attribut.'.tt_code='.$q->argument($attribut, Query::$SQL_STRING).' '
                 . 'LEFT JOIN valeur AS v_'.$attribut.' ON v_'.$attribut.'.fk_entite = e.pk_entite AND a_'.$attribut.'.pk_attribut = v_'.$attribut.'.fk_attribut ');
         }
+        $q->addToRequest('WHERE 1=1');
+        if($condition != ''){
+            $q->addToRequest('AND '.$condition);
+        }
+        if($this->parent){
+            $q->addToRequest('AND e.fk_entite='.$q->argument($this->parent, Query::$SQL_NUMERIC));
+        }
+        if($orderBy){
+            $q->addToRequest('ORDER BY '.$orderBy.' '.$orderBySens);
+        }
         $q->execute();
         $qr = $q->getQueryResults();
-        
-        Debug::dump($qr);
         
         foreach($qr AS $r){
             $l = array();
@@ -36,14 +52,73 @@ class View{
                 $type = StringTools::firstCarToUpperCase($r['type_'.$attribut]);
                 $className = 'polarisapi\data\attribut\\' . $type;
 		$c = new $className($r['pk_entite'], $attribut, $r['val_'.$attribut]);
-                $l[$attribut] = $c->getFinalValue();
+                $l[$attribut] = $c->getValue();
             }
             
             $this->datas[] = $l;
         }
     }
     
+    public function getParentEntite(){
+        return $this->parent;
+    }
+    
+    public function getEntiteType(){
+        return $this->entiteType;
+    }
+    
     public function getDatas(){
         return $this->datas;
+    }
+    
+    public function getAttributs(){
+        return $this->attributs;
+    }
+    
+    
+    //Fonctions d'itération
+
+    /**
+     * Itération : current
+     * @return mixed
+     */
+    public function current() {
+        return current($this->datas);
+    }
+
+
+    /**
+     * Itération : key
+     * @return string
+     */
+    public function key() {
+        return key($this->datas);
+    }
+
+
+    /**
+     * Itération : rewind
+     * @return \jin\query\QueryResult
+     */
+    public function rewind() {
+        reset($this->datas);
+        return $this;
+    }
+
+
+    /**
+     * Itération : next
+     */
+    public function next() {
+        next($this->datas);
+    }
+
+
+    /**
+     * Itération valid
+     * @return boolean
+     */
+    public function valid() {
+        return array_key_exists(key($this->datas), $this->datas);
     }
 }

@@ -1,7 +1,7 @@
 <?php
 
-use polarisapi\data\View;
-use jin\log\Debug;
+use \PolarisCore;
 
-$v = new View('PJ', 'pk_entite', 'ASC', null, array('NOM'));
-Debug::dump($v->getDatas());
+$selectedAppz = PolarisCore::getFromUrl('appz', 'game');
+
+include 'appz/'.$selectedAppz.'/index.php';

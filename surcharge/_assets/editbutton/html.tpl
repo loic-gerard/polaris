@@ -1,0 +1,1 @@
+<div class="smallButtonsContainer"><a href="%value%" class="smallOrangeButton">Modifier</a></a>
