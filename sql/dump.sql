@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost:8889
--- Généré le :  Mar 13 Janvier 2015 à 08:13
+-- Généré le :  Mar 13 Janvier 2015 à 08:18
 -- Version du serveur :  5.5.38
 -- Version de PHP :  5.6.2
 
@@ -406,7 +406,7 @@ CREATE TABLE `valeur` (
   `fk_attribut` int(11) NOT NULL,
   `tt_valeur` text NOT NULL,
   `fk_entite` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5962 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=5962 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `valeur`
