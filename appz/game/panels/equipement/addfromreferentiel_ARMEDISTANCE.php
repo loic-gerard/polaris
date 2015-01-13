@@ -1,0 +1,28 @@
+<?php
+
+use polarisapi\ui\utils\ViewTable;
+use polarisapi\data\View;
+use polarisapi\ui\categorie\FreeCategorie;
+
+
+$view = new View(
+        'REF_ARMEDISTANCE', 
+        'pk_entite', 
+        'ASC', 
+        '', 
+        array('REF_ARMEDISTANCE_DESIGNATION', 'REF_ARMEDISTANCE_TYPE', 'REF_ARMEDISTANCE_MILIEU', 'REF_ARMEDISTANCE_DEGATSPHYS', 'REF_ARMEDISTANCE_PORTEE1', 'REF_ARMEDISTANCE_PORTEE2', 'REF_ARMEDISTANCE_PORTEE3', 'REF_ARMEDISTANCE_PORTEE4', 'REF_ARMEDISTANCE_CADENCE', 'REF_ARMEDISTANCE_DEGATSCHOC', 'REF_ARMEDISTANCE_RESISTANCE', 'REF_ARMEDISTANCE_TALENT'),
+        null);
+$wt = new ViewTable(
+        $view, 
+        array('REF_ARMEDISTANCE_DESIGNATION' => 'Désignation', 'REF_ARMEDISTANCE_DEGATSPHYS' => 'Dégats physiques', 'REF_ARMEDISTANCE_DEGATSCHOC' => 'Dégats de choc', 'REF_ARMEDISTANCE_MILIEU' => 'Milieu', 'REF_ARMEDISTANCE_TYPE' => 'Type', 'REF_ARMEDISTANCE_PORTEE1' => 'Port. courte', 'REF_ARMEDISTANCE_PORTEE2' => 'Port. moy.', 'REF_ARMEDISTANCE_PORTEE3' => 'Port. longue', 'REF_ARMEDISTANCE_PORTEE4' => 'Port. ext.', 'REF_ARMEDISTANCE_CADENCE' => 'Cadence', 'REF_ARMEDISTANCE_RESISTANCE' => 'Resistance', 'REF_ARMEDISTANCE_TALENT' => 'Talent'), 
+        false,
+        array(),
+        array(),
+        false,
+        false,
+        null,
+        'ARMEDISTANCE',
+        $_GET['player']);
+$fc = new FreeCategorie('Arme à distance');
+
+echo $wt->build();

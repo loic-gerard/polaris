@@ -75,6 +75,33 @@ class View implements Iterator{
         return $this->attributs;
     }
     
+    public function count(){
+	return count($this->datas);
+    }
+    
+    public function getSumValue($key, $selectedOnly = null){
+	$total = 0;
+	foreach($this->datas AS $d){
+	    if($selectedOnly){
+		if($d[$selectedOnly] == 1){
+		     $total .= $d[$key];
+		}
+	    }else{
+		 $total .= $d[$key];
+	    }
+	   
+	}
+	
+	return $total;
+    }
+    
+    public function getSelectedValue($key, $selectedOnly){
+	foreach($this->datas AS $d){
+	    if($d[$selectedOnly] == 1){
+		return $d[$key];
+	    }
+	}
+    }
     
     //Fonctions d'itération
 

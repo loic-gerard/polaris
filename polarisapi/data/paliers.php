@@ -4,7 +4,7 @@ namespace polarisapi\data;
 
 use jin\query\Query;
 use jin\query\QueryResult;
-
+use jin\lang\StringTools;
 
 class Paliers{
     public static function getPalierColumn($porcent){
@@ -46,7 +46,7 @@ class Paliers{
         return $datas;
     }
     
-    public static function renderPalierColumn($porcent){
+    public static function renderPalierColumn($porcent, $onclick = ''){
         $palier = self::getPalierColumn($porcent);
         
         $output = '<table>';
@@ -56,7 +56,14 @@ class Paliers{
         $output .= '</tr>';
         foreach($palier['marges'] AS $marge){
             $output .= '<tr>';
-            $output .= '<td>'.$marge['marge'].'</td>';
+	    if($onclick){
+		$url = StringTools::replaceAll($onclick, '%marge%', $marge['marge']);
+		
+		$output .= '<td class="modifiable" onClick="'.$url.'">'.$marge['marge'].'</td>';
+	    }else{
+		$output .= '<td>'.$marge['marge'].'</td>';
+	    }
+            
             $aff = '';
             if($marge['min'] == $marge['max']){
                 $aff = $marge['min'];

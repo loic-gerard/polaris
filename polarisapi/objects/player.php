@@ -5,50 +5,62 @@ namespace polarisapi\objects;
 use jin\query\Query;
 use jin\query\QueryResult;
 use polarisapi\data\attribut\Attribut;
+use jin\lang\NumberTools;
+use jin\lang\ArrayTools;
+use polarisapi\objects\GlobalPlayer;
+use polarisapi\data\View;
 
-class Player{
-    private $id;
+class Player extends GlobalPlayer{
+    
+    private $armesDistance;
     
     public function __construct($id) {
-        $this->id = $id;
+	parent::__construct($id);
+	$this->type = '';
+	
+	$this->armesDistance = new View('ARMEDISTANCE', 'pk_entite', 'ASC', '', array('ARMEDISTANCE_DESIGNATION', 'ARMEDISTANCE_TYPE', 'ARMEDISTANCE_MILIEU', 'ARMEDISTANCE_DEGATSPHYS', 'ARMEDISTANCE_DEGATSCHOC', 'ARMEDISTANCE_PORTEE1', 'ARMEDISTANCE_PORTEE2', 'ARMEDISTANCE_PORTEE3', 'ARMEDISTANCE_PORTEE4', 'ARMEDISTANCE_CADENCE', 'ARMEDISTANCE_MUNITIONS', 'ARMEDISTANCE_EQUIPED', 'ARMEDISTANCE_RESISTANCE', 'ARMEDISTANCE_TALENT'), $id);
     }
     
-    public function addBlessure($nb){
-        $retour = array();
-        $retour['typeblessure'] = 'Aucune';
-        
-        //Récupération des seuils
-        $seuils = array();
-        $seuils[] = array('blessAttribut' => Attribut::getAttribut($_POST['joueur'], 'BLESSURE_LEGERE'),'attribut' => Attribut::getAttribut($_POST['joueur'], 'SEUIL_LEGERE'), 'code' => 'LEGERE');
-        $seuils[] = array('blessAttribut' => Attribut::getAttribut($_POST['joueur'], 'BLESSURE_GRAVE'),'attribut' => Attribut::getAttribut($_POST['joueur'], 'SEUIL_GRAVE'), 'code' => 'GRAVE');
-        $seuils[] = array('blessAttribut' => Attribut::getAttribut($_POST['joueur'], 'BLESSURE_CRITIQUE'),'attribut' => Attribut::getAttribut($_POST['joueur'], 'SEUIL_CRITIQUE'), 'code' => 'CRITIQUE');
-        $seuils[] = array('blessAttribut' => Attribut::getAttribut($_POST['joueur'], 'BLESSURE_FATAL'),'attribut' => Attribut::getAttribut($_POST['joueur'], 'SEUIL_FATAL'), 'code' => 'FATAL');
-        $seuils[] = array('blessAttribut' => Attribut::getAttribut($_POST['joueur'], 'BLESSURE_MORT'),'attribut' => Attribut::getAttribut($_POST['joueur'], 'SEUIL_MORT'), 'code' => 'MORT');
-
-        $bless = $_POST['blessure'];
-        $i = null;
-        $ci = 0;
-        foreach($seuils as $seuil){
-            if($bless > $seuil['attribut']->getFinalValue()){
-                $i = $ci;
-            }
-            $ci++;
-        }
-        $startI = $i;
-        
-        $found = false;
-        for($i = $startI; $i < count($seuils); $i++){
-            //Teste si on est déjà au max
-            $max = $seuils[$i]['blessAttribut']->evaluateExpression($seuils[$i]['blessAttribut']->getData('max'));
-            if($seuils[$i]['blessAttribut']->getFinalValue() < $max){
-                $seuils[$i]['blessAttribut']->setValue($seuils[$i]['blessAttribut']->getFinalValue()+1);
-                $retour['typeblessure'] = $seuils[$i]['code'];
-                $found = true;
-                break;
-            }
-        }
-        
-        return $retour;
+    public function getType(){
+	return 'PJ';
+    }
+    
+    public function getResArmeDistance(){
+	return $this->armesDistance->getSumValue('ARMEDISTANCE_RESISTANCE', 'ARMEDISTANCE_EQUIPED');
+    }
+    
+    
+    
+    public function getParerArmeDistance(){
+	$talent = $this->armesDistance->getSelectedValue('ARMEDISTANCE_TALENT', 'ARMEDISTANCE_EQUIPED');
+	
+	$a = Attribut::getAttribut($this->id, $talent);
+	return $a->getFinalValue();
+    }
+    
+    public function getEsquiveArmeDistance(){
+	$a = Attribut::getAttribut($this->id, 'TALENT_ESQUIVE');
+	return $a->getFinalValue();
+    }
+    
+    public function getTalentNameArmeDistance(){
+	$talent = $this->armesDistance->getSelectedValue('ARMEDISTANCE_TALENT', 'ARMEDISTANCE_EQUIPED');
+	
+	$a = Attribut::getAttribut($this->id, $talent);
+	
+	return $a->getAttributName();
+    }
+    
+    public function getTalentValueArmeDistance(){
+	$talent = $this->armesDistance->getSelectedValue('ARMEDISTANCE_TALENT', 'ARMEDISTANCE_EQUIPED');
+	
+	$a = Attribut::getAttribut($this->id, $talent);
+	
+	return $a->getFinalValue();
+    }
+    
+    public function getResArmeContact(){
+	
     }
 }
 

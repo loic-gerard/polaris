@@ -62,6 +62,8 @@ if($confirm){
 </div>
 </div>
 
+
+
 <div class="rightPane" id="resultatCalcul"></div>
 
 <?php } ?>

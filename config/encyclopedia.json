@@ -1,0 +1,326 @@
+{
+    "ENCYCLOPEDIE": {
+	"designation": "Menu de l'encyclopédie",
+	"attributs": {
+	    "ENCYCLO_CODE": {
+		"designation": "Code entitetype",
+		"type": "Simple"
+	    },
+	    "ENCYCLO_LABEL": {
+		"designation": "Nom du menu",
+		"type": "Simple"
+	    }
+	},
+	"entites": [
+	    {
+		"ENCYCLO_CODE": "REF_ARMEDISTANCE",
+		"ENCYCLO_LABEL": "Armes à distance"
+	    },
+	    {
+		"ENCYCLO_CODE": "REF_ARMECORPSACORPS",
+		"ENCYCLO_LABEL": "Armes de corps à corps"
+	    },
+	    {
+		"ENCYCLO_CODE": "REF_PROTECTION",
+		"ENCYCLO_LABEL": "Equipements de protection"
+	    },
+	    {
+		"ENCYCLO_CODE": "REF_EQUIPEMENT",
+		"ENCYCLO_LABEL": "Equipements divers"
+	    },
+	    {
+		"ENCYCLO_CODE": "REF_PNJ",
+		"ENCYCLO_LABEL": "Ennemis / créatures"
+	    },
+	    {
+		"ENCYCLO_CODE": "REF_VEHICULES",
+		"ENCYCLO_LABEL": "Véhicules sous-marin"
+	    }
+	]
+    },
+    "REF_PROTECTION" : {
+	"designation" : "Protections",
+	"attributs" : {
+	    "REF_PROTECTION_DESIGNATION" : {
+		"designation" : "Désignation",
+		"type" : "Simple"
+	    },
+	    "REF_PROTECTION_LOCALISATION" : {
+		"designation" : "Localisation (JAMBES, BUSTE, BRAS ou TETE)",
+		"type" : "Simple"
+	    },
+	    "REF_PROTECTION_PROTECTION" : {
+		"designation" : "Protection",
+		"type" : "Simple"
+	    },
+	    "REF_PROTECTION_RESISTANCE" : {
+		"designation" : "Resistance",
+		"type" : "Simple"
+	    },
+	    "REF_PROTECTION_SPECIAL" : {
+		"designation" : "Spécial",
+		"type" : "Simple"
+	    }
+	},
+	"entites" : [
+	    {
+		"REF_PROTECTION_DESIGNATION" : "Casque de combat",
+		"REF_PROTECTION_LOCALISATION" : "TETE",
+		"REF_PROTECTION_PROTECTION" : 15,
+		"REF_PROTECTION_RESISTANCE" : 30,
+		"REF_PROTECTION_SPECIAL" : "Brille au soleil"
+	    }
+	]
+
+    },
+    "REF_ARMEDISTANCE": {
+	"designation": "Armes à distance",
+	"attributs": {
+	    "REF_ARMEDISTANCE_DESIGNATION": {
+		"designation": "Désignation",
+		"type": "Simple"
+	    },
+	    "REF_ARMEDISTANCE_TYPE": {
+		"designation": "Type",
+		"type": "Simple"
+	    },
+	    "REF_ARMEDISTANCE_TALENT": {
+		"designation": "Talent nécessaire",
+		"type": "Simple"
+	    },
+	    "REF_ARMEDISTANCE_MILIEU": {
+		"designation": "Milieu",
+		"type": "Simple"
+	    },
+	    "REF_ARMEDISTANCE_DEGATSPHYS": {
+		"designation": "Dégats physiques",
+		"type": "Simple"
+	    },
+	    "REF_ARMEDISTANCE_DEGATSCHOC": {
+		"designation": "Dégats de choc",
+		"type": "Simple"
+	    },
+	    "REF_ARMEDISTANCE_PORTEE1": {
+		"designation": "Portée courte",
+		"type": "Simple"
+	    },
+	    "REF_ARMEDISTANCE_PORTEE2": {
+		"designation": "Portée moyenne",
+		"type": "Simple"
+	    },
+	    "REF_ARMEDISTANCE_PORTEE3": {
+		"designation": "Portée longue",
+		"type": "Simple"
+	    },
+	    "REF_ARMEDISTANCE_PORTEE4": {
+		"designation": "Portée extrème",
+		"type": "Simple"
+	    },
+	    "REF_ARMEDISTANCE_CADENCE": {
+		"designation": "Cadence",
+		"type": "Simple"
+	    },
+	    "REF_ARMEDISTANCE_RESISTANCE" :{
+		"designation" : "Résistance",
+		"type" : "Simple"
+	    }
+
+
+	},
+	"entites": [
+	    {
+		"REF_ARMEDISTANCE_DESIGNATION": "Pistolet",
+		"REF_ARMEDISTANCE_TYPE": "Armes de poing",
+		"REF_ARMEDISTANCE_TALENT": "TALENT_ARMES_POING",
+		"REF_ARMEDISTANCE_MILIEU": "Surface",
+		"REF_ARMEDISTANCE_DEGATSPHYS": "3",
+		"REF_ARMEDISTANCE_DEGATSCHOC": "0",
+		"REF_ARMEDISTANCE_PORTEE1": "12m",
+		"REF_ARMEDISTANCE_PORTEE2": "50m",
+		"REF_ARMEDISTANCE_PORTEE3": "100m",
+		"REF_ARMEDISTANCE_PORTEE4": "200m",
+		"REF_ARMEDISTANCE_CADENCE": "4",
+		"REF_ARMEDISTANCE_RESISTANCE": "6"
+	    },
+	    {
+		"REF_ARMEDISTANCE_DESIGNATION": "Pistolet choc",
+		"REF_ARMEDISTANCE_TYPE": "Armes de poing",
+		"REF_ARMEDISTANCE_TALENT": "TALENT_ARMES_POING",
+		"REF_ARMEDISTANCE_MILIEU": "Surface",
+		"REF_ARMEDISTANCE_DEGATSPHYS": "0",
+		"REF_ARMEDISTANCE_DEGATSCHOC": "6",
+		"REF_ARMEDISTANCE_PORTEE1": "6m",
+		"REF_ARMEDISTANCE_PORTEE2": "16m",
+		"REF_ARMEDISTANCE_PORTEE3": "40m",
+		"REF_ARMEDISTANCE_PORTEE4": "80m",
+		"REF_ARMEDISTANCE_CADENCE": "2",
+		"REF_ARMEDISTANCE_RESISTANCE": "2"
+	    }
+	]
+    },
+    "REF_PNJ": {
+	"designation": "PNJ",
+	"attributs": {
+	    "REF_PNJ_NOM": {
+		"designation": "Nom",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_NIV": {
+		"designation": "Niveau de difficulté",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_DESC": {
+		"designation": "Description",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_AGI": {
+		"designation": "AGI",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_FOR": {
+		"designation": "FOR",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_RES": {
+		"designation": "RES",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_GAB": {
+		"designation": "GAB",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_RAP": {
+		"designation": "RAP",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_CHA": {
+		"designation": "CHA",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_VOL": {
+		"designation": "VOL",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_INT": {
+		"designation": "INT",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_SGF": {
+		"designation": "SGF",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_INS": {
+		"designation": "INS",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_REACTION": {
+		"designation": "Réaction",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_PERCEPTION": {
+		"designation": "Perception",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_SEUIL_INCONSCIENCE": {
+		"designation": "Seuil d'inconscience",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_SEUIL_LEGERE": {
+		"designation": "Seuil blessure légère",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_SEUIL_GRAVE": {
+		"designation": "Seuil blessure légère",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_SEUIL_CRITIQUE": {
+		"designation": "Seuil blessure critique",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_SEUIL_FATAL": {
+		"designation": "Seuil blessure fatale",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_SEUIL_MORT": {
+		"designation": "Seuil mort",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_ATTAQUE": {
+		"designation": "Palier attaque",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_ESQUIVE": {
+		"designation": "Palier esquive",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_PARADE": {
+		"designation": "Palier parade",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_FATIGUE": {
+		"designation": "Fatigue",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_DEGATS": {
+		"designation": "Dégats",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_NBATTAQUES": {
+		"designation": "Nombre d'attaques",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_ARMURE": {
+		"designation": "Armure",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_BLINDAGE": {
+		"designation": "Blindage",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_SPE": {
+		"designation": "Spécifique",
+		"type": "Simple"
+	    },
+	    "REF_PNJ_RES_ARME" : {
+		"designation": "Resistance de l'arme utilisée",
+		"type": "Simple"
+	    }
+	},
+	"entites": [
+	    {
+		"REF_PNJ_NOM" : "Pieuvre-tigre",
+		"REF_PNJ_NIV" : "1",
+		"REF_PNJ_DESC" : "Vit dans les plus sombres cavernes sous-marines. Elle tire son nom de sa coloration évoquant celle d'un tigre. ",
+		"REF_PNJ_AGI" : "12",
+		"REF_PNJ_FOR" : "38",
+		"REF_PNJ_RES" : "40",
+		"REF_PNJ_GAB" : "46",
+		"REF_PNJ_RAP" : "14",
+		"REF_PNJ_CHA" : "0",
+		"REF_PNJ_VOL" : "18",
+		"REF_PNJ_INT" : "12",
+		"REF_PNJ_SGF" : "24",
+		"REF_PNJ_INS" : "24",
+		"REF_PNJ_REACTION" : "8",
+		"REF_PNJ_PERCEPTION" : "18",
+		"REF_PNJ_SEUIL_INCONSCIENCE" : "26",
+		"REF_PNJ_SEUIL_LEGERE" : "17",
+		"REF_PNJ_SEUIL_GRAVE" : "35",
+		"REF_PNJ_SEUIL_CRITIQUE" : "52",
+		"REF_PNJ_SEUIL_FATAL" : "104",
+		"REF_PNJ_SEUIL_MORT" : "156",
+		"REF_PNJ_ATTAQUE" : "8",
+		"REF_PNJ_ESQUIVE" : "4",
+		"REF_PNJ_PARADE" : "5",
+		"REF_PNJ_FATIGUE" : "32",
+		"REF_PNJ_DEGATS" : "6",
+		"REF_PNJ_NBATTAQUES" : "8",
+		"REF_PNJ_ARMURE" : "10",
+		"REF_PNJ_BLINDAGE" : "0",
+		"REF_PNJ_SPE" : "Spécifique",
+		"REF_PNJ_RES_ARME" : "3"
+	    }
+	]
+    }
+
+}

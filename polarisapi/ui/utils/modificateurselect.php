@@ -7,10 +7,14 @@ use polarisapi\data\View;
 class ModificateurSelect{
     private $view;
     private $addToHtml;
+    private $cumul;
+    private $formName;
     
-    public function __construct($type, $addToHtml = '') {
+    public function __construct($type, $addToHtml = '', $cumul = false, $formName = null) {
         $this->view = new View('MODIFICATEUR', 'pk_entite', 'ASC', 'v_MODIFICATEUR_TYPE.tt_valeur=\''.$type.'\'', array('MODIFICATEUR_TYPE', 'MODIFICATEUR_LABEL', 'MODIFICATEUR_CATEGORIE', 'MODIFICATEUR_DEFAUT', 'MODIFICATEUR_VALUE', 'MODIFICATEUR_CATEGORIE_ID'));
         $this->addToHtml = $addToHtml;
+	$this->cumul = $cumul;
+	$this->formName = $formName;
     }
     
     public function build(){
@@ -30,7 +34,14 @@ class ModificateurSelect{
             if($l['MODIFICATEUR_DEFAUT'] == 1){
                 $selected = ' checked="checked" ';
             }
-            $output .= '<td width=20><input '.$this->addToHtml.' type="radio" '.$selected.' name="'.$l['MODIFICATEUR_CATEGORIE_ID'].'" id="'.$l['MODIFICATEUR_CATEGORIE_ID'].'" value="'.$l['id'].'"></td>';
+            $output .= '<td width=20>';
+	    if($this->cumul){
+		$output .= '<input '.$this->addToHtml.' type="checkbox" '.$selected.' name="'.$this->formName.'" id="'.$l['MODIFICATEUR_CATEGORIE_ID'].'" value="'.$l['id'].'">';
+	    }else{
+		$output .= '<input '.$this->addToHtml.' type="radio" '.$selected.' name="'.$l['MODIFICATEUR_CATEGORIE_ID'].'" id="'.$l['MODIFICATEUR_CATEGORIE_ID'].'" value="'.$l['id'].'">';
+	    }
+	    
+	    $output .= '</td>';
             $output .= '<td class="leftCell">'.$l['MODIFICATEUR_LABEL'].'</td>';
             $v = $l['MODIFICATEUR_VALUE'];
             if($v >= 0){

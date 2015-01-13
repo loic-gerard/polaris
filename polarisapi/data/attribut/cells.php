@@ -8,11 +8,13 @@ use PolarisCore;
 class Cells extends Attribut{
     public function renderForDisplay(){
         $modUrl = '';
+	$class = '';
         if($this->isModifiable()){
             $modUrl = PolarisCore::getModifierUrl($this->entiteId, $this->attributCode, true);
+	    $class = 'modifiable';
         }
         
-        $output = '<div class="cellsItem">';
+        $output = '<div  '.$modUrl.' class="cellsItem '.$class.'">';
         $output .= '<span class="label">'.$this->getAttributName().' :</span> ';
         $output .= '<div class="clear"></div>';
         $max = round($this->evaluateExpression($this->getData('max')));

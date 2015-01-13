@@ -29,6 +29,10 @@ class Attribut {
         }
         $q->execute();
         $qr = $q->getQueryResults();
+	
+	if($qr->count() == 0){
+	    throw new \Exception('Probleme attribut : '.$q->getSql());
+	}
 
         $type = StringTools::firstCarToUpperCase($qr->getValueAt('tt_type'));
         $className = 'polarisapi\data\attribut\\' . $type;

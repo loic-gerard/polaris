@@ -9,7 +9,7 @@ use jin\lang\StringTools;
 
 class Entite{
     
-    public static function copyTo($entiteCodeFrom, $entiteCodeTo, $entiteFromId, $parent){
+    public static function copyTo($entiteCodeFrom, $entiteCodeTo, $entiteFromId, $parent = null){
         $q = new Query();
         $q->setRequest('SELECT * FROM entitetype WHERE tt_code='.$q->argument($entiteCodeFrom, Query::$SQL_STRING));
         $q->execute();
@@ -31,10 +31,17 @@ class Entite{
         
         $q = new Query();
         $q->setRequest('INSERT INTO entite '
-                . '(fk_entitetype, fk_entite) '
-                . 'VALUES'
-                . '('.$q->argument($qrto->getValueAt('pk_entitetype'), Query::$SQL_NUMERIC).','
-                . $q->argument($parent, Query::$SQL_NUMERIC).')');
+                . '(fk_entitetype');
+	if($parent){
+	    $q->addToRequest(',fk_entite');
+	}
+	$q->addToRequest(')VALUES'
+                . '('.$q->argument($qrto->getValueAt('pk_entitetype'), Query::$SQL_NUMERIC));
+	if($parent){
+	    $q->addToRequest(','.$q->argument($parent, Query::$SQL_NUMERIC));
+	}
+	$q->addToRequest(')');
+
         $q->execute();
         $id = DbConnexion::getLastInsertId('entite', 'pk_entite');
         
@@ -47,6 +54,10 @@ class Entite{
                     . 'AND tt_code='.$q->argument($code, Query::$SQL_STRING));
             $q->execute();
             $qra = $q->getQueryResults();
+	    
+	    if($qra->count() == 0){
+		throw new \Exception('Probleme attribut : '.$q->getSql());
+	    }
             
             $q = new Query();
             $q->setRequest('INSERT INTO valeur '

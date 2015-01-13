@@ -4,7 +4,7 @@ use polarisapi\ui\utils\EntiteSelect;
 use polarisapi\ui\utils\AttributSelect;
 
 $joueur = new EntiteSelect('PJ', 'joueur', 'NOM', null, 'onChange="javascript:calculateJetCarac();"');
-$attribut = new AttributSelect('PJ', 'attribut', null, null, null, 1, 'onChange="javascript:calculateJetCarac();"', array('CARACTERISTIQUES'));
+$attribut = new AttributSelect('PJ', 'attribut', null, null, null, 1, 'onChange="javascript:calculateJetCarac();"', array('CARACTERISTIQUES', 'CARACSEC'));
 
 ?>
 

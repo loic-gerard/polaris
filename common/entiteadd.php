@@ -11,7 +11,11 @@ if (isset($_GET['addEntite'])) {
     
     $toEdit = Json::decode($_GET['toEdit']);
     $toSet = Json::decode($_GET['toSet']);
-    $parent = $_GET['parent'];
+    if(isset($_GET['parent'])){
+	$parent = $_GET['parent'];
+    }else{
+	$parent = null;
+    }
     $entiteType = $_GET['addEntite'];
    
     ?>

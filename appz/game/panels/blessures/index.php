@@ -18,7 +18,7 @@ $view = new View(
         'pk_entite', 
         'ASC', 
         null, 
-        array('HEMMORRAGIE_TYPE'),
+        array('HEMORRAGIE_TYPE'),
         $selectedPlayer);
 $wt = new ViewTable(
         $view, 

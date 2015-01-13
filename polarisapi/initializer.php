@@ -23,6 +23,9 @@ class Initializer{
         foreach($json as $entiteTypeCode => $entiteTypeValue){
             self::treatEntiteType($entiteTypeCode, $entiteTypeValue);
         }
+	
+	//Traitement de l'encylopédie
+	self::readEncyclopedia();
         
         //Traitement des paliers
         self::importPaliers();
@@ -39,6 +42,16 @@ class Initializer{
         
         self::log('Lecture du fichier de configuration');
         return $json;
+    }
+    
+    private static function readEncyclopedia(){
+	self::log('Chargement de l\'encyclopédie');
+	$f = new File(ROOT.'config/encyclopedia.json');
+        $json = Json::decode($f->getContent());
+	
+	foreach($json as $entiteTypeCode => $entiteTypeValue){
+            self::treatEntiteType($entiteTypeCode, $entiteTypeValue);
+        }
     }
     
     private static function emptyDatabase(){

@@ -6,8 +6,8 @@ use \PolarisCore;
 
 <div class="categorie">Combat</div>
 <div class="boutons">
-//<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'combat_addennemi/actpane.php'), true, array('panel')); ?>">Ajouter un ennemi</a>
-//<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'combat_distance/actpane.php'), true, array('panel')); ?>">Attaque à distance</a>
+<a href="<?php echo PolarisCore::getUrl(array('custompopup' => 'appz/gestion/panels/combat_addennemi/actpane.php'), true, array()); ?>">Ajouter un ennemi</a>
+<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'combat_distance/actpane.php', 'windowType' => 'jetWindow'), true, array('panel')); ?>">Attaque à distance</a>
 //<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'combat_corpsacorps/actpane.php'), true, array('panel')); ?>">Attaque au corps à corps</a>
 //<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'combat_parer/actpane.php'), true, array('panel')); ?>">Parer</a>
 //<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'combat_equiver/actpane.php'), true, array('panel')); ?>">Equiver</a>
@@ -19,7 +19,10 @@ use \PolarisCore;
 
 <div class="categorie">Santé</div>
 <div class="boutons">
-<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'blessure/actpane.php'), true, array('panel')); ?>">Blessure</a>
+<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'blessure/actpane.php', 'windowType' => 'halfJetWindow'), true, array('panel')); ?>">Infliger une blessure</a>
+<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'addhemorragie/actpane.php'), true, array('panel')); ?>">Ajouter une hémorragie</a>
+<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'inconscientoui/actpane.php'), true, array('panel')); ?>">Tomber inconscient</a>
+<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'inconscientnon/actpane.php'), true, array('panel')); ?>">Sortir de l'inconscience</a>
 </div>
 
 <div class="categorie">Jets</div>

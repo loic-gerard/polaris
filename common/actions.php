@@ -16,6 +16,20 @@ foreach ($folder AS $f){
     }
 }
 
+//Equiper
+if(isset($_GET['equiper'])){
+    $attribut = Attribut::getAttribut($_GET['equiper'], $_GET['equiperAttribut']);
+    $attribut->setValue('1');
+    header('Location: '.PolarisCore::getUrl(array(), true, array('equiper', 'equiperAttribut')));
+}
+
+//DesEquiper
+if(isset($_GET['desequiper'])){
+    $attribut = Attribut::getAttribut($_GET['desequiper'], $_GET['equiperAttribut']);
+    $attribut->setValue('0');
+    header('Location: '.PolarisCore::getUrl(array(), true, array('desequiper', 'equiperAttribut')));
+}
+
 if (isset($_GET['modAttr']) && isset($_GET['modId']) && isset($_POST['attributModifierFormValid'])) {
     $attribut = Attribut::getAttribut($_GET['modId'], $_GET['modAttr']);
     $attribut->saveDataFromForm();
@@ -53,7 +67,11 @@ if(isset($_GET['entiteDelete'])){
 }
 
 if(isset($_GET['addChoiceId'])){
-    Entite::copyTo($_GET['addChoiceFrom'], $_GET['addChoiceTo'], $_GET['addChoiceId'], $_GET['addChoiceParent']);
+    $parent = null;
+    if(isset($_GET['addChoiceParent'])){
+	$parent = $_GET['addChoiceParent'];
+    }
+    Entite::copyTo($_GET['addChoiceFrom'], $_GET['addChoiceTo'], $_GET['addChoiceId'], $parent);
     header('Location: '.PolarisCore::getUrl(array(), true, array('addChoiceFrom', 'addChoiceTo', 'addChoiceId', 'addChoiceParent')));
     
 }

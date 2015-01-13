@@ -4,6 +4,7 @@ use jin\JinCore;
 use jin\log\Debug;
 use jin\lang\ArrayTools;
 use jin\dataformat\Json;
+use jin\lang\StringTools;
 
 class PolarisCore{
     public static function autoload($className) {
@@ -17,6 +18,10 @@ class PolarisCore{
     
     public static function getUrl($toParse = array(), $keepExistant = true, $except = array()){
         $baseUrl = JinCore::getContainerUrl();
+	if(!StringTools::contains($baseUrl, '/polaris/')){
+	    $baseUrl = StringTools::replaceFirst($baseUrl, 'polaris/', '/polaris/');
+	}
+	
         $args = array();
         if($keepExistant){
             $args = $_GET;
