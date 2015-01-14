@@ -30,6 +30,10 @@ class Paliers{
             return $datas;
         }
         
+	if($porcent > 99){
+	    $porcent = 99;
+	}
+	
         //On récupère le palier
         $q = new Query();
         $q->setRequest('SELECT palier FROM palier WHERE marge=1 '
@@ -37,9 +41,10 @@ class Paliers{
                 . 'AND max >= '.$q->argument($porcent, Query::$SQL_NUMERIC));
         $q->execute();
         $qr = $q->getQueryResults();
+	
         
         $palier = $qr->getValueAt('palier');
-        
+	
         $q = new Query();
         $q->setRequest('SELECT * FROM palier WHERE palier='.$q->argument($palier, Query::$SQL_NUMERIC).' '
                 . 'ORDER BY marge ASC');

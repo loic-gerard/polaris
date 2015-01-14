@@ -42,12 +42,18 @@ function calculateJetRetour(text, xml, params){
 }
 
 function calculateJetCarac(){
+    var type = 'pnj';
+    if(document.getElementById('type_pj').checked){
+	type = 'pj';
+    }
     var joueur = document.getElementById('joueur').value;
-    var attribut = document.getElementById('attribut').value;
+    var pnj = document.getElementById('pnj').value;
+    var attributpj = document.getElementById('attributpj').value;
+    var attributpnj = document.getElementById('attributpnj').value;
     var intensite = document.getElementById('intensite').value;
     var margeadv = document.getElementById('margeadv').value;
     
-    sendAjax("ajax.php",calculateJetCaracRetour,'post','file=appz/gestion/panels/jetcarac/ajax_calcul.php&joueur='+joueur+'&attribut='+attribut+'&intensite='+intensite+'&margeadv='+margeadv,[]);
+    sendAjax("ajax.php",calculateJetCaracRetour,'post','file=appz/gestion/panels/jetcarac/ajax_calcul.php&joueur='+joueur+'&attributpj='+attributpj+'&intensite='+intensite+'&margeadv='+margeadv+'&attributpnj='+attributpnj+'&pnj='+pnj+'&type='+type,[]);
 }
 
 function calculateJetCaracRetour(text, xml, params){
@@ -56,14 +62,19 @@ function calculateJetCaracRetour(text, xml, params){
 
 
 function calculateJetPerceptionEcouter(){
+    var type = 'pnj';
+    if(document.getElementById('target_pj').checked){
+	type = 'pj';
+    }
     var joueur = document.getElementById('joueur').value;
+    var pnj = document.getElementById('pnj').value;
     var intensite = document.getElementById('difficulte').value;
     var diffBase = document.querySelector('input[name="difficultebase"]:checked').value;
     var mod1 = document.querySelector('input[name="mod_bruit"]:checked').value;
     var mod2 = document.querySelector('input[name="mod_bruitdefond"]:checked').value;
     var mod3 = document.querySelector('input[name="mod_terrain"]:checked').value;
     
-    sendAjax("ajax.php",calculateJetPerceptionEcouterRetour,'post','file=appz/gestion/panels/perception_ecouter/ajax_calcul.php&joueur='+joueur+'&intensite='+intensite+'&diffBase='+diffBase+'&mod1='+mod1+'&mod2='+mod2+'&mod3='+mod3,[]);
+    sendAjax("ajax.php",calculateJetPerceptionEcouterRetour,'post','file=appz/gestion/panels/perception_ecouter/ajax_calcul.php&joueur='+joueur+'&intensite='+intensite+'&diffBase='+diffBase+'&mod1='+mod1+'&mod2='+mod2+'&mod3='+mod3+'&type='+type+'&pnj='+pnj,[]);
 }
 
 function calculateJetPerceptionEcouterRetour(text, xml, params){
@@ -71,12 +82,17 @@ function calculateJetPerceptionEcouterRetour(text, xml, params){
 }
 
 function calculateJetPerceptionSentir(){
+    var type = 'pnj';
+    if(document.getElementById('target_pj').checked){
+	type = 'pj';
+    }
     var joueur = document.getElementById('joueur').value;
+    var pnj = document.getElementById('pnj').value;
     var intensite = document.getElementById('difficulte').value;
     var diffBase = document.querySelector('input[name="difficultebase"]:checked').value;
     
     
-    sendAjax("ajax.php",calculateJetPerceptionSentirRetour,'post','file=appz/gestion/panels/perception_sentir/ajax_calcul.php&joueur='+joueur+'&intensite='+intensite+'&diffBase='+diffBase,[]);
+    sendAjax("ajax.php",calculateJetPerceptionSentirRetour,'post','file=appz/gestion/panels/perception_sentir/ajax_calcul.php&joueur='+joueur+'&intensite='+intensite+'&diffBase='+diffBase+'&type='+type+'&pnj='+pnj,[]);
 }
 
 function calculateJetPerceptionSentirRetour(text, xml, params){
@@ -84,14 +100,19 @@ function calculateJetPerceptionSentirRetour(text, xml, params){
 }
 
 function calculateJetPerceptionVoir(){
+    var type = 'pnj';
+    if(document.getElementById('target_pj').checked){
+	type = 'pj';
+    }
     var joueur = document.getElementById('joueur').value;
+    var pnj = document.getElementById('pnj').value;
     var intensite = document.getElementById('difficulte').value;
     var diffBase = document.querySelector('input[name="difficultebase"]:checked').value;
     
     var mod1 = document.querySelector('input[name="mod1"]:checked').value;
     var mod2 = document.querySelector('input[name="mod2"]:checked').value;
     
-    sendAjax("ajax.php",calculateJetPerceptionVoirRetour,'post','file=appz/gestion/panels/perception_voir/ajax_calcul.php&joueur='+joueur+'&intensite='+intensite+'&diffBase='+diffBase+'&mod1='+mod1+'&mod2='+mod2,[]);
+    sendAjax("ajax.php",calculateJetPerceptionVoirRetour,'post','file=appz/gestion/panels/perception_voir/ajax_calcul.php&joueur='+joueur+'&intensite='+intensite+'&diffBase='+diffBase+'&mod1='+mod1+'&mod2='+mod2+'&type='+type+'&pnj='+pnj,[]);
 }
 
 function calculateJetPerceptionVoirRetour(text, xml, params){

@@ -78,14 +78,19 @@ class Categorie {
     public function build() {
         $speStyle = '';
         
+	$code = $this->getCode();
+	if($code == ''){
+	    $code = $this->designation;
+	}
+	
         $output = '';
-        $output .= '<div class="categorie">';
+        $output .= '<div class="categorie" id="'.$code.'">';
         $output .= '<div class="nom">' . $this->getDesignation() . '</div>';
         $output .= '<div class="content">';
         $output .= $this->getHeaderContent();
         $output .= '<div class="insideContent">%content%</div>';
         $output .= '</div>';
-
+	$output .= '</div>';
 
 
         return $output;

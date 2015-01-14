@@ -5,7 +5,12 @@ use polarisapi\data\Paliers;
 use polarisapi\data\JetCarac;
 
 //Calcul du pourcentage
-$data = JetCarac::getSuccessPorcent(null, $_POST['attribut'], $_POST['joueur'], $_POST['intensite'], $_POST['margeadv']);
+if($_POST['type'] == 'pj'){
+    $data = JetCarac::getSuccessPorcent(null, $_POST['attributpj'], $_POST['joueur'], $_POST['intensite'], $_POST['margeadv']);
+}else{
+    $data = JetCarac::getSuccessPorcent(null, $_POST['attributpnj'], $_POST['pnj'], $_POST['intensite'], $_POST['margeadv']);
+}
+
 
 
 echo '<div class="smallCol">';

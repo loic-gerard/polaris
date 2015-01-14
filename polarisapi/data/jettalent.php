@@ -10,7 +10,7 @@ class JetTalent{
         
         $retour = array();
         $basePorcent = $attribut->getFinalValue();
-        $niveau = $attribut->getValue('niveau');
+        $niveau = $attribut->getNiveau();
         
         if($difficulte == 0){
             $bonus = 0;

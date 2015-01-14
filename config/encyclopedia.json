@@ -194,10 +194,109 @@
             {
                 "REF_ARMECORPSACORPS_DESIGNATION" : "Dague",
                 "REF_ARMECORPSACORPS_TYPE" : "Arme de contact",
-                "REF_ARMECORPSACORPS_TALENT" : "TALENT_ARMES_1MAIN",
+                "REF_ARMECORPSACORPS_TALENT" : "TALENT_ARMES_CONTACT",
                 "REF_ARMECORPSACORPS_DEGATSPHYS" : "3",
                 "REF_ARMECORPSACORPS_DEGATSCHOC" : "0",
                 "REF_ARMECORPSACORPS_RESISTANCE" : "12",
+                "REF_ARMECORPSACORPS_SPECIAL" : ""
+            },
+	    {
+                "REF_ARMECORPSACORPS_DESIGNATION" : "Petite lame",
+                "REF_ARMECORPSACORPS_TYPE" : "Arme de contact",
+                "REF_ARMECORPSACORPS_TALENT" : "TALENT_ARMES_CONTACT",
+                "REF_ARMECORPSACORPS_DEGATSPHYS" : "2",
+                "REF_ARMECORPSACORPS_DEGATSCHOC" : "0",
+                "REF_ARMECORPSACORPS_RESISTANCE" : "8",
+                "REF_ARMECORPSACORPS_SPECIAL" : ""
+            },
+	    {
+                "REF_ARMECORPSACORPS_DESIGNATION" : "Dague thermique",
+                "REF_ARMECORPSACORPS_TYPE" : "Arme de contact",
+                "REF_ARMECORPSACORPS_TALENT" : "TALENT_ARMES_CONTACT",
+                "REF_ARMECORPSACORPS_DEGATSPHYS" : "6",
+                "REF_ARMECORPSACORPS_DEGATSCHOC" : "0",
+                "REF_ARMECORPSACORPS_RESISTANCE" : "16",
+                "REF_ARMECORPSACORPS_SPECIAL" : "Nécessite des recharges. N'endommage pas les armures."
+            },
+	    {
+                "REF_ARMECORPSACORPS_DESIGNATION" : "Dague moléculaire",
+                "REF_ARMECORPSACORPS_TYPE" : "Arme de contact",
+                "REF_ARMECORPSACORPS_TALENT" : "TALENT_ARMES_CONTACT",
+                "REF_ARMECORPSACORPS_DEGATSPHYS" : "4",
+                "REF_ARMECORPSACORPS_DEGATSCHOC" : "0",
+                "REF_ARMECORPSACORPS_RESISTANCE" : "12",
+                "REF_ARMECORPSACORPS_SPECIAL" : "Nécessite des recharges. N'endommage pas les armures."
+            },
+	    {
+                "REF_ARMECORPSACORPS_DESIGNATION" : "Dague neurale",
+                "REF_ARMECORPSACORPS_TYPE" : "Arme de contact",
+                "REF_ARMECORPSACORPS_TALENT" : "TALENT_ARMES_CONTACT",
+                "REF_ARMECORPSACORPS_DEGATSPHYS" : "10",
+                "REF_ARMECORPSACORPS_DEGATSCHOC" : "10",
+                "REF_ARMECORPSACORPS_RESISTANCE" : "12",
+                "REF_ARMECORPSACORPS_SPECIAL" : "Necessite des recharges. N'endommage pas les armures."
+            },
+	    {
+                "REF_ARMECORPSACORPS_DESIGNATION" : "Masse",
+                "REF_ARMECORPSACORPS_TYPE" : "Arme blanche à une main",
+                "REF_ARMECORPSACORPS_TALENT" : "TALENT_ARMES_1MAIN",
+                "REF_ARMECORPSACORPS_DEGATSPHYS" : "3",
+                "REF_ARMECORPSACORPS_DEGATSCHOC" : "8",
+                "REF_ARMECORPSACORPS_RESISTANCE" : "15",
+                "REF_ARMECORPSACORPS_SPECIAL" : ""
+            },
+	    {
+                "REF_ARMECORPSACORPS_DESIGNATION" : "Matraque",
+                "REF_ARMECORPSACORPS_TYPE" : "Arme blanche à une main",
+                "REF_ARMECORPSACORPS_TALENT" : "TALENT_ARMES_1MAIN",
+                "REF_ARMECORPSACORPS_DEGATSPHYS" : "2",
+                "REF_ARMECORPSACORPS_DEGATSCHOC" : "8",
+                "REF_ARMECORPSACORPS_RESISTANCE" : "20",
+                "REF_ARMECORPSACORPS_SPECIAL" : ""
+            },
+	    {
+                "REF_ARMECORPSACORPS_DESIGNATION" : "Canne",
+                "REF_ARMECORPSACORPS_TYPE" : "Arme blanche à une main",
+                "REF_ARMECORPSACORPS_TALENT" : "TALENT_ARMES_1MAIN",
+                "REF_ARMECORPSACORPS_DEGATSPHYS" : "2",
+                "REF_ARMECORPSACORPS_DEGATSCHOC" : "6",
+                "REF_ARMECORPSACORPS_RESISTANCE" : "15",
+                "REF_ARMECORPSACORPS_SPECIAL" : ""
+            },
+	    {
+                "REF_ARMECORPSACORPS_DESIGNATION" : "Batte",
+                "REF_ARMECORPSACORPS_TYPE" : "Arme blanche à une main",
+                "REF_ARMECORPSACORPS_TALENT" : "TALENT_ARMES_1MAIN",
+                "REF_ARMECORPSACORPS_DEGATSPHYS" : "2",
+                "REF_ARMECORPSACORPS_DEGATSCHOC" : "6",
+                "REF_ARMECORPSACORPS_RESISTANCE" : "15",
+                "REF_ARMECORPSACORPS_SPECIAL" : ""
+            },
+	    {
+                "REF_ARMECORPSACORPS_DESIGNATION" : "Epée / sabre",
+                "REF_ARMECORPSACORPS_TYPE" : "Arme blanche à une main",
+                "REF_ARMECORPSACORPS_TALENT" : "TALENT_ARMES_1MAIN",
+                "REF_ARMECORPSACORPS_DEGATSPHYS" : "4",
+                "REF_ARMECORPSACORPS_DEGATSCHOC" : "0",
+                "REF_ARMECORPSACORPS_RESISTANCE" : "25",
+                "REF_ARMECORPSACORPS_SPECIAL" : ""
+            },
+	    {
+                "REF_ARMECORPSACORPS_DESIGNATION" : "Matrque-choc Mao",
+                "REF_ARMECORPSACORPS_TYPE" : "Arme blanche à une main",
+                "REF_ARMECORPSACORPS_TALENT" : "TALENT_ARMES_1MAIN",
+                "REF_ARMECORPSACORPS_DEGATSPHYS" : "1",
+                "REF_ARMECORPSACORPS_DEGATSCHOC" : "10",
+                "REF_ARMECORPSACORPS_RESISTANCE" : "20",
+                "REF_ARMECORPSACORPS_SPECIAL" : ""
+            },
+	    {
+                "REF_ARMECORPSACORPS_DESIGNATION" : "Hache",
+                "REF_ARMECORPSACORPS_TYPE" : "Arme blanche à une main",
+                "REF_ARMECORPSACORPS_TALENT" : "TALENT_ARMES_1MAIN",
+                "REF_ARMECORPSACORPS_DEGATSPHYS" : "5",
+                "REF_ARMECORPSACORPS_DEGATSCHOC" : "0",
+                "REF_ARMECORPSACORPS_RESISTANCE" : "20",
                 "REF_ARMECORPSACORPS_SPECIAL" : ""
             }
         ]

@@ -78,6 +78,10 @@ class Pnj extends GlobalPlayer{
         return true;
     }
     
+    public function isArmeCorpsACorps(){
+        return true;
+    }
+    
     public function getArmeDistanceMunitions(){
         return 100;
     }

@@ -26,6 +26,30 @@ class Player extends GlobalPlayer{
 
     }
     
+    public function addFatigue(){
+	$a = Attribut::getAttribut($this->id, 'FATIGUE');
+	$av = $a->getFinalValue();
+
+	
+	$max = $a->evaluateExpression($a->getData('max'));
+	if($av < $max){
+	    $av += 1;
+	}
+	
+	$a->setValue($av);
+    }
+    
+    public function removeFatigue(){
+	$a = Attribut::getAttribut($this->id, 'FATIGUE');
+	$av = $a->getFinalValue();
+	
+	if($av > 0){
+	    $av -= 1;
+	}
+	
+	$a->setValue($av);
+    }
+    
     public function getType(){
 	return 'PJ';
     }
@@ -215,7 +239,7 @@ class Player extends GlobalPlayer{
     
     public function getNiveauEsquive(){
         $a = Attribut::getAttribut($this->id, 'TALENT_ESQUIVE');
-	return $a->getValue('niveau');
+	return $a->getNiveau();
     }
     
     public function resolveMunitionsArmeDistance($nb){
@@ -257,7 +281,11 @@ class Player extends GlobalPlayer{
     }
     
     public function resolveDegatsOnProtection($nb){
-        $nbf = NumberTools::floor($nb/$this->getProtection());
+	$p = $this->getProtection();
+	if($p == 0){
+	    return 0;
+	}
+        $nbf = NumberTools::floor($nb/$p);
         
         foreach($this->protections AS $p){
             $a = Attribut::getAttribut($p['id'], 'PROTECTION_RESISTANCE');

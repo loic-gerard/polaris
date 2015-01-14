@@ -32,36 +32,42 @@ class GlobalPlayer {
             $seuil_inconscience = Attribut::getAttribut($this->id, $this->type . 'SEUIL_INCONSCIENCE');
             $nbBlessInsconscience = NumberTools::floor($nbChoc / $seuil_inconscience->getFinalValue());
 
+	    $blesse = false;
             if ($nbBlessInsconscience > 0) {
                 for ($i = 0; $i < $nbBlessInsconscience; $i++) {
                     $r = $this->addUnitBlessure(0, true);
                     $retour['blessures'] = ArrayTools::merge($retour['blessures'], $r['blessures']);
                     $retour['jets'] = ArrayTools::merge($retour['jets'], $r['jets']);
+		    if($r['choc']){
+			$blesse = true;
+		    }
                 }
             }
 
-            //Test si jet nécessaire
-            $sia = Attribut::getAttribut($this->id, $this->type . 'SEUIL_INCONSCIENCE');
-            $si = $sia->getFinalValue();
+	    if($blesse){
+		//Test si jet nécessaire
+		$sia = Attribut::getAttribut($this->id, $this->type . 'SEUIL_INCONSCIENCE');
+		$si = $sia->getFinalValue();
 
-            $va = Attribut::getAttribut($this->id, $this->type . 'VOL');
-            $v = $va->getFinalValue();
+		$va = Attribut::getAttribut($this->id, $this->type . 'VOL');
+		$v = $va->getFinalValue();
 
-            if ($si >= 4 && $si <= 5) {
-                $retour['jets'][] = 'Jet volonté 5x (' . ($v * 5) . '%) ou inconscience';
-            }
-            if ($si >= 6 && $si <= 7) {
-                $retour['jets'][] = 'Jet volonté 4x (' . ($v * 4) . '%) ou inconscience';
-            }
-            if ($si >= 8 && $si <= 9) {
-                $retour['jets'][] = 'Jet volonté 3x (' . ($v * 3) . '%) ou inconscience';
-            }
-            if ($si >= 10 && $si <= 11) {
-                $retour['jets'][] = 'Jet volonté 2x (' . ($v * 2) . '%) ou inconscience';
-            }
-            if ($si >= 12) {
-                $retour['jets'][] = 'Jet volonté 1x (' . ($v * 1) . '%) ou inconscience';
-            }
+		if ($si >= 4 && $si <= 5) {
+		    $retour['jets'][] = 'Jet volonté 5x (' . ($v * 5) . '%) ou inconscience';
+		}
+		if ($si >= 6 && $si <= 7) {
+		    $retour['jets'][] = 'Jet volonté 4x (' . ($v * 4) . '%) ou inconscience';
+		}
+		if ($si >= 8 && $si <= 9) {
+		    $retour['jets'][] = 'Jet volonté 3x (' . ($v * 3) . '%) ou inconscience';
+		}
+		if ($si >= 10 && $si <= 11) {
+		    $retour['jets'][] = 'Jet volonté 2x (' . ($v * 2) . '%) ou inconscience';
+		}
+		if ($si >= 12) {
+		    $retour['jets'][] = 'Jet volonté 1x (' . ($v * 1) . '%) ou inconscience';
+		}
+	    }
         }
 
         return $retour;
@@ -70,6 +76,7 @@ class GlobalPlayer {
     private function addUnitBlessure($nb, $inconscience = false) {
         $retour['blessures'] = array();
         $retour['jets'] = array();
+	$retour['choc'] = false;
 
         //Récupération des seuils
         $seuils = array();
@@ -127,6 +134,7 @@ class GlobalPlayer {
                         }
                     } else {
                         $retour['blessures'][] = $seuils[$i]['code'] . ' (Choc)';
+			$retour['choc'] = true;
                     }
 
                     $found = true;

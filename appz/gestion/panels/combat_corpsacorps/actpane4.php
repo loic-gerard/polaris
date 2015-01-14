@@ -23,15 +23,9 @@ if($_GET['typeDefenseur'] == 'PJ'){
 $margeReussite = $_GET['margeReussite'];
 
 $modificateurs = ListTools::toArray(ListTools::append($_GET['modificateurs1'], $_GET['modificateurs2']));
-$talentName = $attaquant->getTalentNameArmeDistance();
-$talentValue = $attaquant->getTalentValueArmeDistance();
+$talentName = $attaquant->getTalentNameArmeCorpsACorps();
+$talentValue = $attaquant->getTalentValueArmeCorpsACorps();
 
-$cadence = $attaquant->getArmeDistanceCadence();
-$maxMun = $attaquant->getArmeDistanceMunitions();
-if($cadence > $maxMun){
-    $cadence = $maxMun;
-}
-$attaquant->resolveMunitionsArmeDistance($cadence);
 
 $onlyClose = true;
 ?>
@@ -91,29 +85,14 @@ $onlyClose = true;
     
     <table>
         <?php
-        $degatsPhys = $attaquant->getArmeDistanceDegatsPhysiques();
+        $degatsPhys = $attaquant->getArmeCorpsACorpsDegatsPhysiques();
         ?>
         <tr>
-            <td>Base (<?php echo $attaquant->getArmeDistancename(); ?>)</td>
+            <td>Base (<?php echo $attaquant->getArmeCorpsACorpsName(); ?>)</td>
             <td class="rightCell"><?php echo $degatsPhys; ?></td>
         </tr>
         
-        <?php 
-        if($_GET['portee'] == 0){ 
-            
-        ?>
-        <tr>
-            <td>Bonus bout portant</td>
-            <td class="rightCell">+<?php echo $degatsPhys; ?></td>
-        </tr>
-        
-        <?php 
-        
-        $degatsPhys += $degatsPhys;
-        } 
-        ?>
-        
-        
+ 
         <?php if($degatsPhys > 0) { ?>
         
         <?php 
@@ -126,7 +105,7 @@ $onlyClose = true;
         </tr> 
         <?php
         if($_GET['parer'] == 1){
-            $parer = (int)$defenseur->getResArmeDistance();
+            $parer = (int)$defenseur->getResArmeCorpsACorps();
             $degatsPhys - $parer;
             echo '<tr>';
                 echo '<td>Parer (Resistance de l\'arme)</td>';
@@ -171,27 +150,12 @@ $onlyClose = true;
     
     <table>
         <?php
-        $degatsChoc = $attaquant->getArmeDistanceDegatsChoc();
+        $degatsChoc = $attaquant->getArmeCorpsACorpsDegatsChoc();
         ?>
         <tr>
-            <td>Base (<?php echo $attaquant->getArmeDistancename(); ?>)</td>
+            <td>Base (<?php echo $attaquant->getArmeCorpsACorpsName(); ?>)</td>
             <td class="rightCell"><?php echo $degatsChoc; ?></td>
         </tr>
-        
-        <?php 
-        if($_GET['portee'] == 0){ 
-            
-        ?>
-        <tr>
-            <td>Bonus bout portant</td>
-            <td class="rightCell">+<?php echo $degatsChoc; ?></td>
-        </tr>
-        
-        <?php 
-        
-        $degatsChoc += $degatsChoc;
-        } 
-        ?>
         
         
         <?php if($degatsChoc > 0) { ?>
@@ -205,7 +169,7 @@ $onlyClose = true;
         </tr> 
         <?php
         if($_GET['parer'] == 1){
-            $parer = (int)$defenseur->getResArmeDistance();
+            $parer = (int)$defenseur->getResArmeCorpsACorps();
             $degatsPhys - $parer;
             echo '<tr>';
                 echo '<td>Parer (Resistance de l\'arme)</td>';
@@ -245,20 +209,6 @@ $onlyClose = true;
     
 </div>
 
-<div class="smallCol" style="width: 200px;">
-    <div class="colTitle">
-	Cadence
-    </div>
-    
-  
-    <table>
-        <tr>
-            <td>Tirs</td>
-            <td class="rightCell"><?php echo $cadence; ?></td>
-        </tr>
-    </table>
-    
-</div>
 
 <div class="smallCol" style="width: 200px;">
     <div class="colTitle">
@@ -271,14 +221,14 @@ $onlyClose = true;
     $jets = array();
     if($degatsChoc > 0 || $degatsPhys > 0){
 
-        for($i = 0; $i < $cadence; $i++){
-            $defenseur->resolveDegatsOnProtection($degatsChoc);
-            $defenseur->resolveDegatsOnProtection($degatsPhys);
+        
+	$defenseur->resolveDegatsOnProtection($degatsChoc);
+	$defenseur->resolveDegatsOnProtection($degatsPhys);
             
-            $r = $defenseur->addBlessure($degatsPhys, $degatsChoc);
-            $blessures = ArrayTools::merge($blessures, $r['blessures']);
-            $jets = ArrayTools::merge($jets, $r['jets']);
-        }
+	$r = $defenseur->addBlessure($degatsPhys, $degatsChoc);
+	$blessures = ArrayTools::merge($blessures, $r['blessures']);
+	$jets = ArrayTools::merge($jets, $r['jets']);
+        
         
     }
     

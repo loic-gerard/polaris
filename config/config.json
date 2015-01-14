@@ -48,15 +48,18 @@
 	"attributs": {
 	    "PNJ_NOM": {
 		"designation": "Nom",
-		"type": "Simple"
+		"type": "Simple",
+		"jet" : 0
 	    },
 	    "PNJ_NIV": {
 		"designation": "Niveau de difficulté",
-		"type": "Simple"
+		"type": "Simple",
+		"jet" : 0
 	    },
 	    "PNJ_DESC": {
 		"designation": "Description",
-		"type": "Simple"
+		"type": "Simple",
+		"jet" : 0
 	    },
 	    "PNJ_AGI": {
 		"designation": "AGI",
@@ -100,75 +103,93 @@
 	    },
 	    "PNJ_REACTION": {
 		"designation": "Réaction",
-		"type": "Simple"
+		"type": "Simple",
+		"jet" : 0
 	    },
 	    "PNJ_PERCEPTION": {
 		"designation": "Perception",
-		"type": "Simple"
+		"type": "Simple",
+		"jet" : 0
 	    },
 	    "PNJ_SEUIL_INCONSCIENCE": {
 		"designation": "Seuil d'inconscience",
-		"type": "Simple"
+		"type": "Simple",
+		"jet" : 0
 	    },
 	    "PNJ_SEUIL_LEGERE": {
 		"designation": "Seuil blessure légère",
-		"type": "Simple"
+		"type": "Simple",
+		"jet" : 0
 	    },
 	    "PNJ_SEUIL_GRAVE": {
 		"designation": "Seuil blessure légère",
-		"type": "Simple"
+		"type": "Simple",
+		"jet" : 0
 	    },
 	    "PNJ_SEUIL_CRITIQUE": {
 		"designation": "Seuil blessure critique",
-		"type": "Simple"
+		"type": "Simple",
+		"jet" : 0
 	    },
 	    "PNJ_SEUIL_FATAL": {
 		"designation": "Seuil blessure fatale",
-		"type": "Simple"
+		"type": "Simple",
+		"jet" : 0
 	    },
 	    "PNJ_SEUIL_MORT": {
 		"designation": "Seuil mort",
-		"type": "Simple"
+		"type": "Simple",
+		"jet" : 0
 	    },
 	    "PNJ_ATTAQUE": {
 		"designation": "Palier attaque",
-		"type": "Simple"
+		"type": "Simple",
+		"jet" : 0
 	    },
 	    "PNJ_ESQUIVE": {
 		"designation": "Palier esquive",
-		"type": "Simple"
+		"type": "Simple",
+		"jet" : 0
 	    },
 	    "PNJ_PARADE": {
 		"designation": "Palier parade",
-		"type": "Simple"
+		"type": "Simple",
+		"jet" : 0
 	    },
 	    "PNJ_FATIGUE": {
 		"designation": "Fatigue",
-		"type": "Simple"
+		"type": "Simple",
+		"jet" : 0
 	    },
 	    "PNJ_DEGATS_PHYS": {
 		"designation": "Dégats physiques",
-		"type": "Simple"
+		"type": "Simple",
+		"jet" : 0
 	    },
             "PNJ_DEGATS_CHOC": {
 		"designation": "Dégats de choc",
-		"type": "Simple"
+		"type": "Simple",
+		"jet" : 0
 	    },
 	    "PNJ_NBATTAQUES": {
 		"designation": "Nombre d'attaques",
-		"type": "Simple"
+		"type": "Simple",
+		"jet" : 0
 	    },
 	    "PNJ_ARMURE": {
 		"designation": "Armure",
-		"type": "Simple"
+		"type": "Simple",
+		"jet" : 0
 	    },
 	    "PNJ_BLINDAGE": {
 		"designation": "Blindage",
-		"type": "Simple"
+		"type": "Simple",
+		"jet" : 0
 	    },
 	    "PNJ_SPE": {
 		"designation": "Spécifiquee",
-		"type": "Simple"
+		"type": "Simple",
+		"jet" : 0
 	    },
 	    "PNJ_BLESSURE_INCONSCIENCE": {
 		"designation": "Inconscience",
@@ -233,12 +254,14 @@
 	    "PNJ_INCONSCIENT" : {
 		"designation" : "Inconscient",
 		"type" : "Simple",
-		"defaultValue" : 0
+		"defaultValue" : 0,
+		"jet" : 0
 	    },
 	    "PNJ_RES_ARME" : {
 		"designation" : "Resistance de l'arme utilisée",
 		"type" : "Simple",
-		"defaultValue" : 0
+		"defaultValue" : 0,
+		"jet" : 0
 	    }
 	}
     },
@@ -786,7 +809,239 @@
 		"MODIFICATEUR_CATEGORIE_ID": "",
 		"MODIFICATEUR_LABEL": "Couverture 90%",
 		"MODIFICATEUR_VALUE": "-80"
+	    },
+	    {
+		"MODIFICATEUR_TYPE": "DETECTION",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Cible immobile",
+		"MODIFICATEUR_VALUE": "0/-60"
+	    },
+	    {
+		"MODIFICATEUR_TYPE": "DETECTION",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Cible contre paroi",
+		"MODIFICATEUR_VALUE": "-60/0"
+	    },
+	    {
+		"MODIFICATEUR_TYPE": "DETECTION",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Cible enterrée",
+		"MODIFICATEUR_VALUE": "-80/-40"
+	    },
+	    {
+		"MODIFICATEUR_TYPE": "DETECTION",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Mer agitée",
+		"MODIFICATEUR_VALUE": "-10/0"
+	    },
+	    {
+		"MODIFICATEUR_TYPE": "DETECTION",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Mer forte",
+		"MODIFICATEUR_VALUE": "-30/-30"
+	    },
+	    {
+		"MODIFICATEUR_TYPE": "DETECTION",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Tempête",
+		"MODIFICATEUR_VALUE": "-50/-50"
+	    },
+	    {
+		"MODIFICATEUR_TYPE": "DETECTION",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Vit. +40 noeuds",
+		"MODIFICATEUR_VALUE": "1000/1000"
+	    },
+	    {
+		"MODIFICATEUR_TYPE": "DETECTION",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Vit. +20 noeuds",
+		"MODIFICATEUR_VALUE": "-20/-20"
+	    },
+	    {
+		"MODIFICATEUR_TYPE": "DETECTION",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Vit. 1 à 10 noeuds",
+		"MODIFICATEUR_VALUE": "10/10"
+	    },
+	    {
+		"MODIFICATEUR_TYPE": "DETECTION",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Immobile",
+		"MODIFICATEUR_VALUE": "20/20"
+	    },
+	    {
+		"MODIFICATEUR_TYPE": "DETECTION",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Cible à +20 noeuds",
+		"MODIFICATEUR_VALUE": "0/+20"
+	    },
+	    {
+		"MODIFICATEUR_TYPE": "DETECTION2",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Cible : torpille",
+		"MODIFICATEUR_VALUE": "-40/-40"
+	    },
+	    {
+		"MODIFICATEUR_TYPE": "DETECTION2",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Cible : armure",
+		"MODIFICATEUR_VALUE": "-30/-30"
+	    },
+	    {
+		"MODIFICATEUR_TYPE": "DETECTION2",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Cible : chasseur",
+		"MODIFICATEUR_VALUE": "-20/-20"
+	    },
+	    {
+		"MODIFICATEUR_TYPE": "DETECTION2",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Cible : escorteur",
+		"MODIFICATEUR_VALUE": "-10/-10"
+	    },
+	    {
+		"MODIFICATEUR_TYPE": "DETECTION2",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Cible : fregate",
+		"MODIFICATEUR_VALUE": "0/0"
+	    },
+	    {
+		"MODIFICATEUR_TYPE": "DETECTION2",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Obtacle",
+		"MODIFICATEUR_VALUE": "1000/-50"
+	    },
+	    {
+		"MODIFICATEUR_TYPE": "DETECTION2",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "La cible tire",
+		"MODIFICATEUR_VALUE": "0/20"
+	    },
+	    {
+		"MODIFICATEUR_TYPE": "DETECTION2",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Cible sonar actif",
+		"MODIFICATEUR_VALUE": "0/50"
+	    },
+	    {
+		"MODIFICATEUR_TYPE": "DETECTION2",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Cible brouillée",
+		"MODIFICATEUR_VALUE": "50/50"
+	    },
+	    {
+		"MODIFICATEUR_TYPE": "DETECTION2",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Cible à prop. à hélices",
+		"MODIFICATEUR_VALUE": "0/10"
+	    },
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    {
+		"MODIFICATEUR_TYPE": "SOLTIR",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Cible immobile",
+		"MODIFICATEUR_VALUE": "30/-30"
+	    },
+	    {
+		"MODIFICATEUR_TYPE": "SOLTIR",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Cible contre paroi",
+		"MODIFICATEUR_VALUE": "-60/0"
+	    },
+	    {
+		"MODIFICATEUR_TYPE": "SOLTIR",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Cible enterrée",
+		"MODIFICATEUR_VALUE": "-80/-40"
+	    },
+	    {
+		"MODIFICATEUR_TYPE": "SOLTIR",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Cible : torpille",
+		"MODIFICATEUR_VALUE": "-40/-40"
+	    },
+	    {
+		"MODIFICATEUR_TYPE": "SOLTIR",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Cible : armure",
+		"MODIFICATEUR_VALUE": "-30/-30"
+	    },
+	    {
+		"MODIFICATEUR_TYPE": "SOLTIR",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Cible : chasseur",
+		"MODIFICATEUR_VALUE": "-20/-20"
+	    },
+	    {
+		"MODIFICATEUR_TYPE": "SOLTIR",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Cible : escorteur",
+		"MODIFICATEUR_VALUE": "-10/-10"
+	    },
+	    {
+		"MODIFICATEUR_TYPE": "SOLTIR",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Cible : fregate",
+		"MODIFICATEUR_VALUE": "0/0"
+	    },
+	     {
+		"MODIFICATEUR_TYPE": "SOLTIR",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Cible : croiseur",
+		"MODIFICATEUR_VALUE": "20/20"
+	    },
+	     {
+		"MODIFICATEUR_TYPE": "SOLTIR",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Cible : cuirassé",
+		"MODIFICATEUR_VALUE": "40/40"
+	    },
+	     {
+		"MODIFICATEUR_TYPE": "SOLTIR",
+		"MODIFICATEUR_CATEGORIE": "",
+		"MODIFICATEUR_CATEGORIE_ID": "",
+		"MODIFICATEUR_LABEL": "Cible : cité",
+		"MODIFICATEUR_VALUE": "80/80"
 	    }
+	    
 
 	]
     },
@@ -1221,40 +1476,58 @@
 			"type": "Talent",
 			"data": {
 			    "bonus": "{ATTR:AGI}+{ATTR:FOR}",
-			    "total": "({VAL:niveau}*10)+{VAL:initial}+{DATA:bonus}+{SPE:MODIFIER}"
+			    "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+			    "niveau" : "(floor({DATA:total}/10))"
 			},
 			"defaultValue": {
-			    "niveau": 3,
 			    "initial": 7
 			},
 			"modificateur": 1
 		    },
+		    
+		    "TALENT_ARMES_1MAIN": {
+			"designation": "Arme à une main",
+			"type": "Talent",
+			"data": {
+			    "bonus": "{ATTR:AGI}+{ATTR:FOR}",
+			    "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+			    "niveau" : "(floor({DATA:total}/10))"
+			},
+			"defaultValue": {
+			    "initial": 7
+			},
+			"modificateur": 1
+		    },
+		    
 		    "TALENT_ARMES_POING": {
 			"designation": "Armes de poing",
 			"type": "Talent",
 			"data": {
-			    "bonus": "(({ATTR:AGI}+{ATTR:INS}+{ATTR:SGF})/3)",
-			    "total": "({VAL:niveau}*10)+{VAL:initial}+{DATA:bonus}+{SPE:MODIFIER}"
+			    "bonus": "{ATTR:AGI}+{ATTR:FOR}",
+			    "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+			    "niveau" : "(floor({DATA:total}/10))"
 			},
 			"defaultValue": {
-			    "niveau": 2,
-			    "initial": 8
+			    "initial": 7
 			},
 			"modificateur": 1
-		    },
+		    }
+		    ,
+		    
 		    "TALENT_ESQUIVE": {
 			"designation": "Esquive",
 			"type": "Talent",
 			"data": {
-			    "bonus": "(({ATTR:INS}+{ATTR:AGI}+{ATTR:RAP}-{ATTR:GAB})/2)",
-			    "total": "({VAL:niveau}*10)+{VAL:initial}+{DATA:bonus}+{SPE:MODIFIER}"
+			    "bonus": "{ATTR:AGI}+{ATTR:FOR}",
+			    "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+			    "niveau" : "(floor({DATA:total}/10))"
 			},
 			"defaultValue": {
-			    "niveau": 2,
-			    "initial": 8
+			    "initial": 7
 			},
 			"modificateur": 1
 		    }
+		    
 		}
 	    }
 	},
@@ -1403,6 +1676,10 @@
 	    {
 		"ACTIONMENU_NOM": "Notes",
 		"ACTIONMENU_CODE": "notes"
+	    },
+	    {
+		"ACTIONMENU_NOM": "Imprimer la fiche",
+		"ACTIONMENU_CODE": "print"
 	    }
 
 	]

@@ -36,7 +36,7 @@ class ModificateurSelect{
             }
             $output .= '<td width=20>';
 	    if($this->cumul){
-		$output .= '<input '.$this->addToHtml.' type="checkbox" '.$selected.' name="'.$this->formName.'" id="'.$l['MODIFICATEUR_CATEGORIE_ID'].'" value="'.$l['id'].'">';
+		$output .= '<input '.$this->addToHtml.' type="checkbox" '.$selected.' name="'.$this->formName.'[]" value="'.$l['id'].'">';
 	    }else{
 		$output .= '<input '.$this->addToHtml.' type="radio" '.$selected.' name="'.$l['MODIFICATEUR_CATEGORIE_ID'].'" id="'.$l['MODIFICATEUR_CATEGORIE_ID'].'" value="'.$l['id'].'">';
 	    }

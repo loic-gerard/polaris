@@ -88,7 +88,7 @@ if(!$attaquant->isArmeCorpsACorps()){
 	<div class="label">Esquiver</div>
 	<div class="form">
 	    <input type="radio" name="esquiver" value="0" checked="checked">NON&nbsp;
-	    <input type="radio" name="equiver" value="1">OUI&nbsp;
+	    <input type="radio" name="esquiver" value="1">OUI&nbsp;
 	</div>
     </div>
     

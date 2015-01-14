@@ -182,8 +182,12 @@ class Attribut {
             }
         }
 
-
-        eval("\$resultat = $expression;");
+	try{
+	    eval("\$resultat = $expression;");
+	}catch(\Exception $e){
+	    echo 'Pb avec expression : '.$expression;
+	    exit;
+	}
         return $resultat;
     }
 

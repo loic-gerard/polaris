@@ -94,7 +94,7 @@ $onlyClose = true;
 		$a_label = Attribut::getAttribut($m, 'MODIFICATEUR_LABEL');
 		$a_mod = Attribut::getAttribut($m, 'MODIFICATEUR_VALUE');
 		echo '<tr>';
-		echo '<td>'.$a_label->getFinalValue().' ('.$a_mod->getFinalValue().'%)<td>';
+		echo '<td>'.$a_label->getFinalValue().'<td><td>'.$a_mod->getFinalValue().'%</td>';
 		echo '</tr>';
                 $v = (int)$a_mod->getFinalValue();
 		$totalModif += $v;

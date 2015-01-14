@@ -13,6 +13,10 @@ class Talent extends ComplexeAttribut{
         return $this->evaluateExpression($this->getData('total'));
     }
     
+    public function getNiveau(){
+	return $this->evaluateExpression($this->getData('niveau'));
+    }
+    
     public function renderForDisplay(){
         $modUrl = '';
         if($this->isModifiable()){
@@ -21,7 +25,7 @@ class Talent extends ComplexeAttribut{
         
         $output = '<tr class="'.$this->getModClass().'" '.$modUrl.'>';
         $output .= '<td>'.$this->getAttributName().'</td>';
-        $output .= '<td>'.$this->getValue('niveau').'</td>';
+        $output .= '<td>'.$this->getNiveau().'</td>';
         $output .= '<td>'.$this->getValue('initial').'%</td>';
         $output .= '<td>'.$this->evaluateExpression($this->getData('bonus')).'%</td>';
         $output .= '<td>'.$this->getModifier().'%</td>';
@@ -33,7 +37,6 @@ class Talent extends ComplexeAttribut{
     
     public function renderForEdit(){
         $output = '';
-        $output .= $this->renderEditFormElement('niveau', $this->getValue('niveau'));
         $output .= $this->renderEditFormElement('initial', $this->getValue('initial'));
         
         return $output;

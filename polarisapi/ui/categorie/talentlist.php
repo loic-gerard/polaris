@@ -15,7 +15,7 @@ class TalentList extends Categorie{
         $inputContent .= '<tr class="header">';
         $inputContent .= '<td>Talent</td>';
         $inputContent .= '<td>Niv</td>';
-        $inputContent .= '<td>Inné</td>';
+        $inputContent .= '<td>Exp</td>';
         $inputContent .= '<td>Bonus</td>';
         $inputContent .= '<td>Mod</td>';
         $inputContent .= '<td>Total</td>';

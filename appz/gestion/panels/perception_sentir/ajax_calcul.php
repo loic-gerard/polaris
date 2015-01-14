@@ -5,7 +5,12 @@ use polarisapi\data\Paliers;
 use polarisapi\data\JetPerception;
 
 //Calcul du pourcentage
-$data = JetPerception::getSuccessPorcent('PERCEPTION', null, $_POST['joueur'], $_POST['intensite'], $_POST['diffBase'], array());
+if($_POST['type']=='pj'){
+    $data = JetPerception::getSuccessPorcent('PERCEPTION', null, $_POST['joueur'], $_POST['intensite'], $_POST['diffBase'], array());
+}else{
+    $data = JetPerception::getSuccessPorcent('PNJ_PERCEPTION', null, $_POST['pnj'], $_POST['intensite'], $_POST['diffBase'], array());
+}
+
 
 echo '<div class="smallCol">';
 echo '<table>';

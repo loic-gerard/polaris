@@ -23,7 +23,7 @@ class FreeCategorie {
 
     public function build($content) {
         $output = '';
-        $output .= '<div class="categorie">';
+        $output .= '<div class="categorie" id="'.$this->nom.'">';
         $output .= '<div class="nom">' . $this->getDesignation() . '</div>';
         $output .= '<div class="content">';
         $output .= $this->getHeaderContent();

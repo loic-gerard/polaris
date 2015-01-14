@@ -6,9 +6,25 @@ use polarisapi\data\attribut\Attribut;
 use polarisapi\objects\Player;
 use polarisapi\objects\Pnj;
 use polarisapi\data\Entite;
+use jin\lang\ArrayTools;
 
 $confirm = false;
 
+//Fatigue +
+if(isset($_POST['valid']) && $_GET['actpane'] == 'fatigueadd/actpane.php'){
+    $player = new Player($_POST['joueur']);
+    $player->addFatigue();
+    
+    header('Location: '.PolarisCore::getUrl(array(), true, array('actpane')));
+}
+
+//Fatigue -
+if(isset($_POST['valid']) && $_GET['actpane'] == 'fatigueremove/actpane.php'){
+    $player = new Player($_POST['joueur']);
+    $player->removeFatigue();
+    
+    header('Location: '.PolarisCore::getUrl(array(), true, array('actpane')));
+}
 
 //Combat à distance : Etape 1
 if(isset($_POST['valid']) && $_GET['actpane'] == 'combat_distance/actpane.php'){
@@ -28,13 +44,14 @@ if(isset($_POST['valid']) && $_GET['actpane'] == 'combat_distance/actpane.php'){
     
     $modificateurs1 = '';
     if(isset($_POST['modificateurs1'])){
-	$modificateurs1 = $_POST['modificateurs1'];
+	$modificateurs1 = ArrayTools::toList($_POST['modificateurs1']);
     }
     
     $modificateurs2 = '';
     if(isset($_POST['modificateurs2'])){
-	$modificateurs2 = $_POST['modificateurs2'];
+	$modificateurs2 = ArrayTools::toList($_POST['modificateurs2']);
     }
+    
     
     header('Location: '.PolarisCore::getUrl(array('actpane' => 'combat_distance/actpane2.php', 'idAttaquant' => $idAttaquant, 'typeAttaquant' => $typeAttaquant, 'idDefenseur' => $idDefenseur, 'typeDefenseur' => $typeDefenseur, 'modificateurs1' => $modificateurs1, 'modificateurs2' => $modificateurs2), true, array('actpane')));
 }
@@ -96,12 +113,12 @@ if(isset($_POST['valid']) && $_GET['actpane'] == 'combat_corpsacorps/actpane.php
     
     $modificateurs1 = '';
     if(isset($_POST['modificateurs1'])){
-	$modificateurs1 = $_POST['modificateurs1'];
+	$modificateurs1 = ArrayTools::toList($_POST['modificateurs1']);
     }
     
     $modificateurs2 = '';
     if(isset($_POST['modificateurs2'])){
-	$modificateurs2 = $_POST['modificateurs2'];
+	$modificateurs2 = ArrayTools::toList($_POST['modificateurs2']);
     }
     
     header('Location: '.PolarisCore::getUrl(array('actpane' => 'combat_corpsacorps/actpane2.php', 'idAttaquant' => $idAttaquant, 'typeAttaquant' => $typeAttaquant, 'idDefenseur' => $idDefenseur, 'typeDefenseur' => $typeDefenseur, 'modificateurs1' => $modificateurs1, 'modificateurs2' => $modificateurs2), true, array('actpane')));
@@ -111,29 +128,30 @@ if(isset($_POST['valid']) && $_GET['actpane'] == 'combat_corpsacorps/actpane.php
 if(isset($_POST['valid']) && $_GET['actpane'] == 'combat_corpsacorps/actpane2.php'){
     
     
-    $parer = 0;
-    $parerRes = 0;
-    $parerMarge = 0;
-    $esquiver = 0;
+    $parer = "0";
+    $parerRes = "0";
+    $parerMarge = "0";
+    $esquiver = "0";
     $esquiverMarge = 0;
 
     
     if($_POST['parer'] == 1){
-	$parer = 1;
+	$parer = "1";
 	$parerRes = $_POST['parer_objet'];
 	$parerMarge = $_POST['margeParer'];
     }
     
-    if($_POST['esquiver'] == 1){
-	$esquiver = 1;
+    if($_POST['esquiver'] == "1"){
+	$esquiver = "1";
 	$esquiverMarge = $_POST['margeEsquiver'];
     }
+
     
-    header('Location: '.PolarisCore::getUrl(array('actpane' => 'combat_distance/actpane3.php', 'parer' => $parer, 'parerRes' => $parerRes, 'parerMarge' => $parerMarge, 'esquiver' => $esquiver, 'esquiverMarge' => $esquiverMarge), true, array('actpane')));
+    header('Location: '.PolarisCore::getUrl(array('actpane' => 'combat_corpsacorps/actpane3.php', 'parer' => $parer, 'parerRes' => $parerRes, 'parerMarge' => $parerMarge, 'esquiver' => $esquiver, 'esquiverMarge' => $esquiverMarge), true, array('actpane')));
 }
 
 //Combat corps a corps : Etape 3
-if(isset($_POST['valid']) && $_GET['actpane'] == 'combat_distance/actpane3.php'){
+if(isset($_POST['valid']) && $_GET['actpane'] == 'combat_corpsacorps/actpane3.php'){
     $reussiteCritique = $_POST['reussiteCritique'];
     if($reussiteCritique > 0){
         $margeReussite = $reussiteCritique;
@@ -141,7 +159,7 @@ if(isset($_POST['valid']) && $_GET['actpane'] == 'combat_distance/actpane3.php')
         $margeReussite = $_POST['marge'];
     }
     
-    header('Location: '.PolarisCore::getUrl(array('actpane' => 'combat_distance/actpane4.php', 'reussiteCritique' => $reussiteCritique, 'margeReussite' => $margeReussite), true, array('actpane')));
+    header('Location: '.PolarisCore::getUrl(array('actpane' => 'combat_corpsacorps/actpane4.php', 'reussiteCritique' => $reussiteCritique, 'margeReussite' => $margeReussite), true, array('actpane')));
 }
 
 

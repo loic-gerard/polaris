@@ -6,12 +6,15 @@ use polarisapi\ui\utils\ViewTable;
 use polarisapi\data\View;
 use polarisapi\ui\categorie\FreeCategorie;
 
-$pane = new VerticalList('FATIGUE', $selectedPlayer);
-echo $pane->build();
+
 
 $pane = new VerticalList('BLESSURES', $selectedPlayer);
 echo $pane->build();
 
+$pane = new VerticalList('FATIGUE', $selectedPlayer);
+echo $pane->build();
+
+echo '<div style="clear:both;"></div>';
 
 $view = new View(
         'HEMORRAGIE', 
