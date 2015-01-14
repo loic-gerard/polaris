@@ -7,6 +7,20 @@ use jin\query\QueryResult;
 use jin\lang\StringTools;
 
 class Paliers{
+    
+    public static function getMaxPalier($porcent){
+        $datas = self::getPalierColumn($porcent);
+        
+        $max = 0;
+        foreach($datas['marges'] AS $d){
+            if($d['marge'] < 11){
+                $max = $d['marge'];
+            }
+        }
+        
+        return $max;
+    }
+    
     public static function getPalierColumn($porcent){
         if($porcent < 2){
             $datas['palier'] = 1;
@@ -46,16 +60,28 @@ class Paliers{
         return $datas;
     }
     
-    public static function renderPalierColumn($porcent, $onclick = ''){
+    public static function renderPalierColumn($porcent, $onclick = '', $formName = null){
         $palier = self::getPalierColumn($porcent);
         
         $output = '<table>';
         $output .= '<tr class="header">';
+        if($formName){
+            $output .= '<td width="10">&nbsp;</td>';
+        }
         $output .= '<td>Marge</td>';
         $output .= '<td>Palier '.$palier['palier'].'</td>';
         $output .= '</tr>';
+        $first = true;
         foreach($palier['marges'] AS $marge){
             $output .= '<tr>';
+            if($formName){
+                $checked = '';
+                if($first){
+                    $first = false;
+                    $checked = 'checked="checked"';
+                }
+                $output .= '<td width="10"><input type="radio" '.$checked.' value="'.$marge['marge'].'" name="'.$formName.'" id="'.$formName.'_'.$marge['marge'].'"></td>';
+            }
 	    if($onclick){
 		$url = StringTools::replaceAll($onclick, '%marge%', $marge['marge']);
 		

@@ -146,8 +146,12 @@
 		"designation": "Fatigue",
 		"type": "Simple"
 	    },
-	    "PNJ_DEGATS": {
-		"designation": "Dégats",
+	    "PNJ_DEGATS_PHYS": {
+		"designation": "Dégats physiques",
+		"type": "Simple"
+	    },
+            "PNJ_DEGATS_CHOC": {
+		"designation": "Dégats de choc",
 		"type": "Simple"
 	    },
 	    "PNJ_NBATTAQUES": {
@@ -237,6 +241,48 @@
 		"defaultValue" : 0
 	    }
 	}
+    },
+    "ARMECORPSACORPS": {
+	"designation": "Armes de corps à corps",
+	"attributs": {
+	    "ARMECORPSACORPS_DESIGNATION": {
+		"designation": "Désignation",
+		"type": "Simple"
+	    },
+	    "ARMECORPSACORPS_TYPE": {
+		"designation": "Type",
+		"type": "Simple"
+	    },
+	    "ARMECORPSACORPS_TALENT": {
+		"designation": "Talent nécessaire",
+		"type": "Simple"
+	    },
+	    "ARMECORPSACORPS_DEGATSPHYS": {
+		"designation": "Dégats physiques",
+		"type": "Simple"
+	    },
+	    "ARMECORPSACORPS_DEGATSCHOC": {
+		"designation": "Dégats de choc",
+		"type": "Simple"
+	    },
+	    "ARMECORPSACORPS_RESISTANCE" :{
+		"designation" : "Résistance",
+		"type" : "Simple"
+	    },
+            "ARMECORPSACORPS_SPECIAL" :{
+		"designation" : "Spécial",
+		"type" : "Simple"
+	    },
+            "ARMECORPSACORPS_EQUIPED" :{
+		"designation" : "Equipé",
+		"type" : "Simple",
+                "defaultValue" : 0
+	    }
+
+
+	}
+        
+	
     },
     "ARMEDISTANCE": {
 	"designation": "Armes à distance",
@@ -1339,10 +1385,6 @@
 		"ACTIONMENU_CODE": "blessures"
 	    },
 	    {
-		"ACTIONMENU_NOM": "Aventure",
-		"ACTIONMENU_CODE": "aventure"
-	    },
-	    {
 		"ACTIONMENU_NOM": "Historique",
 		"ACTIONMENU_CODE": "historique"
 	    },
@@ -1351,8 +1393,8 @@
 		"ACTIONMENU_CODE": "equipement"
 	    },
 	    {
-		"ACTIONMENU_NOM": "Inventaire",
-		"ACTIONMENU_CODE": "inventaire"
+		"ACTIONMENU_NOM": "Véhicule",
+		"ACTIONMENU_CODE": "vehicule"
 	    },
 	    {
 		"ACTIONMENU_NOM": "Ennemis / alliés / contacts",

@@ -16,9 +16,9 @@ if($_GET['typeDefenseur'] == 'PJ'){
     $defenseur = new Pnj($_GET['idDefenseur']);
 }
 
-$resParer = $defenseur->getResArmeDistance();
-$jetParer = $defenseur->getParerArmeDistance();
-$jetEsquive = $defenseur->getEsquiveArmeDistance();
+$resParer = $defenseur->getResArmeCorpsACorps();
+$jetParer = $defenseur->getParerArmeCorpsACorps();
+$jetEsquive = $defenseur->getEsquiveArmeCorpsACorps();
 
 ?>
 
@@ -26,22 +26,15 @@ $jetEsquive = $defenseur->getEsquiveArmeDistance();
 <input type="hidden" name="valid" value="1">
 
 <?php
-if(!$attaquant->isArmeDistance()){
+if(!$attaquant->isArmeCorpsACorps()){
 
     echo '<div class="mainTitle">Erreur</div>';
     echo '<div class="smallCol" style="width: 200px;">';
     echo '<div class="colTitle">';
-    echo 'Pas d\'arme à distance';
+    echo 'Pas d\'arme de corps à corps';
     echo '</div>';
     echo '</div>';
-}else if($attaquant->getArmeDistanceMunitions() == 0){
-    echo '<div class="mainTitle">Erreur</div>';
-    echo '<div class="smallCol" style="width: 200px;">';
-    echo '<div class="colTitle">';
-    echo 'Plus de munitions';
-    echo '</div>';
-    echo '</div>';
-}else if($attaquant->getResArmeDistance() == 0){    
+}else if($attaquant->getResArmeCorpsACorps() == 0){    
     echo '<div class="mainTitle">Erreur</div>';
     echo '<div class="smallCol" style="width: 200px;">';
     echo '<div class="colTitle">';
@@ -51,7 +44,7 @@ if(!$attaquant->isArmeDistance()){
 }else{
 ?>
 
-<div class="mainTitle">Portée et réactions du défenseur</div>
+<div class="mainTitle">Réactions du défenseur</div>
 
 <div class="smallCol" style="width: 200px;">
     <div class="colTitle">
@@ -107,31 +100,6 @@ if(!$attaquant->isArmeDistance()){
 	    ?>
 	</div>
     </div>
-</div>
-
-<div class="smallCol" style="width: 200px;">
-    <div class="colTitle">
-	Portée
-    </div>
-    
-    <table>
-    <?php
-    $portees = $attaquant->getArmeDistancePortees();
-    $i = 0;
-    foreach($portees AS $p){
-        $checked = '';
-        if($i==1){
-            $checked = 'checked="checked"';
-        }
-        echo '<tr>';
-        echo '<td width=10><input type="radio" name="portee" value="'.$i.'" '.$checked.'"></td>';
-        echo '<td class="normalCell leftCell">'.$p.'</td>';
-        echo '</tr>';
-        $i++;
-    }
-    ?>
-        
-    </table>
 </div>
 
 <?php

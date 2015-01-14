@@ -93,3 +93,13 @@
     margin-bottom: 8px;
     border-bottom: 1px solid #cccccc;
 }
+
+.mainTitle{
+    font-size: 15px;
+    background-color: #395b9c;
+    color:white;
+    font-weight: bold;
+    padding: 4px;
+    margin-bottom: 10px;
+        
+}

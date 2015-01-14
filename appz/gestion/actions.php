@@ -48,43 +48,102 @@ if(isset($_POST['valid']) && $_GET['actpane'] == 'combat_distance/actpane2.php')
     $parerMarge = 0;
     $esquiver = 0;
     $esquiverMarge = 0;
+    $portee = $_POST['portee'];
     
     if($_POST['parer'] == 1){
 	$parer = 1;
 	$parerRes = $_POST['parer_objet'];
-	$parerMarge = $_POST['marge'];
+	$parerMarge = $_POST['margeParer'];
     }
     
     if($_POST['esquiver'] == 1){
 	$esquiver = 1;
-	$esquiverMarge = $_POST['marge'];
+	$esquiverMarge = $_POST['margeEsquiver'];
     }
     
-    header('Location: '.PolarisCore::getUrl(array('actpane' => 'combat_distance/actpane3.php', 'parer' => $parer, 'parerRes' => $parerRes, 'parerMarge' => $parerMarge, 'esquiver' => $esquiver, 'esquiverMarge' => $esquiverMarge), true, array('actpane')));
+    header('Location: '.PolarisCore::getUrl(array('actpane' => 'combat_distance/actpane3.php', 'portee' => $portee, 'parer' => $parer, 'parerRes' => $parerRes, 'parerMarge' => $parerMarge, 'esquiver' => $esquiver, 'esquiverMarge' => $esquiverMarge), true, array('actpane')));
 }
 
 //Combat à distance : Etape 3
 if(isset($_POST['valid']) && $_GET['actpane'] == 'combat_distance/actpane3.php'){
+    $reussiteCritique = $_POST['reussiteCritique'];
+    if($reussiteCritique > 0){
+        $margeReussite = $reussiteCritique;
+    }else{
+        $margeReussite = $_POST['marge'];
+    }
+    
+    header('Location: '.PolarisCore::getUrl(array('actpane' => 'combat_distance/actpane4.php', 'reussiteCritique' => $reussiteCritique, 'margeReussite' => $margeReussite), true, array('actpane')));
+}
 
+
+
+//Combat au corps à corps : Etape 1
+if(isset($_POST['valid']) && $_GET['actpane'] == 'combat_corpsacorps/actpane.php'){
+    $typeAttaquant = $_POST['typeAttaquant'];
+    if($_POST['typeAttaquant'] == 'PJ'){
+	$idAttaquant = $_POST['joueurAttaquant'];
+    }else{
+	$idAttaquant = $_POST['pnjAttaquant'];
+    }
+    
+    $typeDefenseur = $_POST['typeDefenseur'];
+    if($_POST['typeDefenseur'] == 'PJ'){
+	$idDefenseur = $_POST['joueurDefenseur'];
+    }else{
+	$idDefenseur = $_POST['pnjDefenseur'];
+    }
+    
+    $modificateurs1 = '';
+    if(isset($_POST['modificateurs1'])){
+	$modificateurs1 = $_POST['modificateurs1'];
+    }
+    
+    $modificateurs2 = '';
+    if(isset($_POST['modificateurs2'])){
+	$modificateurs2 = $_POST['modificateurs2'];
+    }
+    
+    header('Location: '.PolarisCore::getUrl(array('actpane' => 'combat_corpsacorps/actpane2.php', 'idAttaquant' => $idAttaquant, 'typeAttaquant' => $typeAttaquant, 'idDefenseur' => $idDefenseur, 'typeDefenseur' => $typeDefenseur, 'modificateurs1' => $modificateurs1, 'modificateurs2' => $modificateurs2), true, array('actpane')));
+}
+
+//Combat corps a corps : Etape 2
+if(isset($_POST['valid']) && $_GET['actpane'] == 'combat_corpsacorps/actpane2.php'){
+    
+    
     $parer = 0;
     $parerRes = 0;
     $parerMarge = 0;
     $esquiver = 0;
     $esquiverMarge = 0;
+
     
     if($_POST['parer'] == 1){
 	$parer = 1;
 	$parerRes = $_POST['parer_objet'];
-	$parerMarge = $_POST['marge'];
+	$parerMarge = $_POST['margeParer'];
     }
     
     if($_POST['esquiver'] == 1){
 	$esquiver = 1;
-	$esquiverMarge = $_POST['marge'];
+	$esquiverMarge = $_POST['margeEsquiver'];
     }
     
     header('Location: '.PolarisCore::getUrl(array('actpane' => 'combat_distance/actpane3.php', 'parer' => $parer, 'parerRes' => $parerRes, 'parerMarge' => $parerMarge, 'esquiver' => $esquiver, 'esquiverMarge' => $esquiverMarge), true, array('actpane')));
 }
+
+//Combat corps a corps : Etape 3
+if(isset($_POST['valid']) && $_GET['actpane'] == 'combat_distance/actpane3.php'){
+    $reussiteCritique = $_POST['reussiteCritique'];
+    if($reussiteCritique > 0){
+        $margeReussite = $reussiteCritique;
+    }else{
+        $margeReussite = $_POST['marge'];
+    }
+    
+    header('Location: '.PolarisCore::getUrl(array('actpane' => 'combat_distance/actpane4.php', 'reussiteCritique' => $reussiteCritique, 'margeReussite' => $margeReussite), true, array('actpane')));
+}
+
 
 //Ajout blessure
 if(isset($_POST['valid']) && $_GET['actpane'] == 'blessure/actpane.php'){

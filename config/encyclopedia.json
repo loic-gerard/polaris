@@ -124,10 +124,8 @@
 		"designation" : "Résistance",
 		"type" : "Simple"
 	    }
-
-
 	},
-	"entites": [
+        "entites": [
 	    {
 		"REF_ARMEDISTANCE_DESIGNATION": "Pistolet",
 		"REF_ARMEDISTANCE_TYPE": "Armes de poing",
@@ -157,6 +155,53 @@
 		"REF_ARMEDISTANCE_RESISTANCE": "2"
 	    }
 	]
+    },    
+    "REF_ARMECORPSACORPS": {
+	"designation": "Armes de corps à corps",
+	"attributs": {
+	    "REF_ARMECORPSACORPS_DESIGNATION": {
+		"designation": "Désignation",
+		"type": "Simple"
+	    },
+	    "REF_ARMECORPSACORPS_TYPE": {
+		"designation": "Type",
+		"type": "Simple"
+	    },
+	    "REF_ARMECORPSACORPS_TALENT": {
+		"designation": "Talent nécessaire",
+		"type": "Simple"
+	    },
+	    "REF_ARMECORPSACORPS_DEGATSPHYS": {
+		"designation": "Dégats physiques",
+		"type": "Simple"
+	    },
+	    "REF_ARMECORPSACORPS_DEGATSCHOC": {
+		"designation": "Dégats de choc",
+		"type": "Simple"
+	    },
+	    "REF_ARMECORPSACORPS_RESISTANCE" :{
+		"designation" : "Résistance",
+		"type" : "Simple"
+	    },
+            "REF_ARMECORPSACORPS_SPECIAL" :{
+		"designation" : "Spécial",
+		"type" : "Simple"
+	    }
+
+
+	},
+        "entites" : [
+            {
+                "REF_ARMECORPSACORPS_DESIGNATION" : "Dague",
+                "REF_ARMECORPSACORPS_TYPE" : "Arme de contact",
+                "REF_ARMECORPSACORPS_TALENT" : "TALENT_ARMES_1MAIN",
+                "REF_ARMECORPSACORPS_DEGATSPHYS" : "3",
+                "REF_ARMECORPSACORPS_DEGATSCHOC" : "0",
+                "REF_ARMECORPSACORPS_RESISTANCE" : "12",
+                "REF_ARMECORPSACORPS_SPECIAL" : ""
+            }
+        ]
+	
     },
     "REF_PNJ": {
 	"designation": "PNJ",
@@ -261,8 +306,12 @@
 		"designation": "Fatigue",
 		"type": "Simple"
 	    },
-	    "REF_PNJ_DEGATS": {
-		"designation": "Dégats",
+	    "REF_PNJ_DEGATS_PHYS": {
+		"designation": "Dégats physiques",
+		"type": "Simple"
+	    },
+            "REF_PNJ_DEGATS_CHOC": {
+		"designation": "Dégats choc",
 		"type": "Simple"
 	    },
 	    "REF_PNJ_NBATTAQUES": {
@@ -313,7 +362,8 @@
 		"REF_PNJ_ESQUIVE" : "4",
 		"REF_PNJ_PARADE" : "5",
 		"REF_PNJ_FATIGUE" : "32",
-		"REF_PNJ_DEGATS" : "6",
+		"REF_PNJ_DEGATS_PHYS" : "6",
+                "REF_PNJ_DEGATS_CHOC" : "3",
 		"REF_PNJ_NBATTAQUES" : "8",
 		"REF_PNJ_ARMURE" : "10",
 		"REF_PNJ_BLINDAGE" : "0",

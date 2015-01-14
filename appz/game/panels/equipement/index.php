@@ -21,7 +21,11 @@ $wt = new ViewTable(
         array(),
         true,
         true,
-        'appz/game/panels/equipement/addfromreferentiel_PROTECTION.php');
+        'appz/game/panels/equipement/addfromreferentiel_PROTECTION.php',
+        false,
+	0,
+	null,
+	'PROTECTION_EQUIPED');
 $fc = new FreeCategorie('Protections');
 
 echo $fc->build($wt->build());
@@ -48,5 +52,31 @@ $wt = new ViewTable(
 	null,
 	'ARMEDISTANCE_EQUIPED');
 $fc = new FreeCategorie('Armes à distance');
+
+echo $fc->build($wt->build());
+
+
+
+$view = new View(
+        'ARMECORPSACORPS', 
+        'pk_entite', 
+        'ASC', 
+        '', 
+        array('ARMECORPSACORPS_DESIGNATION','ARMECORPSACORPS_TYPE','ARMECORPSACORPS_TALENT','ARMECORPSACORPS_DEGATSPHYS','ARMECORPSACORPS_DEGATSCHOC','ARMECORPSACORPS_RESISTANCE', 'ARMECORPSACORPS_EQUIPED'),
+        $selectedPlayer);
+$wt = new ViewTable(
+        $view, 
+        array('ARMECORPSACORPS_DESIGNATION' => 'Designation','ARMECORPSACORPS_TYPE' => 'Type','ARMECORPSACORPS_TALENT' => 'Talent','ARMECORPSACORPS_DEGATSPHYS' => 'Dégats physiques','ARMECORPSACORPS_DEGATSCHOC' => 'Dégats choc','ARMECORPSACORPS_RESISTANCE' => 'Resistance'), 
+        true,
+        array('ARMECORPSACORPS_DESIGNATION','ARMECORPSACORPS_TYPE','ARMECORPSACORPS_TALENT','ARMECORPSACORPS_DEGATSPHYS','ARMECORPSACORPS_DEGATSCHOC','ARMECORPSACORPS_RESISTANCE'),
+        array(),
+        true,
+        true,
+        'appz/game/panels/equipement/addfromreferentiel_ARMECORPSACORPS.php',
+	false,
+	0,
+	null,
+	'ARMECORPSACORPS_EQUIPED');
+$fc = new FreeCategorie('Armes de corps à corps');
 
 echo $fc->build($wt->build());
