@@ -18,6 +18,15 @@ class Pnj extends GlobalPlayer{
 	return 'PNJ';
     }
     
+     public function getTalentCodeArmeCorpsACorps(){
+	return '';
+    }
+    
+    public function getTalentCodeArmeDistance(){
+
+	return '';
+    }
+    
     public function getResArmeDistance(){
 	$a = Attribut::getAttribut($this->id, $this->type.'RES_ARME');
 	return $a->getFinalValue();

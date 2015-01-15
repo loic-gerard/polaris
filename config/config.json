@@ -1,4 +1,21 @@
 {
+    "EVOLUTION" : {
+	"designation" : "Points d'évolution",
+	"attributs" : {
+	    "EVOLUTION_DESIGNATION" : {
+		"designation" : "Désignation",
+		"type" : "Simple"
+	    },
+	    "EVOLUTION_TALENT" : {
+		"designation" : "Code talent",
+		"type" : "Simple"
+	    },
+	    "EVOLUTION_TYPE" : {
+		"designation" : "Type d'évolution (TALENT,IDEE,ACTION,INTERPRETATION,AVENTURE)",
+		"type" : "Simple"
+	    }
+	}
+    },
     "HEMORRAGIE": {
         "designation": "Hémorragies",
         "attributs": {
@@ -1575,7 +1592,14 @@
                         "modificateur": 1,
                         "modifiable": 0,
                         "jet": 0
-                    }
+                    },
+		    "EVOLUTION" : {
+			"designation" : "Points d'évolution",
+			"type" : "Simple",
+			"defaultValue" : "0",
+			"modificateur" : 0,
+			"jet" : "1"
+		    }
                 }
             },
             "TALENTS_PHYSIQUES": {

@@ -6,6 +6,8 @@ use jin\log\Debug;
 use jin\filesystem\Folder;
 use polarisapi\data\Entite;
 use jin\dataformat\Json;
+use polarisapi\data\View;
+
 
 $folder = new Folder(ROOT.'appz/');
 foreach ($folder AS $f){
@@ -14,6 +16,32 @@ foreach ($folder AS $f){
            include (ROOT.'appz/'.$f.'/actions.php');
        }
     }
+}
+
+//Fin d'aventure'
+if (isset($_GET['progression'])) {
+       $joueurs = new View('PJ', 'v_NOM.tt_valeur', 'ASC', '', array('NOM'));
+       
+       foreach ($joueurs AS $joueur) {
+
+	   $total = 0;
+	   $points = new View('EVOLUTION', null, null, '', array('EVOLUTION_TALENT', 'EVOLUTION_TYPE', 'EVOLUTION_DESIGNATION'), $joueur['id']);
+	   foreach ($points AS $p) {
+	       if ($p['EVOLUTION_TYPE'] == 'TALENT') {
+	       } else {
+		   $total += 0.25;
+	       }
+	       
+	       Entite::deleteEntite($p['id']);
+	   }
+
+	   $a = Attribut::getAttribut($joueur['id'], 'EVOLUTION');
+	   $av = $a->getFinalValue();
+	   $av += $total;
+	   $a->setValue($av);
+       }
+       
+       header('Location: '.PolarisCore::getUrl(array(), true, array('progression')));
 }
 
 //Equiper

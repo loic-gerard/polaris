@@ -72,6 +72,7 @@ if(!$attaquant->isArmeCorpsACorps()){
 	<div class="form">
 	    <?php
 	    echo Paliers::renderPalierColumn($jetParer, null, 'margeParer');
+	    echo '<br><br><a class="actBlueButton" href="javascript:addProgressionPoint(\''.$_GET['idDefenseur'].'\',\'TALENT\',\''.$defenseur->getTalentCodeArmeCorpsACorps().'\');">Réussite ou échec critique</a>';
 	    ?>
 	</div>
     </div>
@@ -97,6 +98,7 @@ if(!$attaquant->isArmeCorpsACorps()){
 	<div class="form">
 	    <?php
 	    echo Paliers::renderPalierColumn($jetEsquive, null, 'margeEsquiver');
+	    echo '<br><br><a class="actBlueButton" href="javascript:addProgressionPoint(\''.$_GET['idDefenseur'].'\',\'TALENT\',\'TALENT_ESQUIVE\');">Réussite ou échec critique</a>';
 	    ?>
 	</div>
     </div>

@@ -134,5 +134,7 @@ $onlyClose = true;
     <br><br>
     <a href="<?php echo PolarisCore::getUrl(array('actpane' => 'combat_distance/actpane_echec.php'), true, array('actpane')); ?>" class="smallBlueButton">Echec critique</a><br><bR>
     <a href="javascript:document.getElementById('reussiteCritique').value='<?php echo Paliers::getMaxPalier($totalPorcent); ?>';document.getElementById('modificateurForm').submit();" class="smallBlueButton">Réussite critique</a>
-    
+    <?php
+    echo '<br><br><a class="actBlueButton" href="javascript:addProgressionPoint(\''.$_GET['idAttaquant'].'\',\'TALENT\',\''.$defenseur->getTalentCodeArmeDistance().'\');">Réussite ou échec critique</a>';
+    ?>
 </div>

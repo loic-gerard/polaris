@@ -3,6 +3,7 @@
 
 use polarisapi\data\Paliers;
 use polarisapi\data\JetCarac;
+use polarisapi\ui
 
 //Calcul du pourcentage
 if($_POST['type'] == 'pj'){
@@ -26,4 +27,5 @@ echo '</div>';
         
 echo '<div class="smallCol">';
 echo Paliers::renderPalierColumn($data['total']);
+echo '<br><br><a class="actBlueButton" href="javascript:addProgressionPoint(\''.$_GET['idAttaquant'].'\',\'TALENT\',\''.$defenseur->getTalentCodeArmeCorpsACorps().'\');">Réussite ou échec critique</a>';
 echo '</div>';

@@ -93,7 +93,17 @@ foreach($view AS $viewItem){
     
 	echo '<div class="clear"></div>';
 	
+	//Actions
+	echo '<div class="separation"></div>';
+    
+	//Belle idée
+	echo '<a class="actBlueButton" href="javascript:addProgressionPoint(\''.$viewItem['id'].'\',\'IDEE\',\'\');">Belle idée !</a>';
 	
+	//Belle action
+	echo '<a class="actBlueButton" href="javascript:addProgressionPoint(\''.$viewItem['id'].'\',\'ACTION\',\'\');">Belle action !</a>';
+	
+	//Belle interprétation
+	echo '<a class="actBlueButton" href="javascript:addProgressionPoint(\''.$viewItem['id'].'\',\'INTERPRETATION\',\'\');">Belle interprétation !</a>';
 	
     echo '</div>';
 }

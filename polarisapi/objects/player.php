@@ -235,6 +235,22 @@ class Player extends GlobalPlayer{
 	return $a->getFinalValue();
     }
     
+    public function getTalentCodeArmeCorpsACorps(){
+	$talent = $this->armesCorpsACorps->getSelectedValue('ARMECORPSACORPS_TALENT', 'ARMECORPSACORPS_EQUIPED');
+	
+	
+	return $talent;
+    }
+    
+    public function getTalentCodeArmeDistance(){
+	$talent = $this->armesDistance->getSelectedValue('ARMEDISTANCE_TALENT', 'ARMEDISTANCE_EQUIPED');
+	
+	
+	return $talent;
+    }
+    
+
+    
 
     
     public function getNiveauEsquive(){

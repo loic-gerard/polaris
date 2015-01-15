@@ -1,3 +1,11 @@
+function addProgressionPoint(joueur, type, talent){
+    sendAjax("ajax.php",addProgressionPointRetour,'post','file=common/addprogressionpoint.php&joueur='+joueur+'&type='+type+'&talent='+talent,[]);
+}
+
+function addProgressionPointRetour(text, xml, params){
+    alert(text);
+}
+
 function setPj(){
     document.getElementById('panel_PJ').style.display = '';
     document.getElementById('panel_PNJ').style.display = 'none';
