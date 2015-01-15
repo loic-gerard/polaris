@@ -5,7 +5,7 @@ use polarisapi\ui\utils\AttributSelect;
 
 $joueur = new EntiteSelect('PJ', 'joueur', 'NOM', null, 'onChange="javascript:calculateJet();"');
 
-$attribut = new AttributSelect('PJ', 'attribut', null, null, null, 1, 'onChange="javascript:calculateJet();"', array('TALENTS'));
+$attribut = new AttributSelect('PJ', 'attribut', null, null, null, 1, 'onChange="javascript:calculateJet();"', array('TALENTSTALENTS_PHYSIQUES', 'TALENTS_COMBAT', 'TALENTS_SOCIAUX', 'TALENTS_COMMERCIAUX', 'TALENTS_ARTISANAUX', 'TALENTS_CONNAISSANCES', 'TALENTS_ARTISTIQUES', 'TALENTS_MENTAUX', 'TALENTS_NAVIGATION', 'TALENTS_INVESTIGATION', 'TALENTS_MEDICAUX'));
 
 ?>
 

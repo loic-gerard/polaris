@@ -54,6 +54,10 @@ class Categorie {
         }
     }
     
+    public function getAttributs(){
+        return $this->attributs;
+    }
+    
     public function setWidth($w){
         $this->width = $w;
     }

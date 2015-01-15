@@ -13,12 +13,12 @@ class TalentList extends Categorie{
         $inputContent = '';
         $inputContent .= '<table>';
         $inputContent .= '<tr class="header">';
-        $inputContent .= '<td>Talent</td>';
-        $inputContent .= '<td>Niv</td>';
-        $inputContent .= '<td>Exp</td>';
-        $inputContent .= '<td>Bonus</td>';
-        $inputContent .= '<td>Mod</td>';
-        $inputContent .= '<td>Total</td>';
+        $inputContent .= '<td width="50%">Talent</td>';
+        $inputContent .= '<td width="10%">Niv</td>';
+        $inputContent .= '<td width="10%">Exp</td>';
+        $inputContent .= '<td width="10%">Bonus</td>';
+        $inputContent .= '<td width="10%">Mod</td>';
+        $inputContent .= '<td width="10%">Total</td>';
         $inputContent .= '</tr>';
         foreach($this->attributs AS $attribut){
             $inputContent .= $attribut->renderForDisplay();

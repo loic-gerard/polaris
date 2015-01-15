@@ -12,6 +12,24 @@ body{
   
 }
 
+.player .cellsItem .label{
+    font-size: 11px;
+}
+
+a.bluelink{
+    text-decoration: none;
+    font-weight: bold;
+    color:#395b9c;
+}
+
+.playerName{
+    font-weight: bold;
+    color:white;
+    margin-left: 10px;
+    float: left;
+    padding-top: 5px;
+}
+
 .clear{
     clear: both;
 }
@@ -238,6 +256,19 @@ table .rightCell{
     margin-right: 5px;
 }
 
+.actBlueButtonR{
+    text-decoration: none;
+    color: white;
+    padding: 3px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: #395b9c;
+    margin-bottom: 2px;
+    line-height: 23px;
+    margin-right: 10px;
+    float: right;
+}
+
 .smallButtonsHeadTableContainer{
     margin-bottom: 10px;
     text-align: left;
@@ -372,5 +403,5 @@ textArea{
 }
 
 .encycloPanel{
-    margin-left: 20vw;
+    margin-left: 15vw;
 }

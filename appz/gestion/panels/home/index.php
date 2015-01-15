@@ -4,11 +4,6 @@ use \PolarisCore;
 
 ?>
 
-Par joueur :
-+ bonne idée !
-+ belle action !
-+ belle interpretation !
-
 
 <div class="categorie">Combat</div>
 <div class="boutons">
@@ -23,13 +18,10 @@ Par joueur :
 <div class="boutons">
 <a href="<?php echo PolarisCore::getUrl(array('actpane' => 'blessure/actpane.php', 'windowType' => 'halfJetWindow'), true, array('panel')); ?>">Infliger une blessure</a>
 <a href="<?php echo PolarisCore::getUrl(array('actpane' => 'addhemorragie/actpane.php'), true, array('panel')); ?>">Ajouter une hémorragie</a>
-<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'inconscientoui/actpane.php'), true, array('panel')); ?>">Tomber inconscient</a>
+<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'inconscientoui/actpane.php'), true, array('panel')); ?>">Tomber inconscient</a><br>
 <a href="<?php echo PolarisCore::getUrl(array('actpane' => 'inconscientnon/actpane.php'), true, array('panel')); ?>">Sortir de l'inconscience</a>
 <a href="<?php echo PolarisCore::getUrl(array('actpane' => 'fatigueadd/actpane.php'), true, array('panel')); ?>">Fatigue +</a>
 <a href="<?php echo PolarisCore::getUrl(array('actpane' => 'fatigueremove/actpane.php'), true, array('panel')); ?>">Fatigue -</a>
-//<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'jettalent/actpane.php', 'windowType' => 'jetWindow'), true, array('panel')); ?>">Stopper une hémrorragie</a>
-//<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'jettalent/actpane.php', 'windowType' => 'jetWindow'), true, array('panel')); ?>">Diminuer une hémorragie</a>
-
 
 
 
@@ -56,7 +48,7 @@ Par joueur :
 <div class="boutons">
 <a href="<?php echo PolarisCore::getUrl(array('actpane' => 'sm_detection/actpane.php', 'windowType' => 'jetWindow'), true, array('panel')); ?>">Jet de détection (1)</a>
 <a href="<?php echo PolarisCore::getUrl(array('actpane' => 'sm_analyse/actpane.php', 'windowType' => 'jetWindow'), true, array('panel')); ?>">Jet d'analyse (2)</a>
-<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'sm_soltir/actpane.php', 'windowType' => 'jetWindow'), true, array('panel')); ?>">Calcul d'une solution de tir (3)</a>
+<a href="<?php echo PolarisCore::getUrl(array('actpane' => 'sm_soltir/actpane.php', 'windowType' => 'jetWindow'), true, array('panel')); ?>">Calcul d'une solution de tir (3)</a><br>
 <a href="<?php echo PolarisCore::getUrl(array('actpane' => 'sm_degats/actpane.php', 'windowType' => 'jetWindow'), true, array('panel')); ?>">Infliger des dégats (4)</a>
 <a href="<?php echo PolarisCore::getUrl(array('actpane' => 'sm_integrite/actpane.php', 'windowType' => 'jetWindow'), true, array('panel')); ?>">Jet d'intégrité</a>
 

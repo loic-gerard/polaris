@@ -1,10 +1,10 @@
 #col2Menu{
-    width:20vw;
+    width:15vw;
     background-color: #494a4a;
     height: calc(100vh - 65px);
     position: fixed;
     top:65px;
-    left:calc(20vw + 1px);
+    left:calc(15vw + 1px);
     padding-right: 1px;
     border-top:1px solid #262626;
 }

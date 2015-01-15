@@ -25,16 +25,8 @@
 		"ENCYCLO_LABEL": "Equipements de protection"
 	    },
 	    {
-		"ENCYCLO_CODE": "REF_EQUIPEMENT",
-		"ENCYCLO_LABEL": "Equipements divers"
-	    },
-	    {
 		"ENCYCLO_CODE": "REF_PNJ",
 		"ENCYCLO_LABEL": "Ennemis / créatures"
-	    },
-	    {
-		"ENCYCLO_CODE": "REF_VEHICULES",
-		"ENCYCLO_LABEL": "Véhicules sous-marin"
 	    }
 	]
     },

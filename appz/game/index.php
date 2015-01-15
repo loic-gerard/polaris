@@ -6,9 +6,10 @@ include 'playermenu.php';
 
 $selectedPlayer = PolarisCore::getFromUrl('player',null);
 if($selectedPlayer){
+    $selectedPane = PolarisCore::getFromUrl('panel', 'caracs');
     include 'actionmenu.php';
     
-    $selectedPane = PolarisCore::getFromUrl('panel', null);
+    
     
     echo '<div class="gamePanel">';
     include 'panels/'.$selectedPane.'/index.php';

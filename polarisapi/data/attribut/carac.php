@@ -22,6 +22,7 @@ class Carac extends ComplexeAttribut{
         $output = '<tr class="'.$this->getModClass().'" '.$modUrl.'>';
         $output .= '<td>'.$this->getAttributName().'</td>';
         $output .= '<td>'.$this->getValue('initial').'</td>';
+        $output .= '<td>'.round($this->evaluateExpression($this->getData('max'))).'</td>';
         $output .= '<td>'.$this->getModifier().'</td>';
         $output .= '<td>'.$this->getFinalValue().'</td>';
         $output .= '</tr>';

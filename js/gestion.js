@@ -6,6 +6,16 @@ function addProgressionPointRetour(text, xml, params){
     alert(text);
 }
 
+function updNiveau(talent, joueur){
+    sendAjax("ajax.php",updNiveauRetour,'post','file=common/updniveau.php&joueur='+joueur+'&talent='+talent,[]);
+}
+
+function updNiveauRetour(text, xml, params){
+    alert(text);
+}
+
+
+
 function setPj(){
     document.getElementById('panel_PJ').style.display = '';
     document.getElementById('panel_PNJ').style.display = 'none';
@@ -27,8 +37,8 @@ function setPnjAttaquant(){
 }
 
 function setPjDefenseur(){
-    document.getElementById('panel_attaquant_PJ').style.display = '';
-    document.getElementById('panel_attaquant_PNJ').style.display = 'none';
+    document.getElementById('panel_defenseur_PJ').style.display = '';
+    document.getElementById('panel_defenseur_PNJ').style.display = 'none';
 }
 
 function setPnjDefenseur(){

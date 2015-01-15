@@ -11,6 +11,7 @@ if($_POST['talent'] != ''){
     $data['EVOLUTION_DESIGNATION'] = 'Evolution talent '.$name;
     $data['EVOLUTION_TALENT'] = $_POST['talent'];
     $data['EVOLUTION_TYPE'] = 'TALENT';
+    
     Entite::addEntite('EVOLUTION', $data, $_POST['joueur']);
 }else{
     $data = array();

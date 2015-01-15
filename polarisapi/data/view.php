@@ -84,10 +84,10 @@ class View implements Iterator{
 	foreach($this->datas AS $d){
 	    if($selectedOnly){
 		if($d[$selectedOnly] == 1){
-		     $total .= $d[$key];
+		     $total += (int)$d[$key];
 		}
 	    }else{
-		 $total .= $d[$key];
+		 $total += (int)$d[$key];
 	    }
 	   
 	}

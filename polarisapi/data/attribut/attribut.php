@@ -196,9 +196,13 @@ class Attribut {
         $output .= '<div class="editItem">';
         $output .= '<div class="label">' . $key . '</div>';
         if ($key) {
+            
             $output .= '<div class="form"><input type="text" id="' . $this->attributCode . '_' . $this->entiteId . '_' . $key . '" name="' . $this->attributCode . '_' . $this->entiteId . '_' . $key . '" value="' . $value . '"></div>';
+            $output .= '<script language="javascript">document.getElementById(\'' . $this->attributCode . '_' . $this->entiteId . '_' . $key . '\').focus();</script>';
         } else {
             $output .= '<div class="form"><input type="text" id="' . $this->attributCode . '_' . $this->entiteId . '" name="' . $this->attributCode . '_' . $this->entiteId . '" value="' . $value . '"></div>';
+            $output .= '<script language="javascript">document.getElementById(\'' . $this->attributCode . '_' . $this->entiteId . '\').focus();</script>';
+            
         }
 
         $output .= '</div>';
@@ -241,6 +245,8 @@ class Attribut {
     }
 
     public function setValue($value, $key = null) {
+        
+        
         if ($key) {
             $this->value[$key] = $value;
         } else {

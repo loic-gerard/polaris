@@ -1,13 +1,19 @@
 #entiteAddWindow{
     background-color: white;
-    width: 300px;
+    width: 1200px;
     height: 500px;
     position: fixed;
     top:50%;
     left:50%;
     margin-top: -250px;
-    margin-left: -150px;
+    margin-left: -600px;
     z-index: 1000;
+}
+
+#entiteAddWindow .editItem{
+    float: left;
+    width:200px;
+    margin-right: 20px;
 }
 
 #entiteAddMask{

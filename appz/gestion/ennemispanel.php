@@ -5,14 +5,16 @@ use polarisapi\data\View;
 use polarisapi\data\attribut\Attribut;
 use polarisapi\objects\Pnj;
 
-$view = new View('PNJ');
+$view = new View('PNJ', null, null, '', array('PNJ_NOM'));
 
 
 
 
 echo '<div id="ennemisPanel">';
-echo '<div class="title">Ennemis</div>';
+echo '<div style="height:10px;"></div>';
 foreach($view AS $viewItem){
+    
+    echo '<div class="playerName">'.$viewItem['PNJ_NOM'].'</div>';
     echo '<div class="player">';
     
 	echo '<div class="col1">';
@@ -23,9 +25,26 @@ foreach($view AS $viewItem){
 	    $attr[] = Attribut::getAttribut($viewItem['id'], 'PNJ_BLESSURE_CRITIQUE');
 	    $attr[] = Attribut::getAttribut($viewItem['id'], 'PNJ_BLESSURE_FATAL');
 	    $attr[] = Attribut::getAttribut($viewItem['id'], 'PNJ_BLESSURE_MORT');
+            
+            $seuils = array();
+            $seuils[] = null;
+            $seuils[] = Attribut::getAttribut($viewItem['id'], 'PNJ_SEUIL_INCONSCIENCE');
+	    $seuils[] = Attribut::getAttribut($viewItem['id'], 'PNJ_SEUIL_LEGERE');
+	    $seuils[] = Attribut::getAttribut($viewItem['id'], 'PNJ_SEUIL_GRAVE');
+	    $seuils[] = Attribut::getAttribut($viewItem['id'], 'PNJ_SEUIL_CRITIQUE');
+	    $seuils[] = Attribut::getAttribut($viewItem['id'], 'PNJ_SEUIL_FATAL');
+	    $seuils[] = Attribut::getAttribut($viewItem['id'], 'PNJ_SEUIL_MORT');
+	    $i = 0;
 	    foreach($attr AS $a){
-		echo $a->renderForDisplay();
+                
+                $seuil = '';
+                if($seuils[$i]){
+                    $seuil = $seuils[$i]->getFinalValue();
+                }
+		echo $a->renderForSmartDisplay($seuil);
 		echo '<div class="clear"></div>';
+                
+                $i++;
 	    }
 	    echo '<div class="clear"></div>';
 	echo '</div>';
@@ -61,7 +80,7 @@ foreach($view AS $viewItem){
 	
 	    $inconscient = Attribut::getAttribut($viewItem['id'], 'PNJ_INCONSCIENT');
 	    if($inconscient->getFinalValue() == 1){
-		echo '<div class="subTitle">Inconscient : OUI</div>';
+		echo '<div class="subTitle">Inconscient : <b style="color:red;">OUI</b></div>';
 		echo '<div class="separation"></div>';
 	    }
 	
@@ -69,7 +88,7 @@ foreach($view AS $viewItem){
 	    if($v->count() > 0){
 		echo '<div class="subTitle">Hemorragies : </div>';
 		foreach($v AS $d){
-		    echo '<div class="subValue">'.$d['HEMORRAGIE_TYPE'].'</div>';
+		    echo '<div class="subValue" style="color:red;"><b>'.$d['HEMORRAGIE_TYPE'].'</b></div>';
 		}
 		echo '<div class="separation"></div>';
 	    }
@@ -77,7 +96,7 @@ foreach($view AS $viewItem){
 	    if($v->count() > 0){
 		echo '<div class="subTitle">Poisons : </div>';
 		foreach($v AS $d){
-		    echo '<div class="subValue"><b>'.$d['POISON_DESIGNATION'].' (Intensité : '.$d['POISON_INTENSITE'].')</b><br><i>'.$d['POISON_EFFETS'].'</i></div>';
+		    echo '<div class="subValue" style="color:red;"><b>'.$d['POISON_DESIGNATION'].' (Intensité : '.$d['POISON_INTENSITE'].')</b><br><i>'.$d['POISON_EFFETS'].'</i></div>';
 		}
 		echo '<div class="separation"></div>';
 	    }
@@ -85,7 +104,7 @@ foreach($view AS $viewItem){
 	    if($v->count() > 0){
 		echo '<div class="subTitle">Maladies : </div>';
 		foreach($v AS $d){
-		    echo '<div class="subValue"><b>'.$d['MALADIE_DESIGNATION'].' (Intensité : '.$d['MALADIE_INTENSITE'].')</b><br><i>'.$d['MALADIE_EFFETS'].'</i></div>';
+		    echo '<div class="subValue" style="color:red;"><b>'.$d['MALADIE_DESIGNATION'].' (Intensité : '.$d['MALADIE_INTENSITE'].')</b><br><i>'.$d['MALADIE_EFFETS'].'</i></div>';
 		}
 		echo '<div class="separation"></div>';
 	    }

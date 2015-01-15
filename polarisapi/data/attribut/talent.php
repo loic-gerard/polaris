@@ -23,13 +23,15 @@ class Talent extends ComplexeAttribut{
             $modUrl = PolarisCore::getModifierUrl($this->entiteId, $this->attributCode, true);
         }
         
-        $output = '<tr class="'.$this->getModClass().'" '.$modUrl.'>';
-        $output .= '<td>'.$this->getAttributName().'</td>';
-        $output .= '<td>'.$this->getNiveau().'</td>';
-        $output .= '<td>'.$this->getValue('initial').'%</td>';
-        $output .= '<td>'.round($this->evaluateExpression($this->getData('bonus'))).'%</td>';
-        $output .= '<td>'.$this->getModifier().'%</td>';
-        $output .= '<td>'.$this->getFinalValue().'%</td>';
+        $plusUrl = 'javascript:updNiveau(\''.$this->getAttributCode().'\', '.$_GET['player'].');';
+        
+        $output = '<tr class="'.$this->getModClass().'">';
+        $output .= '<td>'.$this->getAttributName().' <a href="'.$plusUrl.'">(+10)</a></td>';
+        $output .= '<td '.$modUrl.'>'.$this->getNiveau().'</td>';
+        $output .= '<td '.$modUrl.'>'.$this->getValue('initial').'%</td>';
+        $output .= '<td '.$modUrl.'>'.round($this->evaluateExpression($this->getData('bonus'))).'%</td>';
+        $output .= '<td '.$modUrl.'>'.$this->getModifier().'%</td>';
+        $output .= '<td '.$modUrl.'>'.$this->getFinalValue().'%</td>';
         $output .= '</tr>';
         
         return $output;

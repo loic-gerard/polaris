@@ -1324,6 +1324,18 @@
                         "designation": "Lieu de naissance",
                         "type": "Simple",
                         "jet": 0
+                    },
+                    "MUTATIONS" : {
+                        "designation" : "Mutations",
+                        "type" : "Simple",
+                        "jet" : "0",
+                        "modificateur" : 0
+                    },
+                    "STERILITE" : {
+                        "designation" : "Stérile",
+                        "type" : "Simple",
+                        "jet" : "0",
+                        "modificateur" : 0
                     }
                 }
             },
@@ -1334,7 +1346,8 @@
                         "designation": "Force",
                         "type": "Carac",
                         "data": {
-                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                            "total": "{VAL:initial}+{SPE:MODIFIER}",
+                            "max" : "(round(1.5*{ATTR:GAB}))"
                         },
                         "defaultValue": {
                             "initial": 0
@@ -1345,7 +1358,8 @@
                         "designation": "Gabarit",
                         "type": "Carac",
                         "data": {
-                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                            "total": "{VAL:initial}+{SPE:MODIFIER}",
+                            "max" : "({ATTR:FOR}+{ATTR:RAP})"
                         },
                         "defaultValue": {
                             "initial": 0
@@ -1356,7 +1370,8 @@
                         "designation": "Charisme",
                         "type": "Carac",
                         "data": {
-                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                            "total": "{VAL:initial}+{SPE:MODIFIER}",
+                            "max" : "24"
                         },
                         "defaultValue": {
                             "initial": 0
@@ -1367,7 +1382,8 @@
                         "designation": "Intelligence",
                         "type": "Carac",
                         "data": {
-                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                            "total": "{VAL:initial}+{SPE:MODIFIER}",
+                            "max" : "24"
                         },
                         "defaultValue": {
                             "initial": 0
@@ -1378,7 +1394,8 @@
                         "designation": "Volonté",
                         "type": "Carac",
                         "data": {
-                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                            "total": "{VAL:initial}+{SPE:MODIFIER}",
+                            "max" : "24"
                         },
                         "defaultValue": {
                             "initial": 0
@@ -1389,7 +1406,8 @@
                         "designation": "Résistance",
                         "type": "Carac",
                         "data": {
-                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                            "total": "{VAL:initial}+{SPE:MODIFIER}",
+                            "max" : "24"
                         },
                         "defaultValue": {
                             "initial": 0
@@ -1400,7 +1418,8 @@
                         "designation": "Agilité",
                         "type": "Carac",
                         "data": {
-                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                            "total": "{VAL:initial}+{SPE:MODIFIER}",
+                            "max" : "24"
                         },
                         "defaultValue": {
                             "initial": 0
@@ -1411,7 +1430,8 @@
                         "designation": "Sang-froid",
                         "type": "Carac",
                         "data": {
-                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                            "total": "{VAL:initial}+{SPE:MODIFIER}",
+                            "max" : "24"
                         },
                         "defaultValue": {
                             "initial": 0
@@ -1422,7 +1442,8 @@
                         "designation": "Instinct",
                         "type": "Carac",
                         "data": {
-                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                            "total": "{VAL:initial}+{SPE:MODIFIER}",
+                            "max" : "24"
                         },
                         "defaultValue": {
                             "initial": 0
@@ -1433,7 +1454,8 @@
                         "designation": "Rapidité",
                         "type": "Carac",
                         "data": {
-                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                            "total": "{VAL:initial}+{SPE:MODIFIER}",
+                            "max" : "(round(1.5*{ATTR:AGI}))"
                         },
                         "defaultValue": {
                             "initial": 0
@@ -1598,8 +1620,23 @@
 			"type" : "Simple",
 			"defaultValue" : "0",
 			"modificateur" : 0,
-			"jet" : "1"
-		    }
+			"jet" : "0"
+		    },
+                    "CELEBRITE" : {
+                        "designation" : "Célébrité",
+			"type" : "Simple",
+			"defaultValue" : "0",
+			"modificateur" : 0,
+			"jet" : "0"
+                    },
+                    "INFLUENCE" : {
+                        "designation" : "Influence",
+			"type" : "Simple",
+			"defaultValue" : "0",
+			"modificateur" : 0,
+			"jet" : "0"
+                    }
+                    
                 }
             },
             "TALENTS_PHYSIQUES": {
@@ -2090,7 +2127,7 @@
                 }
             },
             "TALENTS_SOCIAUX" : {
-                "designation" : "",
+                "designation" : "Talents sociaux",
                 "attributs" : {
                     "TALENT_BARATIN": {
                         "designation": "Baratin",
@@ -2668,7 +2705,7 @@
                 }
             },
             "TALENTS_NAVIGATION" : {
-                "designation" : "",
+                "designation" : "Talents de navigation",
                 "attributs" : {
                     "TALENT_LECTURERADAR": {
                         "designation": "Lecture radar",
@@ -2972,47 +3009,138 @@
         },
         "entites": [
             {
-                "NOM": "Joueur 1",
+                "NOM": "Varen Zorael",
                 "FOR": {
-                    "initial": 15
+                    "initial": 0
                 },
                 "GAB": {
-                    "initial": 17
+                    "initial": 0
                 },
                 "CHA": {
-                    "initial": 19
+                    "initial": 0
                 },
                 "INT": {
-                    "initial": 13
+                    "initial": 0
                 },
                 "VOL": {
-                    "initial": 17
+                    "initial": 0
                 },
                 "RES": {
-                    "initial": 11
+                    "initial": 0
                 },
                 "AGI": {
-                    "initial": 14
+                    "initial": 0
                 },
                 "SGF": {
-                    "initial": 13
+                    "initial": 0
                 },
                 "INS": {
-                    "initial": 9
+                    "initial": 0
                 },
                 "RAP": {
-                    "initial": 10
+                    "initial": 0
                 }
             },
             {
-                "NOM": "Joueur 2",
+                "NOM": "Curth Flavius",
                 "FOR": {
-                    "initial": 20
+                    "initial": 0
+                },
+                "GAB": {
+                    "initial": 0
+                },
+                "CHA": {
+                    "initial": 0
+                },
+                "INT": {
+                    "initial": 0
+                },
+                "VOL": {
+                    "initial": 0
+                },
+                "RES": {
+                    "initial": 0
                 },
                 "AGI": {
-                    "initial": 10
+                    "initial": 0
+                },
+                "SGF": {
+                    "initial": 0
+                },
+                "INS": {
+                    "initial": 0
+                },
+                "RAP": {
+                    "initial": 0
+                }
+            },
+            {
+                "NOM": "Elyas Anders",
+                "FOR": {
+                    "initial": 0
+                },
+                "GAB": {
+                    "initial": 0
+                },
+                "CHA": {
+                    "initial": 0
+                },
+                "INT": {
+                    "initial": 0
+                },
+                "VOL": {
+                    "initial": 0
+                },
+                "RES": {
+                    "initial": 0
+                },
+                "AGI": {
+                    "initial": 0
+                },
+                "SGF": {
+                    "initial": 0
+                },
+                "INS": {
+                    "initial": 0
+                },
+                "RAP": {
+                    "initial": 0
+                }
+            },
+            {
+                "NOM": "Ethan Haakan",
+                "FOR": {
+                    "initial": 0
+                },
+                "GAB": {
+                    "initial": 0
+                },
+                "CHA": {
+                    "initial": 0
+                },
+                "INT": {
+                    "initial": 0
+                },
+                "VOL": {
+                    "initial": 0
+                },
+                "RES": {
+                    "initial": 0
+                },
+                "AGI": {
+                    "initial": 0
+                },
+                "SGF": {
+                    "initial": 0
+                },
+                "INS": {
+                    "initial": 0
+                },
+                "RAP": {
+                    "initial": 0
                 }
             }
+            
         ]
     },
     "MAINMENU": {
@@ -3035,10 +3163,6 @@
             {
                 "NOMMENU": "Joueurs",
                 "CODEAPPZ": "game"
-            },
-            {
-                "NOMMENU": "Combats sous-marin",
-                "CODEAPPZ": "submarine"
             },
             {
                 "NOMMENU": "Journal",
@@ -3090,27 +3214,15 @@
                 "ACTIONMENU_CODE": "blessures"
             },
             {
-                "ACTIONMENU_NOM": "Historique",
-                "ACTIONMENU_CODE": "historique"
-            },
-            {
                 "ACTIONMENU_NOM": "Equipement",
                 "ACTIONMENU_CODE": "equipement"
-            },
-            {
-                "ACTIONMENU_NOM": "Véhicule",
-                "ACTIONMENU_CODE": "vehicule"
             },
             {
                 "ACTIONMENU_NOM": "Ennemis / alliés / contacts",
                 "ACTIONMENU_CODE": "contacts"
             },
             {
-                "ACTIONMENU_NOM": "Notes",
-                "ACTIONMENU_CODE": "notes"
-            },
-            {
-                "ACTIONMENU_NOM": "Imprimer la fiche",
+                "ACTIONMENU_NOM": "Outils",
                 "ACTIONMENU_CODE": "print"
             }
 

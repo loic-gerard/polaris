@@ -9,3 +9,7 @@
 <a href="print.php?target=appz/game/panels/print/print5.php&player=<?php echo $_GET['player']; ?>" target="_blank" class="smallBlueButton">Page 5 (Equipement)</a>
 <br><br>
 <a href="print.php?target=appz/game/panels/print/print6.php&player=<?php echo $_GET['player']; ?>" target="_blank" class="smallBlueButton">Page 6 (Contacts)</a>
+<br>
+<br>
+<br>
+<a href="<?php echo PolarisCore::getUrl(array('recalcul' => 1), true, array()); ?>" target="_blank" class="smallBlueButton">Recalculer tous les bonus de base des talents</a>

@@ -97,6 +97,7 @@ class Entite{
         $q->execute();
         $qr = $q->getQueryResults();
         
+  
         //Add entite
         $q = new Query();
         $q->addToRequest('INSERT INTO entite '

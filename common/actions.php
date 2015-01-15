@@ -7,6 +7,7 @@ use jin\filesystem\Folder;
 use polarisapi\data\Entite;
 use jin\dataformat\Json;
 use polarisapi\data\View;
+use polarisapi\ui\categorie\Categorie;
 
 
 $folder = new Folder(ROOT.'appz/');
@@ -16,6 +17,44 @@ foreach ($folder AS $f){
            include (ROOT.'appz/'.$f.'/actions.php');
        }
     }
+}
+
+
+//Recalcul
+if(isset($_GET['recalcul'])){
+    $cattal = array();
+    $cat = new Categorie('TALENTS_PHYSIQUES', $_GET['player']);
+    $cattal[] = $cat->getAttributs();
+    $cat = new Categorie('TALENTS_COMBAT', $_GET['player']);
+    $cattal[] = $cat->getAttributs();
+    $cat = new Categorie('TALENTS_SOCIAUX', $_GET['player']);
+    $cattal[] = $cat->getAttributs();
+    $cat = new Categorie('TALENTS_ARTISANAUX', $_GET['player']);
+    $cattal[] = $cat->getAttributs();
+    $cat = new Categorie('TALENTS_CONNAISSANCES', $_GET['player']);
+    $cattal[] = $cat->getAttributs();
+    $cat = new Categorie('TALENTS_COMMERCIAUX', $_GET['player']);
+    $cattal[] = $cat->getAttributs();
+    $cat = new Categorie('TALENTS_ARTISTIQUES', $_GET['player']);
+    $cattal[] = $cat->getAttributs();
+    $cat = new Categorie('TALENTS_MENTAUX', $_GET['player']);
+    $cattal[] = $cat->getAttributs();
+    $cat = new Categorie('TALENTS_NAVIGATION', $_GET['player']);
+    $cattal[] = $cat->getAttributs();
+    $cat = new Categorie('TALENTS_INVESTIGATION', $_GET['player']);
+    $cattal[] = $cat->getAttributs();
+    $cat = new Categorie('TALENTS_MEDICAUX', $_GET['player']);
+    $cattal[] = $cat->getAttributs();
+    
+    foreach($cattal AS $catl){
+        foreach($catl AS $c){
+            $aleatoire = rand(1, 10);
+            $c->setValue($aleatoire, 'initial');
+        }
+    }
+    
+    header('Location: '.PolarisCore::getUrl(array(), true, array('recalcul')));
+
 }
 
 //Fin d'aventure'

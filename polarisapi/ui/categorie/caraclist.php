@@ -15,6 +15,7 @@ class CaracList extends Categorie{
         $inputContent .= '<tr class="header">';
         $inputContent .= '<td>Caractéristique</td>';
         $inputContent .= '<td>Initial</td>';
+        $inputContent .= '<td>Max</td>';
         $inputContent .= '<td>Modificateur</td>';
         $inputContent .= '<td>Total</td>';
         $inputContent .= '</tr>';
