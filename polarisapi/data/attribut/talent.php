@@ -10,7 +10,7 @@ class Talent extends ComplexeAttribut{
    
     
     public function getFinalValue() {
-        return $this->evaluateExpression($this->getData('total'));
+        return round($this->evaluateExpression($this->getData('total')));
     }
     
     public function getNiveau(){
@@ -27,7 +27,7 @@ class Talent extends ComplexeAttribut{
         $output .= '<td>'.$this->getAttributName().'</td>';
         $output .= '<td>'.$this->getNiveau().'</td>';
         $output .= '<td>'.$this->getValue('initial').'%</td>';
-        $output .= '<td>'.$this->evaluateExpression($this->getData('bonus')).'%</td>';
+        $output .= '<td>'.round($this->evaluateExpression($this->getData('bonus'))).'%</td>';
         $output .= '<td>'.$this->getModifier().'%</td>';
         $output .= '<td>'.$this->getFinalValue().'%</td>';
         $output .= '</tr>';

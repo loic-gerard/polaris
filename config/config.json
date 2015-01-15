@@ -1,1688 +1,3096 @@
 {
-    
     "HEMORRAGIE": {
-	"designation": "Hémorragies",
-	"attributs": {
-	    "HEMORRAGIE_TYPE": {
-		"designation": "Code du type d'hémorragie",
-		"type": "Simple"
-	    }
-	}
+        "designation": "Hémorragies",
+        "attributs": {
+            "HEMORRAGIE_TYPE": {
+                "designation": "Code du type d'hémorragie",
+                "type": "Simple"
+            }
+        }
     },
     "POISON": {
-	"designation": "Poisons",
-	"attributs": {
-	    "POISON_DESIGNATION": {
-		"designation": "Désignation",
-		"type": "Simple"
-	    },
-	    "POISON_INTENSITE": {
-		"designation": "Intensité",
-		"type": "Simple"
-	    },
-	    "POISON_EFFETS": {
-		"designation": "Effets",
-		"type": "Simple"
-	    }
-	}
+        "designation": "Poisons",
+        "attributs": {
+            "POISON_DESIGNATION": {
+                "designation": "Désignation",
+                "type": "Simple"
+            },
+            "POISON_INTENSITE": {
+                "designation": "Intensité",
+                "type": "Simple"
+            },
+            "POISON_EFFETS": {
+                "designation": "Effets",
+                "type": "Simple"
+            }
+        }
     },
     "MALADIE": {
-	"designation": "Maladies",
-	"attributs": {
-	    "MALADIE_DESIGNATION": {
-		"designation": "Désignation",
-		"type": "Simple"
-	    },
-	    "MALADIE_INTENSITE": {
-		"designation": "Intensité",
-		"type": "Simple"
-	    },
-	    "MALADIE_EFFETS": {
-		"designation": "Effets",
-		"type": "Simple"
-	    }
-	}
+        "designation": "Maladies",
+        "attributs": {
+            "MALADIE_DESIGNATION": {
+                "designation": "Désignation",
+                "type": "Simple"
+            },
+            "MALADIE_INTENSITE": {
+                "designation": "Intensité",
+                "type": "Simple"
+            },
+            "MALADIE_EFFETS": {
+                "designation": "Effets",
+                "type": "Simple"
+            }
+        }
     },
     "PNJ": {
-	"designation": "Ennemi",
-	"attributs": {
-	    "PNJ_NOM": {
-		"designation": "Nom",
-		"type": "Simple",
-		"jet" : 0
-	    },
-	    "PNJ_NIV": {
-		"designation": "Niveau de difficulté",
-		"type": "Simple",
-		"jet" : 0
-	    },
-	    "PNJ_DESC": {
-		"designation": "Description",
-		"type": "Simple",
-		"jet" : 0
-	    },
-	    "PNJ_AGI": {
-		"designation": "AGI",
-		"type": "Simple"
-	    },
-	    "PNJ_FOR": {
-		"designation": "FOR",
-		"type": "Simple"
-	    },
-	    "PNJ_RES": {
-		"designation": "RES",
-		"type": "Simple"
-	    },
-	    "PNJ_GAB": {
-		"designation": "GAB",
-		"type": "Simple"
-	    },
-	    "PNJ_RAP": {
-		"designation": "RAP",
-		"type": "Simple"
-	    },
-	    "PNJ_CHA": {
-		"designation": "CHA",
-		"type": "Simple"
-	    },
-	    "PNJ_VOL": {
-		"designation": "VOL",
-		"type": "Simple"
-	    },
-	    "PNJ_INT": {
-		"designation": "INT",
-		"type": "Simple"
-	    },
-	    "PNJ_SGF": {
-		"designation": "SGF",
-		"type": "Simple"
-	    },
-	    "PNJ_INS": {
-		"designation": "INS",
-		"type": "Simple"
-	    },
-	    "PNJ_REACTION": {
-		"designation": "Réaction",
-		"type": "Simple",
-		"jet" : 0
-	    },
-	    "PNJ_PERCEPTION": {
-		"designation": "Perception",
-		"type": "Simple",
-		"jet" : 0
-	    },
-	    "PNJ_SEUIL_INCONSCIENCE": {
-		"designation": "Seuil d'inconscience",
-		"type": "Simple",
-		"jet" : 0
-	    },
-	    "PNJ_SEUIL_LEGERE": {
-		"designation": "Seuil blessure légère",
-		"type": "Simple",
-		"jet" : 0
-	    },
-	    "PNJ_SEUIL_GRAVE": {
-		"designation": "Seuil blessure légère",
-		"type": "Simple",
-		"jet" : 0
-	    },
-	    "PNJ_SEUIL_CRITIQUE": {
-		"designation": "Seuil blessure critique",
-		"type": "Simple",
-		"jet" : 0
-	    },
-	    "PNJ_SEUIL_FATAL": {
-		"designation": "Seuil blessure fatale",
-		"type": "Simple",
-		"jet" : 0
-	    },
-	    "PNJ_SEUIL_MORT": {
-		"designation": "Seuil mort",
-		"type": "Simple",
-		"jet" : 0
-	    },
-	    "PNJ_ATTAQUE": {
-		"designation": "Palier attaque",
-		"type": "Simple",
-		"jet" : 0
-	    },
-	    "PNJ_ESQUIVE": {
-		"designation": "Palier esquive",
-		"type": "Simple",
-		"jet" : 0
-	    },
-	    "PNJ_PARADE": {
-		"designation": "Palier parade",
-		"type": "Simple",
-		"jet" : 0
-	    },
-	    "PNJ_FATIGUE": {
-		"designation": "Fatigue",
-		"type": "Simple",
-		"jet" : 0
-	    },
-	    "PNJ_DEGATS_PHYS": {
-		"designation": "Dégats physiques",
-		"type": "Simple",
-		"jet" : 0
-	    },
+        "designation": "Ennemi",
+        "attributs": {
+            "PNJ_NOM": {
+                "designation": "Nom",
+                "type": "Simple",
+                "jet": 0
+            },
+            "PNJ_NIV": {
+                "designation": "Niveau de difficulté",
+                "type": "Simple",
+                "jet": 0
+            },
+            "PNJ_DESC": {
+                "designation": "Description",
+                "type": "Simple",
+                "jet": 0
+            },
+            "PNJ_AGI": {
+                "designation": "AGI",
+                "type": "Simple"
+            },
+            "PNJ_FOR": {
+                "designation": "FOR",
+                "type": "Simple"
+            },
+            "PNJ_RES": {
+                "designation": "RES",
+                "type": "Simple"
+            },
+            "PNJ_GAB": {
+                "designation": "GAB",
+                "type": "Simple"
+            },
+            "PNJ_RAP": {
+                "designation": "RAP",
+                "type": "Simple"
+            },
+            "PNJ_CHA": {
+                "designation": "CHA",
+                "type": "Simple"
+            },
+            "PNJ_VOL": {
+                "designation": "VOL",
+                "type": "Simple"
+            },
+            "PNJ_INT": {
+                "designation": "INT",
+                "type": "Simple"
+            },
+            "PNJ_SGF": {
+                "designation": "SGF",
+                "type": "Simple"
+            },
+            "PNJ_INS": {
+                "designation": "INS",
+                "type": "Simple"
+            },
+            "PNJ_REACTION": {
+                "designation": "Réaction",
+                "type": "Simple",
+                "jet": 0
+            },
+            "PNJ_PERCEPTION": {
+                "designation": "Perception",
+                "type": "Simple",
+                "jet": 0
+            },
+            "PNJ_SEUIL_INCONSCIENCE": {
+                "designation": "Seuil d'inconscience",
+                "type": "Simple",
+                "jet": 0
+            },
+            "PNJ_SEUIL_LEGERE": {
+                "designation": "Seuil blessure légère",
+                "type": "Simple",
+                "jet": 0
+            },
+            "PNJ_SEUIL_GRAVE": {
+                "designation": "Seuil blessure légère",
+                "type": "Simple",
+                "jet": 0
+            },
+            "PNJ_SEUIL_CRITIQUE": {
+                "designation": "Seuil blessure critique",
+                "type": "Simple",
+                "jet": 0
+            },
+            "PNJ_SEUIL_FATAL": {
+                "designation": "Seuil blessure fatale",
+                "type": "Simple",
+                "jet": 0
+            },
+            "PNJ_SEUIL_MORT": {
+                "designation": "Seuil mort",
+                "type": "Simple",
+                "jet": 0
+            },
+            "PNJ_ATTAQUE": {
+                "designation": "Palier attaque",
+                "type": "Simple",
+                "jet": 0
+            },
+            "PNJ_ESQUIVE": {
+                "designation": "Palier esquive",
+                "type": "Simple",
+                "jet": 0
+            },
+            "PNJ_PARADE": {
+                "designation": "Palier parade",
+                "type": "Simple",
+                "jet": 0
+            },
+            "PNJ_FATIGUE": {
+                "designation": "Fatigue",
+                "type": "Simple",
+                "jet": 0
+            },
+            "PNJ_DEGATS_PHYS": {
+                "designation": "Dégats physiques",
+                "type": "Simple",
+                "jet": 0
+            },
             "PNJ_DEGATS_CHOC": {
-		"designation": "Dégats de choc",
-		"type": "Simple",
-		"jet" : 0
-	    },
-	    "PNJ_NBATTAQUES": {
-		"designation": "Nombre d'attaques",
-		"type": "Simple",
-		"jet" : 0
-	    },
-	    "PNJ_ARMURE": {
-		"designation": "Armure",
-		"type": "Simple",
-		"jet" : 0
-	    },
-	    "PNJ_BLINDAGE": {
-		"designation": "Blindage",
-		"type": "Simple",
-		"jet" : 0
-	    },
-	    "PNJ_SPE": {
-		"designation": "Spécifiquee",
-		"type": "Simple",
-		"jet" : 0
-	    },
-	    "PNJ_BLESSURE_INCONSCIENCE": {
-		"designation": "Inconscience",
-		"type": "cells",
-		"data": {
-		    "max": "12"
-		},
-		"defaultValue": 0,
-		"modificateur": 0,
-		"jet": 0
-	    },
-	    "PNJ_BLESSURE_LEGERE": {
-		"designation": "Blessures légères",
-		"type": "cells",
-		"data": {
-		    "max": "8"
-		},
-		"defaultValue": 0,
-		"modificateur": 0,
-		"jet": 0
-	    },
-	    "PNJ_BLESSURE_GRAVE": {
-		"designation": "Blessures graves",
-		"type": "cells",
-		"data": {
-		    "max": "6"
-		},
-		"defaultValue": 0,
-		"modificateur": 0,
-		"jet": 0
-	    },
-	    "PNJ_BLESSURE_CRITIQUE": {
-		"designation": "Blessures critiques",
-		"type": "cells",
-		"data": {
-		    "max": "4"
-		},
-		"defaultValue": 0,
-		"modificateur": 0,
-		"jet": 0
-	    },
-	    "PNJ_BLESSURE_FATAL": {
-		"designation": "Blessures fatales",
-		"type": "cells",
-		"data": {
-		    "max": "2"
-		},
-		"defaultValue": 0,
-		"modificateur": 0,
-		"jet": 0
-	    },
-	    "PNJ_BLESSURE_MORT": {
-		"designation": "Mort",
-		"type": "cells",
-		"data": {
-		    "max": "1"
-		},
-		"defaultValue": 0,
-		"modificateur": 0,
-		"jet": 0
-	    },
-	    "PNJ_INCONSCIENT" : {
-		"designation" : "Inconscient",
-		"type" : "Simple",
-		"defaultValue" : 0,
-		"jet" : 0
-	    },
-	    "PNJ_RES_ARME" : {
-		"designation" : "Resistance de l'arme utilisée",
-		"type" : "Simple",
-		"defaultValue" : 0,
-		"jet" : 0
-	    }
-	}
+                "designation": "Dégats de choc",
+                "type": "Simple",
+                "jet": 0
+            },
+            "PNJ_NBATTAQUES": {
+                "designation": "Nombre d'attaques",
+                "type": "Simple",
+                "jet": 0
+            },
+            "PNJ_ARMURE": {
+                "designation": "Armure",
+                "type": "Simple",
+                "jet": 0
+            },
+            "PNJ_BLINDAGE": {
+                "designation": "Blindage",
+                "type": "Simple",
+                "jet": 0
+            },
+            "PNJ_SPE": {
+                "designation": "Spécifiquee",
+                "type": "Simple",
+                "jet": 0
+            },
+            "PNJ_BLESSURE_INCONSCIENCE": {
+                "designation": "Inconscience",
+                "type": "cells",
+                "data": {
+                    "max": "12"
+                },
+                "defaultValue": 0,
+                "modificateur": 0,
+                "jet": 0
+            },
+            "PNJ_BLESSURE_LEGERE": {
+                "designation": "Blessures légères",
+                "type": "cells",
+                "data": {
+                    "max": "8"
+                },
+                "defaultValue": 0,
+                "modificateur": 0,
+                "jet": 0
+            },
+            "PNJ_BLESSURE_GRAVE": {
+                "designation": "Blessures graves",
+                "type": "cells",
+                "data": {
+                    "max": "6"
+                },
+                "defaultValue": 0,
+                "modificateur": 0,
+                "jet": 0
+            },
+            "PNJ_BLESSURE_CRITIQUE": {
+                "designation": "Blessures critiques",
+                "type": "cells",
+                "data": {
+                    "max": "4"
+                },
+                "defaultValue": 0,
+                "modificateur": 0,
+                "jet": 0
+            },
+            "PNJ_BLESSURE_FATAL": {
+                "designation": "Blessures fatales",
+                "type": "cells",
+                "data": {
+                    "max": "2"
+                },
+                "defaultValue": 0,
+                "modificateur": 0,
+                "jet": 0
+            },
+            "PNJ_BLESSURE_MORT": {
+                "designation": "Mort",
+                "type": "cells",
+                "data": {
+                    "max": "1"
+                },
+                "defaultValue": 0,
+                "modificateur": 0,
+                "jet": 0
+            },
+            "PNJ_INCONSCIENT": {
+                "designation": "Inconscient",
+                "type": "Simple",
+                "defaultValue": 0,
+                "jet": 0
+            },
+            "PNJ_RES_ARME": {
+                "designation": "Resistance de l'arme utilisée",
+                "type": "Simple",
+                "defaultValue": 0,
+                "jet": 0
+            }
+        }
     },
     "ARMECORPSACORPS": {
-	"designation": "Armes de corps à corps",
-	"attributs": {
-	    "ARMECORPSACORPS_DESIGNATION": {
-		"designation": "Désignation",
-		"type": "Simple"
-	    },
-	    "ARMECORPSACORPS_TYPE": {
-		"designation": "Type",
-		"type": "Simple"
-	    },
-	    "ARMECORPSACORPS_TALENT": {
-		"designation": "Talent nécessaire",
-		"type": "Simple"
-	    },
-	    "ARMECORPSACORPS_DEGATSPHYS": {
-		"designation": "Dégats physiques",
-		"type": "Simple"
-	    },
-	    "ARMECORPSACORPS_DEGATSCHOC": {
-		"designation": "Dégats de choc",
-		"type": "Simple"
-	    },
-	    "ARMECORPSACORPS_RESISTANCE" :{
-		"designation" : "Résistance",
-		"type" : "Simple"
-	    },
-            "ARMECORPSACORPS_SPECIAL" :{
-		"designation" : "Spécial",
-		"type" : "Simple"
-	    },
-            "ARMECORPSACORPS_EQUIPED" :{
-		"designation" : "Equipé",
-		"type" : "Simple",
-                "defaultValue" : 0
-	    }
+        "designation": "Armes de corps à corps",
+        "attributs": {
+            "ARMECORPSACORPS_DESIGNATION": {
+                "designation": "Désignation",
+                "type": "Simple"
+            },
+            "ARMECORPSACORPS_TYPE": {
+                "designation": "Type",
+                "type": "Simple"
+            },
+            "ARMECORPSACORPS_TALENT": {
+                "designation": "Talent nécessaire",
+                "type": "Simple"
+            },
+            "ARMECORPSACORPS_DEGATSPHYS": {
+                "designation": "Dégats physiques",
+                "type": "Simple"
+            },
+            "ARMECORPSACORPS_DEGATSCHOC": {
+                "designation": "Dégats de choc",
+                "type": "Simple"
+            },
+            "ARMECORPSACORPS_RESISTANCE": {
+                "designation": "Résistance",
+                "type": "Simple"
+            },
+            "ARMECORPSACORPS_SPECIAL": {
+                "designation": "Spécial",
+                "type": "Simple"
+            },
+            "ARMECORPSACORPS_EQUIPED": {
+                "designation": "Equipé",
+                "type": "Simple",
+                "defaultValue": 0
+            }
 
 
-	}
-        
-	
+        }
+
+
     },
     "ARMEDISTANCE": {
-	"designation": "Armes à distance",
-	"attributs": {
-	    "ARMEDISTANCE_DESIGNATION": {
-		"designation": "Désignation",
-		"type": "Simple"
-	    },
-	    "ARMEDISTANCE_TYPE": {
-		"designation": "Type",
-		"type": "Simple"
-	    },
-	    "ARMEDISTANCE_TALENT": {
-		"designation": "Talent nécessaire",
-		"type": "Simple"
-	    },
-	    "ARMEDISTANCE_MILIEU": {
-		"designation": "Milieu",
-		"type": "Simple"
-	    },
-	    "ARMEDISTANCE_DEGATSPHYS": {
-		"designation": "Dégats physiques",
-		"type": "Simple"
-	    },
-	    "ARMEDISTANCE_DEGATSCHOC": {
-		"designation": "Dégats de choc",
-		"type": "Simple"
-	    },
-	    "ARMEDISTANCE_PORTEE1": {
-		"designation": "Portée courte",
-		"type": "Simple"
-	    },
-	    "ARMEDISTANCE_PORTEE2": {
-		"designation": "Portée moyenne",
-		"type": "Simple"
-	    },
-	    "ARMEDISTANCE_PORTEE3": {
-		"designation": "Portée longue",
-		"type": "Simple"
-	    },
-	    "ARMEDISTANCE_PORTEE4": {
-		"designation": "Portée extrème",
-		"type": "Simple"
-	    },
-	    "ARMEDISTANCE_CADENCE": {
-		"designation": "Cadence",
-		"type": "Simple"
-	    },
-	    "ARMEDISTANCE_MUNITIONS": {
-		"designation": "Munitions",
-		"type": "Simple",
-		"defaultValue": 0
-	    },
-	    "ARMEDISTANCE_RESISTANCE": {
-		"designation": "Resistance",
-		"type": "Simple"
-	    },
-	    "ARMEDISTANCE_EQUIPED": {
-		"designation": "Equipé",
-		"type": "Simple",
-		"defaultValue": 0
-	    }
-	}
+        "designation": "Armes à distance",
+        "attributs": {
+            "ARMEDISTANCE_DESIGNATION": {
+                "designation": "Désignation",
+                "type": "Simple"
+            },
+            "ARMEDISTANCE_TYPE": {
+                "designation": "Type",
+                "type": "Simple"
+            },
+            "ARMEDISTANCE_TALENT": {
+                "designation": "Talent nécessaire",
+                "type": "Simple"
+            },
+            "ARMEDISTANCE_MILIEU": {
+                "designation": "Milieu",
+                "type": "Simple"
+            },
+            "ARMEDISTANCE_DEGATSPHYS": {
+                "designation": "Dégats physiques",
+                "type": "Simple"
+            },
+            "ARMEDISTANCE_DEGATSCHOC": {
+                "designation": "Dégats de choc",
+                "type": "Simple"
+            },
+            "ARMEDISTANCE_PORTEE1": {
+                "designation": "Portée courte",
+                "type": "Simple"
+            },
+            "ARMEDISTANCE_PORTEE2": {
+                "designation": "Portée moyenne",
+                "type": "Simple"
+            },
+            "ARMEDISTANCE_PORTEE3": {
+                "designation": "Portée longue",
+                "type": "Simple"
+            },
+            "ARMEDISTANCE_PORTEE4": {
+                "designation": "Portée extrème",
+                "type": "Simple"
+            },
+            "ARMEDISTANCE_CADENCE": {
+                "designation": "Cadence",
+                "type": "Simple"
+            },
+            "ARMEDISTANCE_MUNITIONS": {
+                "designation": "Munitions",
+                "type": "Simple",
+                "defaultValue": 0
+            },
+            "ARMEDISTANCE_RESISTANCE": {
+                "designation": "Resistance",
+                "type": "Simple"
+            },
+            "ARMEDISTANCE_EQUIPED": {
+                "designation": "Equipé",
+                "type": "Simple",
+                "defaultValue": 0
+            }
+        }
     },
-    "PROTECTION" : {
-	"designation" : "Protections",
-	"attributs" : {
-	    "PROTECTION_DESIGNATION" : {
-		"designation" : "Désignation",
-		"type" : "Simple"
-	    },
-	    "PROTECTION_LOCALISATION" : {
-		"designation" : "Localisation",
-		"type" : "Simple"
-	    },
-	    "PROTECTION_PROTECTION" : {
-		"designation" : "Protection",
-		"type" : "Simple"
-	    },
-	    "PROTECTION_RESISTANCE" : {
-		"designation" : "Resistance",
-		"type" : "Simple"
-	    },
-	    "PROTECTION_SPECIAL" : {
-		"designation" : "Spécial",
-		"type" : "Simple"
-	    },
-	    "PROTECTION_USURE" : {
-		"designation" : "Usure (en %)",
-		"type" : "Simple",
-		"defaultValue" : 0
-	    },
-	    "PROTECTION_EQUIPED" : {
-		"designation" : "Equipé",
-		"type" : "Simple",
-		"defaultValue" : 1
-	    }
-	    
-	}
+    "PROTECTION": {
+        "designation": "Protections",
+        "attributs": {
+            "PROTECTION_DESIGNATION": {
+                "designation": "Désignation",
+                "type": "Simple"
+            },
+            "PROTECTION_LOCALISATION": {
+                "designation": "Localisation",
+                "type": "Simple"
+            },
+            "PROTECTION_PROTECTION": {
+                "designation": "Protection",
+                "type": "Simple"
+            },
+            "PROTECTION_RESISTANCE": {
+                "designation": "Resistance",
+                "type": "Simple"
+            },
+            "PROTECTION_SPECIAL": {
+                "designation": "Spécial",
+                "type": "Simple"
+            },
+            "PROTECTION_USURE": {
+                "designation": "Usure (en %)",
+                "type": "Simple",
+                "defaultValue": 0
+            },
+            "PROTECTION_EQUIPED": {
+                "designation": "Equipé",
+                "type": "Simple",
+                "defaultValue": 1
+            }
+
+        }
     },
     "CONTACT": {
-	"designation": "Contacts",
-	"categories": {
-	    "CONTACTS": {
-		"designation": "Contacts",
-		"attributs": {
-		    "CONTACT_NOM": {
-			"designation": "Nom",
-			"type": "Simple"
-		    },
-		    "CONTACT_LOCALISATION": {
-			"designation": "Dernière localisation connue",
-			"type": "Simple"
-		    },
-		    "CONTACT_TYPE": {
-			"designation": "Type de contact",
-			"type": "Simple"
-		    },
-		    "CONTACT_DETAILS": {
-			"designation": "Détails divers",
-			"type": "Simple"
-		    }
-		}
-	    }
-	}
+        "designation": "Contacts",
+        "categories": {
+            "CONTACTS": {
+                "designation": "Contacts",
+                "attributs": {
+                    "CONTACT_NOM": {
+                        "designation": "Nom",
+                        "type": "Simple"
+                    },
+                    "CONTACT_LOCALISATION": {
+                        "designation": "Dernière localisation connue",
+                        "type": "Simple"
+                    },
+                    "CONTACT_TYPE": {
+                        "designation": "Type de contact",
+                        "type": "Simple"
+                    },
+                    "CONTACT_DETAILS": {
+                        "designation": "Détails divers",
+                        "type": "Simple"
+                    }
+                }
+            }
+        }
 
     },
     "MODIFICATEUR": {
-	"designation": "Modificateur",
-	"categories": {
-	    "MODIFICATEUR": {
-		"designation": "Modificateur",
-		"attributs": {
-		    "MODIFICATEUR_TYPE": {
-			"designation": "Type de modificateur",
-			"type": "Simple"
-		    },
-		    "MODIFICATEUR_LABEL": {
-			"designation": "Label",
-			"type": "Simple"
-		    },
-		    "MODIFICATEUR_CATEGORIE": {
-			"designation": "Catégorie",
-			"type": "Simple"
-		    },
-		    "MODIFICATEUR_CATEGORIE_ID": {
-			"designation": "Form ID cat",
-			"type": "Simple"
-		    },
-		    "MODIFICATEUR_DEFAUT": {
-			"designation": "Defaut",
-			"type": "Simple",
-			"defaultValue": 0
-		    },
-		    "MODIFICATEUR_VALUE": {
-			"designation": "Valeur",
-			"type": "Simple"
-		    }
-		}
-	    }
-	},
-	"entites": [
-	    {
-		"MODIFICATEUR_TYPE": "ECOUTER",
-		"MODIFICATEUR_CATEGORIE": "Bruit à percevoir",
-		"MODIFICATEUR_LABEL": "Murmure",
-		"MODIFICATEUR_CATEGORIE_ID": "mod_bruit",
-		"MODIFICATEUR_VALUE": "6"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "ECOUTER",
-		"MODIFICATEUR_CATEGORIE": "Bruit à percevoir",
-		"MODIFICATEUR_LABEL": "Voix basse",
-		"MODIFICATEUR_CATEGORIE_ID": "mod_bruit",
-		"MODIFICATEUR_VALUE": "2"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "ECOUTER",
-		"MODIFICATEUR_CATEGORIE": "Bruit à percevoir",
-		"MODIFICATEUR_LABEL": "Voix normale",
-		"MODIFICATEUR_CATEGORIE_ID": "mod_bruit",
-		"MODIFICATEUR_VALUE": "0",
-		"MODIFICATEUR_DEFAUT": 1
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "ECOUTER",
-		"MODIFICATEUR_CATEGORIE": "Bruit à percevoir",
-		"MODIFICATEUR_LABEL": "Crier",
-		"MODIFICATEUR_CATEGORIE_ID": "mod_bruit",
-		"MODIFICATEUR_VALUE": "-6"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "ECOUTER",
-		"MODIFICATEUR_CATEGORIE": "Bruit à percevoir",
-		"MODIFICATEUR_LABEL": "Haut-parleur",
-		"MODIFICATEUR_CATEGORIE_ID": "mod_bruit",
-		"MODIFICATEUR_VALUE": "-12"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "ECOUTER",
-		"MODIFICATEUR_CATEGORIE": "Bruit de fond",
-		"MODIFICATEUR_CATEGORIE_ID": "mod_bruitdefond",
-		"MODIFICATEUR_LABEL": "Silence",
-		"MODIFICATEUR_VALUE": "0",
-		"MODIFICATEUR_DEFAUT": 1
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "ECOUTER",
-		"MODIFICATEUR_CATEGORIE": "Bruit de fond",
-		"MODIFICATEUR_CATEGORIE_ID": "mod_bruitdefond",
-		"MODIFICATEUR_LABEL": "Ronronnement de machine",
-		"MODIFICATEUR_VALUE": "2"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "ECOUTER",
-		"MODIFICATEUR_CATEGORIE": "Bruit de fond",
-		"MODIFICATEUR_CATEGORIE_ID": "mod_bruitdefond",
-		"MODIFICATEUR_LABEL": "Discussion animée",
-		"MODIFICATEUR_VALUE": "4"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "ECOUTER",
-		"MODIFICATEUR_CATEGORIE": "Bruit de fond",
-		"MODIFICATEUR_CATEGORIE_ID": "mod_bruitdefond",
-		"MODIFICATEUR_LABEL": "Ambiance de bar",
-		"MODIFICATEUR_VALUE": "6"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "ECOUTER",
-		"MODIFICATEUR_CATEGORIE": "Bruit de fond",
-		"MODIFICATEUR_CATEGORIE_ID": "mod_bruitdefond",
-		"MODIFICATEUR_LABEL": "Machinerie bruyante",
-		"MODIFICATEUR_VALUE": "12"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "ECOUTER",
-		"MODIFICATEUR_CATEGORIE": "Terrain",
-		"MODIFICATEUR_CATEGORIE_ID": "mod_terrain",
-		"MODIFICATEUR_LABEL": "Dégagé",
-		"MODIFICATEUR_VALUE": "0",
-		"MODIFICATEUR_DEFAUT": 1
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "ECOUTER",
-		"MODIFICATEUR_CATEGORIE": "Terrain",
-		"MODIFICATEUR_CATEGORIE_ID": "mod_terrain",
-		"MODIFICATEUR_LABEL": "Obstrué",
-		"MODIFICATEUR_VALUE": "4"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "ECOUTER",
-		"MODIFICATEUR_CATEGORIE": "Terrain",
-		"MODIFICATEUR_CATEGORIE_ID": "mod_terrain",
-		"MODIFICATEUR_LABEL": "Endroit clos",
-		"MODIFICATEUR_VALUE": "-3"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "ECOUTER",
-		"MODIFICATEUR_CATEGORIE": "Terrain",
-		"MODIFICATEUR_CATEGORIE_ID": "mod_terrain",
-		"MODIFICATEUR_LABEL": "Endroit résonnant",
-		"MODIFICATEUR_VALUE": "-6"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "PERCEPTION",
-		"MODIFICATEUR_CATEGORIE": "Difficulté de base",
-		"MODIFICATEUR_CATEGORIE_ID": "difficultebase",
-		"MODIFICATEUR_LABEL": "Le joueur somnole",
-		"MODIFICATEUR_VALUE": "24"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "PERCEPTION",
-		"MODIFICATEUR_CATEGORIE": "Difficulté de base",
-		"MODIFICATEUR_CATEGORIE_ID": "difficultebase",
-		"MODIFICATEUR_LABEL": "Le joueur ne fait pas attention",
-		"MODIFICATEUR_VALUE": "18",
-		"MODIFICATEUR_DEFAUT": 1
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "PERCEPTION",
-		"MODIFICATEUR_CATEGORIE": "Difficulté de base",
-		"MODIFICATEUR_CATEGORIE_ID": "difficultebase",
-		"MODIFICATEUR_LABEL": "Le joueur est attentif (sans se concentrer sur un sens)",
-		"MODIFICATEUR_VALUE": "12"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "PERCEPTION",
-		"MODIFICATEUR_CATEGORIE": "Difficulté de base",
-		"MODIFICATEUR_CATEGORIE_ID": "difficultebase",
-		"MODIFICATEUR_LABEL": "Le joueur est attentif (se concentre sur un sens)",
-		"MODIFICATEUR_VALUE": "8"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "PERCEPTION",
-		"MODIFICATEUR_CATEGORIE": "Difficulté de base",
-		"MODIFICATEUR_CATEGORIE_ID": "difficultebase",
-		"MODIFICATEUR_LABEL": "Le joueur est très attentif (sans se concentrer sur un sens)",
-		"MODIFICATEUR_VALUE": "10"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "PERCEPTION",
-		"MODIFICATEUR_CATEGORIE": "Difficulté de base",
-		"MODIFICATEUR_CATEGORIE_ID": "difficultebase",
-		"MODIFICATEUR_LABEL": "Le joueur est très attentif (se concentre sur un sens)",
-		"MODIFICATEUR_VALUE": "6"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "VOIR",
-		"MODIFICATEUR_CATEGORIE": "Terrain",
-		"MODIFICATEUR_CATEGORIE_ID": "mod1",
-		"MODIFICATEUR_LABEL": "Dégagé",
-		"MODIFICATEUR_VALUE": "-3"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "VOIR",
-		"MODIFICATEUR_CATEGORIE": "Terrain",
-		"MODIFICATEUR_CATEGORIE_ID": "mod1",
-		"MODIFICATEUR_LABEL": "Partiellement obstrué (peu de végétation, relief bas, quelques personnes)",
-		"MODIFICATEUR_VALUE": "0",
-		"MODIFICATEUR_DEFAUT": 1
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "VOIR",
-		"MODIFICATEUR_CATEGORIE": "Terrain",
-		"MODIFICATEUR_CATEGORIE_ID": "mod1",
-		"MODIFICATEUR_LABEL": "Obstrué (feuillage fourni, relief varié, petite foule, eau sale)",
-		"MODIFICATEUR_VALUE": "3"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "VOIR",
-		"MODIFICATEUR_CATEGORIE": "Terrain",
-		"MODIFICATEUR_CATEGORIE_ID": "mod1",
-		"MODIFICATEUR_LABEL": "Très obstrué (végétatuin dense, bcp de relief, rues Equinoxe, foule importante, eau egouts)",
-		"MODIFICATEUR_VALUE": "6"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "VOIR",
-		"MODIFICATEUR_CATEGORIE": "Luminosité",
-		"MODIFICATEUR_CATEGORIE_ID": "mod2",
-		"MODIFICATEUR_LABEL": "Forte (projecteurs, lumière solaire)",
-		"MODIFICATEUR_VALUE": "-3"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "VOIR",
-		"MODIFICATEUR_CATEGORIE": "Luminosité",
-		"MODIFICATEUR_CATEGORIE_ID": "mod2",
-		"MODIFICATEUR_LABEL": "Normale (Eclairage d'une cité)",
-		"MODIFICATEUR_VALUE": "0",
-		"MODIFICATEUR_DEFAUT": 1
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "VOIR",
-		"MODIFICATEUR_CATEGORIE": "Luminosité",
-		"MODIFICATEUR_CATEGORIE_ID": "mod2",
-		"MODIFICATEUR_LABEL": "Moyenne (Torches, lampes électriques)",
-		"MODIFICATEUR_VALUE": "3"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "VOIR",
-		"MODIFICATEUR_CATEGORIE": "Luminosité",
-		"MODIFICATEUR_CATEGORIE_ID": "mod2",
-		"MODIFICATEUR_LABEL": "Faible (veilleuse, fumigènes, tempête)",
-		"MODIFICATEUR_VALUE": "6"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "VOIR",
-		"MODIFICATEUR_CATEGORIE": "Luminosité",
-		"MODIFICATEUR_CATEGORIE_ID": "mod2",
-		"MODIFICATEUR_LABEL": "Très faible (ombre, ténèbre partielles, tempête de sable)",
-		"MODIFICATEUR_VALUE": "9"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "COMBAT",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Attaque de dos",
-		"MODIFICATEUR_VALUE": "40"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "COMBAT",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Attaque de dos en combat",
-		"MODIFICATEUR_VALUE": "20"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "COMBAT",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Attaque de coté",
-		"MODIFICATEUR_VALUE": "20"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "COMBAT",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Attaque de coté en combat",
-		"MODIFICATEUR_VALUE": "10"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "COMBAT",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Attaque par-dessus",
-		"MODIFICATEUR_VALUE": "10"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "COMBAT",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Cible au sol",
-		"MODIFICATEUR_VALUE": "20"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "COMBAT",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Cible immobile",
-		"MODIFICATEUR_VALUE": "60"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "COMBAT",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Attaque à partir du sol",
-		"MODIFICATEUR_VALUE": "-20"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "COMBAT",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Attaque en escaladant",
-		"MODIFICATEUR_VALUE": "-30"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "COMBAT",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Ajuster (5%)",
-		"MODIFICATEUR_VALUE": "5"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "COMBAT",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Ajuster (10%)",
-		"MODIFICATEUR_VALUE": "10"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "COMBAT",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Position désavantageuse",
-		"MODIFICATEUR_VALUE": "-20"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "COMBAT2",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Obscurité partielle",
-		"MODIFICATEUR_VALUE": "-30"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "COMBAT2",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Visibilité réduite",
-		"MODIFICATEUR_VALUE": "-20"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "COMBAT2",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Visibilité moyenne",
-		"MODIFICATEUR_VALUE": "-10"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "COMBAT2",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Couverture 20%",
-		"MODIFICATEUR_VALUE": "-10"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "COMBAT2",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Couverture 50%",
-		"MODIFICATEUR_VALUE": "-30"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "COMBAT2",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Couverture 70%",
-		"MODIFICATEUR_VALUE": "-50"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "COMBAT2",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Couverture 90%",
-		"MODIFICATEUR_VALUE": "-80"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "DETECTION",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Cible immobile",
-		"MODIFICATEUR_VALUE": "0/-60"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "DETECTION",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Cible contre paroi",
-		"MODIFICATEUR_VALUE": "-60/0"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "DETECTION",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Cible enterrée",
-		"MODIFICATEUR_VALUE": "-80/-40"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "DETECTION",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Mer agitée",
-		"MODIFICATEUR_VALUE": "-10/0"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "DETECTION",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Mer forte",
-		"MODIFICATEUR_VALUE": "-30/-30"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "DETECTION",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Tempête",
-		"MODIFICATEUR_VALUE": "-50/-50"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "DETECTION",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Vit. +40 noeuds",
-		"MODIFICATEUR_VALUE": "1000/1000"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "DETECTION",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Vit. +20 noeuds",
-		"MODIFICATEUR_VALUE": "-20/-20"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "DETECTION",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Vit. 1 à 10 noeuds",
-		"MODIFICATEUR_VALUE": "10/10"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "DETECTION",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Immobile",
-		"MODIFICATEUR_VALUE": "20/20"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "DETECTION",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Cible à +20 noeuds",
-		"MODIFICATEUR_VALUE": "0/+20"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "DETECTION2",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Cible : torpille",
-		"MODIFICATEUR_VALUE": "-40/-40"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "DETECTION2",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Cible : armure",
-		"MODIFICATEUR_VALUE": "-30/-30"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "DETECTION2",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Cible : chasseur",
-		"MODIFICATEUR_VALUE": "-20/-20"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "DETECTION2",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Cible : escorteur",
-		"MODIFICATEUR_VALUE": "-10/-10"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "DETECTION2",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Cible : fregate",
-		"MODIFICATEUR_VALUE": "0/0"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "DETECTION2",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Obtacle",
-		"MODIFICATEUR_VALUE": "1000/-50"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "DETECTION2",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "La cible tire",
-		"MODIFICATEUR_VALUE": "0/20"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "DETECTION2",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Cible sonar actif",
-		"MODIFICATEUR_VALUE": "0/50"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "DETECTION2",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Cible brouillée",
-		"MODIFICATEUR_VALUE": "50/50"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "DETECTION2",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Cible à prop. à hélices",
-		"MODIFICATEUR_VALUE": "0/10"
-	    },
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    {
-		"MODIFICATEUR_TYPE": "SOLTIR",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Cible immobile",
-		"MODIFICATEUR_VALUE": "30/-30"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "SOLTIR",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Cible contre paroi",
-		"MODIFICATEUR_VALUE": "-60/0"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "SOLTIR",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Cible enterrée",
-		"MODIFICATEUR_VALUE": "-80/-40"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "SOLTIR",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Cible : torpille",
-		"MODIFICATEUR_VALUE": "-40/-40"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "SOLTIR",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Cible : armure",
-		"MODIFICATEUR_VALUE": "-30/-30"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "SOLTIR",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Cible : chasseur",
-		"MODIFICATEUR_VALUE": "-20/-20"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "SOLTIR",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Cible : escorteur",
-		"MODIFICATEUR_VALUE": "-10/-10"
-	    },
-	    {
-		"MODIFICATEUR_TYPE": "SOLTIR",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Cible : fregate",
-		"MODIFICATEUR_VALUE": "0/0"
-	    },
-	     {
-		"MODIFICATEUR_TYPE": "SOLTIR",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Cible : croiseur",
-		"MODIFICATEUR_VALUE": "20/20"
-	    },
-	     {
-		"MODIFICATEUR_TYPE": "SOLTIR",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Cible : cuirassé",
-		"MODIFICATEUR_VALUE": "40/40"
-	    },
-	     {
-		"MODIFICATEUR_TYPE": "SOLTIR",
-		"MODIFICATEUR_CATEGORIE": "",
-		"MODIFICATEUR_CATEGORIE_ID": "",
-		"MODIFICATEUR_LABEL": "Cible : cité",
-		"MODIFICATEUR_VALUE": "80/80"
-	    }
-	    
+        "designation": "Modificateur",
+        "categories": {
+            "MODIFICATEUR": {
+                "designation": "Modificateur",
+                "attributs": {
+                    "MODIFICATEUR_TYPE": {
+                        "designation": "Type de modificateur",
+                        "type": "Simple"
+                    },
+                    "MODIFICATEUR_LABEL": {
+                        "designation": "Label",
+                        "type": "Simple"
+                    },
+                    "MODIFICATEUR_CATEGORIE": {
+                        "designation": "Catégorie",
+                        "type": "Simple"
+                    },
+                    "MODIFICATEUR_CATEGORIE_ID": {
+                        "designation": "Form ID cat",
+                        "type": "Simple"
+                    },
+                    "MODIFICATEUR_DEFAUT": {
+                        "designation": "Defaut",
+                        "type": "Simple",
+                        "defaultValue": 0
+                    },
+                    "MODIFICATEUR_VALUE": {
+                        "designation": "Valeur",
+                        "type": "Simple"
+                    }
+                }
+            }
+        },
+        "entites": [
+            {
+                "MODIFICATEUR_TYPE": "ECOUTER",
+                "MODIFICATEUR_CATEGORIE": "Bruit à percevoir",
+                "MODIFICATEUR_LABEL": "Murmure",
+                "MODIFICATEUR_CATEGORIE_ID": "mod_bruit",
+                "MODIFICATEUR_VALUE": "6"
+            },
+            {
+                "MODIFICATEUR_TYPE": "ECOUTER",
+                "MODIFICATEUR_CATEGORIE": "Bruit à percevoir",
+                "MODIFICATEUR_LABEL": "Voix basse",
+                "MODIFICATEUR_CATEGORIE_ID": "mod_bruit",
+                "MODIFICATEUR_VALUE": "2"
+            },
+            {
+                "MODIFICATEUR_TYPE": "ECOUTER",
+                "MODIFICATEUR_CATEGORIE": "Bruit à percevoir",
+                "MODIFICATEUR_LABEL": "Voix normale",
+                "MODIFICATEUR_CATEGORIE_ID": "mod_bruit",
+                "MODIFICATEUR_VALUE": "0",
+                "MODIFICATEUR_DEFAUT": 1
+            },
+            {
+                "MODIFICATEUR_TYPE": "ECOUTER",
+                "MODIFICATEUR_CATEGORIE": "Bruit à percevoir",
+                "MODIFICATEUR_LABEL": "Crier",
+                "MODIFICATEUR_CATEGORIE_ID": "mod_bruit",
+                "MODIFICATEUR_VALUE": "-6"
+            },
+            {
+                "MODIFICATEUR_TYPE": "ECOUTER",
+                "MODIFICATEUR_CATEGORIE": "Bruit à percevoir",
+                "MODIFICATEUR_LABEL": "Haut-parleur",
+                "MODIFICATEUR_CATEGORIE_ID": "mod_bruit",
+                "MODIFICATEUR_VALUE": "-12"
+            },
+            {
+                "MODIFICATEUR_TYPE": "ECOUTER",
+                "MODIFICATEUR_CATEGORIE": "Bruit de fond",
+                "MODIFICATEUR_CATEGORIE_ID": "mod_bruitdefond",
+                "MODIFICATEUR_LABEL": "Silence",
+                "MODIFICATEUR_VALUE": "0",
+                "MODIFICATEUR_DEFAUT": 1
+            },
+            {
+                "MODIFICATEUR_TYPE": "ECOUTER",
+                "MODIFICATEUR_CATEGORIE": "Bruit de fond",
+                "MODIFICATEUR_CATEGORIE_ID": "mod_bruitdefond",
+                "MODIFICATEUR_LABEL": "Ronronnement de machine",
+                "MODIFICATEUR_VALUE": "2"
+            },
+            {
+                "MODIFICATEUR_TYPE": "ECOUTER",
+                "MODIFICATEUR_CATEGORIE": "Bruit de fond",
+                "MODIFICATEUR_CATEGORIE_ID": "mod_bruitdefond",
+                "MODIFICATEUR_LABEL": "Discussion animée",
+                "MODIFICATEUR_VALUE": "4"
+            },
+            {
+                "MODIFICATEUR_TYPE": "ECOUTER",
+                "MODIFICATEUR_CATEGORIE": "Bruit de fond",
+                "MODIFICATEUR_CATEGORIE_ID": "mod_bruitdefond",
+                "MODIFICATEUR_LABEL": "Ambiance de bar",
+                "MODIFICATEUR_VALUE": "6"
+            },
+            {
+                "MODIFICATEUR_TYPE": "ECOUTER",
+                "MODIFICATEUR_CATEGORIE": "Bruit de fond",
+                "MODIFICATEUR_CATEGORIE_ID": "mod_bruitdefond",
+                "MODIFICATEUR_LABEL": "Machinerie bruyante",
+                "MODIFICATEUR_VALUE": "12"
+            },
+            {
+                "MODIFICATEUR_TYPE": "ECOUTER",
+                "MODIFICATEUR_CATEGORIE": "Terrain",
+                "MODIFICATEUR_CATEGORIE_ID": "mod_terrain",
+                "MODIFICATEUR_LABEL": "Dégagé",
+                "MODIFICATEUR_VALUE": "0",
+                "MODIFICATEUR_DEFAUT": 1
+            },
+            {
+                "MODIFICATEUR_TYPE": "ECOUTER",
+                "MODIFICATEUR_CATEGORIE": "Terrain",
+                "MODIFICATEUR_CATEGORIE_ID": "mod_terrain",
+                "MODIFICATEUR_LABEL": "Obstrué",
+                "MODIFICATEUR_VALUE": "4"
+            },
+            {
+                "MODIFICATEUR_TYPE": "ECOUTER",
+                "MODIFICATEUR_CATEGORIE": "Terrain",
+                "MODIFICATEUR_CATEGORIE_ID": "mod_terrain",
+                "MODIFICATEUR_LABEL": "Endroit clos",
+                "MODIFICATEUR_VALUE": "-3"
+            },
+            {
+                "MODIFICATEUR_TYPE": "ECOUTER",
+                "MODIFICATEUR_CATEGORIE": "Terrain",
+                "MODIFICATEUR_CATEGORIE_ID": "mod_terrain",
+                "MODIFICATEUR_LABEL": "Endroit résonnant",
+                "MODIFICATEUR_VALUE": "-6"
+            },
+            {
+                "MODIFICATEUR_TYPE": "PERCEPTION",
+                "MODIFICATEUR_CATEGORIE": "Difficulté de base",
+                "MODIFICATEUR_CATEGORIE_ID": "difficultebase",
+                "MODIFICATEUR_LABEL": "Le joueur somnole",
+                "MODIFICATEUR_VALUE": "24"
+            },
+            {
+                "MODIFICATEUR_TYPE": "PERCEPTION",
+                "MODIFICATEUR_CATEGORIE": "Difficulté de base",
+                "MODIFICATEUR_CATEGORIE_ID": "difficultebase",
+                "MODIFICATEUR_LABEL": "Le joueur ne fait pas attention",
+                "MODIFICATEUR_VALUE": "18",
+                "MODIFICATEUR_DEFAUT": 1
+            },
+            {
+                "MODIFICATEUR_TYPE": "PERCEPTION",
+                "MODIFICATEUR_CATEGORIE": "Difficulté de base",
+                "MODIFICATEUR_CATEGORIE_ID": "difficultebase",
+                "MODIFICATEUR_LABEL": "Le joueur est attentif (sans se concentrer sur un sens)",
+                "MODIFICATEUR_VALUE": "12"
+            },
+            {
+                "MODIFICATEUR_TYPE": "PERCEPTION",
+                "MODIFICATEUR_CATEGORIE": "Difficulté de base",
+                "MODIFICATEUR_CATEGORIE_ID": "difficultebase",
+                "MODIFICATEUR_LABEL": "Le joueur est attentif (se concentre sur un sens)",
+                "MODIFICATEUR_VALUE": "8"
+            },
+            {
+                "MODIFICATEUR_TYPE": "PERCEPTION",
+                "MODIFICATEUR_CATEGORIE": "Difficulté de base",
+                "MODIFICATEUR_CATEGORIE_ID": "difficultebase",
+                "MODIFICATEUR_LABEL": "Le joueur est très attentif (sans se concentrer sur un sens)",
+                "MODIFICATEUR_VALUE": "10"
+            },
+            {
+                "MODIFICATEUR_TYPE": "PERCEPTION",
+                "MODIFICATEUR_CATEGORIE": "Difficulté de base",
+                "MODIFICATEUR_CATEGORIE_ID": "difficultebase",
+                "MODIFICATEUR_LABEL": "Le joueur est très attentif (se concentre sur un sens)",
+                "MODIFICATEUR_VALUE": "6"
+            },
+            {
+                "MODIFICATEUR_TYPE": "VOIR",
+                "MODIFICATEUR_CATEGORIE": "Terrain",
+                "MODIFICATEUR_CATEGORIE_ID": "mod1",
+                "MODIFICATEUR_LABEL": "Dégagé",
+                "MODIFICATEUR_VALUE": "-3"
+            },
+            {
+                "MODIFICATEUR_TYPE": "VOIR",
+                "MODIFICATEUR_CATEGORIE": "Terrain",
+                "MODIFICATEUR_CATEGORIE_ID": "mod1",
+                "MODIFICATEUR_LABEL": "Partiellement obstrué (peu de végétation, relief bas, quelques personnes)",
+                "MODIFICATEUR_VALUE": "0",
+                "MODIFICATEUR_DEFAUT": 1
+            },
+            {
+                "MODIFICATEUR_TYPE": "VOIR",
+                "MODIFICATEUR_CATEGORIE": "Terrain",
+                "MODIFICATEUR_CATEGORIE_ID": "mod1",
+                "MODIFICATEUR_LABEL": "Obstrué (feuillage fourni, relief varié, petite foule, eau sale)",
+                "MODIFICATEUR_VALUE": "3"
+            },
+            {
+                "MODIFICATEUR_TYPE": "VOIR",
+                "MODIFICATEUR_CATEGORIE": "Terrain",
+                "MODIFICATEUR_CATEGORIE_ID": "mod1",
+                "MODIFICATEUR_LABEL": "Très obstrué (végétatuin dense, bcp de relief, rues Equinoxe, foule importante, eau egouts)",
+                "MODIFICATEUR_VALUE": "6"
+            },
+            {
+                "MODIFICATEUR_TYPE": "VOIR",
+                "MODIFICATEUR_CATEGORIE": "Luminosité",
+                "MODIFICATEUR_CATEGORIE_ID": "mod2",
+                "MODIFICATEUR_LABEL": "Forte (projecteurs, lumière solaire)",
+                "MODIFICATEUR_VALUE": "-3"
+            },
+            {
+                "MODIFICATEUR_TYPE": "VOIR",
+                "MODIFICATEUR_CATEGORIE": "Luminosité",
+                "MODIFICATEUR_CATEGORIE_ID": "mod2",
+                "MODIFICATEUR_LABEL": "Normale (Eclairage d'une cité)",
+                "MODIFICATEUR_VALUE": "0",
+                "MODIFICATEUR_DEFAUT": 1
+            },
+            {
+                "MODIFICATEUR_TYPE": "VOIR",
+                "MODIFICATEUR_CATEGORIE": "Luminosité",
+                "MODIFICATEUR_CATEGORIE_ID": "mod2",
+                "MODIFICATEUR_LABEL": "Moyenne (Torches, lampes électriques)",
+                "MODIFICATEUR_VALUE": "3"
+            },
+            {
+                "MODIFICATEUR_TYPE": "VOIR",
+                "MODIFICATEUR_CATEGORIE": "Luminosité",
+                "MODIFICATEUR_CATEGORIE_ID": "mod2",
+                "MODIFICATEUR_LABEL": "Faible (veilleuse, fumigènes, tempête)",
+                "MODIFICATEUR_VALUE": "6"
+            },
+            {
+                "MODIFICATEUR_TYPE": "VOIR",
+                "MODIFICATEUR_CATEGORIE": "Luminosité",
+                "MODIFICATEUR_CATEGORIE_ID": "mod2",
+                "MODIFICATEUR_LABEL": "Très faible (ombre, ténèbre partielles, tempête de sable)",
+                "MODIFICATEUR_VALUE": "9"
+            },
+            {
+                "MODIFICATEUR_TYPE": "COMBAT",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Attaque de dos",
+                "MODIFICATEUR_VALUE": "40"
+            },
+            {
+                "MODIFICATEUR_TYPE": "COMBAT",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Attaque de dos en combat",
+                "MODIFICATEUR_VALUE": "20"
+            },
+            {
+                "MODIFICATEUR_TYPE": "COMBAT",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Attaque de coté",
+                "MODIFICATEUR_VALUE": "20"
+            },
+            {
+                "MODIFICATEUR_TYPE": "COMBAT",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Attaque de coté en combat",
+                "MODIFICATEUR_VALUE": "10"
+            },
+            {
+                "MODIFICATEUR_TYPE": "COMBAT",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Attaque par-dessus",
+                "MODIFICATEUR_VALUE": "10"
+            },
+            {
+                "MODIFICATEUR_TYPE": "COMBAT",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Cible au sol",
+                "MODIFICATEUR_VALUE": "20"
+            },
+            {
+                "MODIFICATEUR_TYPE": "COMBAT",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Cible immobile",
+                "MODIFICATEUR_VALUE": "60"
+            },
+            {
+                "MODIFICATEUR_TYPE": "COMBAT",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Attaque à partir du sol",
+                "MODIFICATEUR_VALUE": "-20"
+            },
+            {
+                "MODIFICATEUR_TYPE": "COMBAT",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Attaque en escaladant",
+                "MODIFICATEUR_VALUE": "-30"
+            },
+            {
+                "MODIFICATEUR_TYPE": "COMBAT",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Ajuster (5%)",
+                "MODIFICATEUR_VALUE": "5"
+            },
+            {
+                "MODIFICATEUR_TYPE": "COMBAT",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Ajuster (10%)",
+                "MODIFICATEUR_VALUE": "10"
+            },
+            {
+                "MODIFICATEUR_TYPE": "COMBAT",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Position désavantageuse",
+                "MODIFICATEUR_VALUE": "-20"
+            },
+            {
+                "MODIFICATEUR_TYPE": "COMBAT2",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Obscurité partielle",
+                "MODIFICATEUR_VALUE": "-30"
+            },
+            {
+                "MODIFICATEUR_TYPE": "COMBAT2",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Visibilité réduite",
+                "MODIFICATEUR_VALUE": "-20"
+            },
+            {
+                "MODIFICATEUR_TYPE": "COMBAT2",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Visibilité moyenne",
+                "MODIFICATEUR_VALUE": "-10"
+            },
+            {
+                "MODIFICATEUR_TYPE": "COMBAT2",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Couverture 20%",
+                "MODIFICATEUR_VALUE": "-10"
+            },
+            {
+                "MODIFICATEUR_TYPE": "COMBAT2",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Couverture 50%",
+                "MODIFICATEUR_VALUE": "-30"
+            },
+            {
+                "MODIFICATEUR_TYPE": "COMBAT2",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Couverture 70%",
+                "MODIFICATEUR_VALUE": "-50"
+            },
+            {
+                "MODIFICATEUR_TYPE": "COMBAT2",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Couverture 90%",
+                "MODIFICATEUR_VALUE": "-80"
+            },
+            {
+                "MODIFICATEUR_TYPE": "DETECTION",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Cible immobile",
+                "MODIFICATEUR_VALUE": "0/-60"
+            },
+            {
+                "MODIFICATEUR_TYPE": "DETECTION",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Cible contre paroi",
+                "MODIFICATEUR_VALUE": "-60/0"
+            },
+            {
+                "MODIFICATEUR_TYPE": "DETECTION",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Cible enterrée",
+                "MODIFICATEUR_VALUE": "-80/-40"
+            },
+            {
+                "MODIFICATEUR_TYPE": "DETECTION",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Mer agitée",
+                "MODIFICATEUR_VALUE": "-10/0"
+            },
+            {
+                "MODIFICATEUR_TYPE": "DETECTION",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Mer forte",
+                "MODIFICATEUR_VALUE": "-30/-30"
+            },
+            {
+                "MODIFICATEUR_TYPE": "DETECTION",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Tempête",
+                "MODIFICATEUR_VALUE": "-50/-50"
+            },
+            {
+                "MODIFICATEUR_TYPE": "DETECTION",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Vit. +40 noeuds",
+                "MODIFICATEUR_VALUE": "1000/1000"
+            },
+            {
+                "MODIFICATEUR_TYPE": "DETECTION",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Vit. +20 noeuds",
+                "MODIFICATEUR_VALUE": "-20/-20"
+            },
+            {
+                "MODIFICATEUR_TYPE": "DETECTION",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Vit. 1 à 10 noeuds",
+                "MODIFICATEUR_VALUE": "10/10"
+            },
+            {
+                "MODIFICATEUR_TYPE": "DETECTION",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Immobile",
+                "MODIFICATEUR_VALUE": "20/20"
+            },
+            {
+                "MODIFICATEUR_TYPE": "DETECTION",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Cible à +20 noeuds",
+                "MODIFICATEUR_VALUE": "0/+20"
+            },
+            {
+                "MODIFICATEUR_TYPE": "DETECTION2",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Cible : torpille",
+                "MODIFICATEUR_VALUE": "-40/-40"
+            },
+            {
+                "MODIFICATEUR_TYPE": "DETECTION2",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Cible : armure",
+                "MODIFICATEUR_VALUE": "-30/-30"
+            },
+            {
+                "MODIFICATEUR_TYPE": "DETECTION2",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Cible : chasseur",
+                "MODIFICATEUR_VALUE": "-20/-20"
+            },
+            {
+                "MODIFICATEUR_TYPE": "DETECTION2",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Cible : escorteur",
+                "MODIFICATEUR_VALUE": "-10/-10"
+            },
+            {
+                "MODIFICATEUR_TYPE": "DETECTION2",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Cible : fregate",
+                "MODIFICATEUR_VALUE": "0/0"
+            },
+            {
+                "MODIFICATEUR_TYPE": "DETECTION2",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Obtacle",
+                "MODIFICATEUR_VALUE": "1000/-50"
+            },
+            {
+                "MODIFICATEUR_TYPE": "DETECTION2",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "La cible tire",
+                "MODIFICATEUR_VALUE": "0/20"
+            },
+            {
+                "MODIFICATEUR_TYPE": "DETECTION2",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Cible sonar actif",
+                "MODIFICATEUR_VALUE": "0/50"
+            },
+            {
+                "MODIFICATEUR_TYPE": "DETECTION2",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Cible brouillée",
+                "MODIFICATEUR_VALUE": "50/50"
+            },
+            {
+                "MODIFICATEUR_TYPE": "DETECTION2",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Cible à prop. à hélices",
+                "MODIFICATEUR_VALUE": "0/10"
+       },
+            {
+                "MODIFICATEUR_TYPE": "SOLTIR",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Cible immobile",
+                "MODIFICATEUR_VALUE": "30/-30"
+            },
+            {
+                "MODIFICATEUR_TYPE": "SOLTIR",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Cible contre paroi",
+                "MODIFICATEUR_VALUE": "-60/0"
+            },
+            {
+                "MODIFICATEUR_TYPE": "SOLTIR",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Cible enterrée",
+                "MODIFICATEUR_VALUE": "-80/-40"
+            },
+            {
+                "MODIFICATEUR_TYPE": "SOLTIR",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Cible : torpille",
+                "MODIFICATEUR_VALUE": "-40/-40"
+            },
+            {
+                "MODIFICATEUR_TYPE": "SOLTIR",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Cible : armure",
+                "MODIFICATEUR_VALUE": "-30/-30"
+            },
+            {
+                "MODIFICATEUR_TYPE": "SOLTIR",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Cible : chasseur",
+                "MODIFICATEUR_VALUE": "-20/-20"
+            },
+            {
+                "MODIFICATEUR_TYPE": "SOLTIR",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Cible : escorteur",
+                "MODIFICATEUR_VALUE": "-10/-10"
+            },
+            {
+                "MODIFICATEUR_TYPE": "SOLTIR",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Cible : fregate",
+                "MODIFICATEUR_VALUE": "0/0"
+            },
+            {
+                "MODIFICATEUR_TYPE": "SOLTIR",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Cible : croiseur",
+                "MODIFICATEUR_VALUE": "20/20"
+            },
+            {
+                "MODIFICATEUR_TYPE": "SOLTIR",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Cible : cuirassé",
+                "MODIFICATEUR_VALUE": "40/40"
+            },
+            {
+                "MODIFICATEUR_TYPE": "SOLTIR",
+                "MODIFICATEUR_CATEGORIE": "",
+                "MODIFICATEUR_CATEGORIE_ID": "",
+                "MODIFICATEUR_LABEL": "Cible : cité",
+                "MODIFICATEUR_VALUE": "80/80"
+            }
 
-	]
+
+        ]
     },
     "PROGRESSION": {
-	"designation": "Progression",
-	"categories": {
-	    "PROGRESSION": {
-		"designation": "Progression",
-		"attributs": {
-		    "PROGRESSION_TALENT": {
-			"designation": "Talent concerné",
-			"type": "Simple"
-		    },
-		    "PROGRESSION_VALEUR": {
-			"designation": "% de progression",
-			"type": "Simple"
-		    },
-		    "PROGRESSION_RAISON": {
-			"designation": "Raison de la progression",
-			"type": "Simple"
-		    },
-		    "PROGRESSION_LIBRE": {
-			"designation": "Progression libre",
-			"type": "Simple"
-		    }
-		}
-	    }
-	}
+        "designation": "Progression",
+        "categories": {
+            "PROGRESSION": {
+                "designation": "Progression",
+                "attributs": {
+                    "PROGRESSION_TALENT": {
+                        "designation": "Talent concerné",
+                        "type": "Simple"
+                    },
+                    "PROGRESSION_VALEUR": {
+                        "designation": "% de progression",
+                        "type": "Simple"
+                    },
+                    "PROGRESSION_RAISON": {
+                        "designation": "Raison de la progression",
+                        "type": "Simple"
+                    },
+                    "PROGRESSION_LIBRE": {
+                        "designation": "Progression libre",
+                        "type": "Simple"
+                    }
+                }
+            }
+        }
     },
     "JOURNAL": {
-	"designation": "Entrée du journal",
-	"categories": {
-	    "JOURNAL": {
-		"designation": "Journal",
-		"attributs": {
-		    "JOURNAL_TEXTE": {
-			"designation": "Texte",
-			"type": "Simple"
-		    },
-		    "JOURNAL_DATE": {
-			"designation": "Texte",
-			"type": "Simple"
-		    }
-		}
-	    }
-	}
+        "designation": "Entrée du journal",
+        "categories": {
+            "JOURNAL": {
+                "designation": "Journal",
+                "attributs": {
+                    "JOURNAL_TEXTE": {
+                        "designation": "Texte",
+                        "type": "Simple"
+                    },
+                    "JOURNAL_DATE": {
+                        "designation": "Texte",
+                        "type": "Simple"
+                    }
+                }
+            }
+        }
     },
     "PJ": {
-	"designation": "Personnage joueur",
-	"categories": {
-	    "FATIGUE": {
-		"designation": "Fatigue",
-		"attributs": {
-		    "FATIGUE": {
-			"designation": "Fatigue",
-			"type": "cells",
-			"data": {
-			    "max": "({ATTR:FOR}+{ATTR:RES}+{ATTR:VOL})/3"
-			},
-			"defaultValue": 0,
-			"jet": 0
-		    }
-		}
-	    },
-	    "EQUIPEMENTCOMBAT": {
-		"designation": "Equipements de combat",
-		"attributs": {
-		    "PROTECTION_JAMBEDROITE": {
-			"designation": "Jambe droite",
-			"type": "Equipement",
-			"data": {
-			    "localStart": 1,
-			    "localEnd": 11
-			},
-			"defaultValue": {
-			    "equipement": "",
-			    "usure": "",
-			    "protection": 0,
-			    "resistance": ""
-			},
-			"jet": 0
-		    }
-		}
-	    },
-	    "BLESSURES": {
-		"designation": "Blessures",
-		"attributs": {
-		    "BLESSURE_INCONSCIENCE": {
-			"designation": "Inconscience",
-			"type": "cells",
-			"data": {
-			    "max": "12"
-			},
-			"defaultValue": 0,
-			"modificateur": 0,
-			"jet": 0
-		    },
-		    "BLESSURE_LEGERE": {
-			"designation": "Blessures légères",
-			"type": "cells",
-			"data": {
-			    "max": "8"
-			},
-			"defaultValue": 0,
-			"modificateur": 0,
-			"jet": 0
-		    },
-		    "BLESSURE_GRAVE": {
-			"designation": "Blessures graves",
-			"type": "cells",
-			"data": {
-			    "max": "6"
-			},
-			"defaultValue": 0,
-			"modificateur": 0,
-			"jet": 0
-		    },
-		    "BLESSURE_CRITIQUE": {
-			"designation": "Blessures critiques",
-			"type": "cells",
-			"data": {
-			    "max": "4"
-			},
-			"defaultValue": 0,
-			"modificateur": 0,
-			"jet": 0
-		    },
-		    "BLESSURE_FATAL": {
-			"designation": "Blessures fatales",
-			"type": "cells",
-			"data": {
-			    "max": "2"
-			},
-			"defaultValue": 0,
-			"modificateur": 0,
-			"jet": 0
-		    },
-		    "BLESSURE_MORT": {
-			"designation": "Mort",
-			"type": "cells",
-			"data": {
-			    "max": "1"
-			},
-			"defaultValue": 0,
-			"modificateur": 0,
-			"jet": 0
-		    }
-		}
-	    },
-	    "SEUILSBLESSURES": {
-		"designation": "Seuils de blessure",
-		"attributs": {
-		    "SEUIL_INCONSCIENCE": {
-			"designation": "Inconscience",
-			"type": "caracsec",
-			"data": {
-			    "total": "round(({ATTR:RES}+{ATTR:GAB}+{ATTR:VOL})/4)"
-			},
-			"defaultValue": 0,
-			"modificateur": 0,
-			"modifiable": 0,
-			"jet": 0
-		    },
-		    "SEUIL_LEGERE": {
-			"designation": "Blessure légère",
-			"type": "caracsec",
-			"data": {
-			    "total": "round(({ATTR:RES}+{ATTR:GAB}+{ATTR:VOL})/6)"
-			},
-			"defaultValue": 0,
-			"modificateur": 0,
-			"modifiable": 0,
-			"jet": 0
-		    },
-		    "SEUIL_GRAVE": {
-			"designation": "Blessure grave",
-			"type": "caracsec",
-			"data": {
-			    "total": "round(({ATTR:RES}+{ATTR:GAB}+{ATTR:VOL})/3)"
-			},
-			"defaultValue": 0,
-			"modificateur": 0,
-			"modifiable": 0,
-			"jet": 0
-		    },
-		    "SEUIL_CRITIQUE": {
-			"designation": "Inconscience",
-			"type": "caracsec",
-			"data": {
-			    "total": "round(({ATTR:RES}+{ATTR:GAB}+{ATTR:VOL})/2)"
-			},
-			"defaultValue": 0,
-			"modificateur": 0,
-			"modifiable": 0,
-			"jet": 0
-		    },
-		    "SEUIL_FATAL": {
-			"designation": "Fatal",
-			"type": "caracsec",
-			"data": {
-			    "total": "round(({ATTR:RES}+{ATTR:GAB}+{ATTR:VOL})/1)"
-			},
-			"defaultValue": 0,
-			"modificateur": 0,
-			"modifiable": 0,
-			"jet": 0
-		    },
-		    "SEUIL_MORT": {
-			"designation": "Mort",
-			"type": "caracsec",
-			"data": {
-			    "total": "round(({ATTR:RES}+{ATTR:GAB}+{ATTR:VOL})*1.5)"
-			},
-			"defaultValue": 0,
-			"modificateur": 0,
-			"modifiable": 0,
-			"jet": 0
-		    }
+        "designation": "Personnage joueur",
+        "categories": {
+            "FATIGUE": {
+                "designation": "Fatigue",
+                "attributs": {
+                    "FATIGUE": {
+                        "designation": "Fatigue",
+                        "type": "cells",
+                        "data": {
+                            "max": "({ATTR:FOR}+{ATTR:RES}+{ATTR:VOL})/3"
+                        },
+                        "defaultValue": 0,
+                        "jet": 0
+                    }
+                }
+            },
+            "EQUIPEMENTCOMBAT": {
+                "designation": "Equipements de combat",
+                "attributs": {
+                    "PROTECTION_JAMBEDROITE": {
+                        "designation": "Jambe droite",
+                        "type": "Equipement",
+                        "data": {
+                            "localStart": 1,
+                            "localEnd": 11
+                        },
+                        "defaultValue": {
+                            "equipement": "",
+                            "usure": "",
+                            "protection": 0,
+                            "resistance": ""
+                        },
+                        "jet": 0
+                    }
+                }
+            },
+            "BLESSURES": {
+                "designation": "Blessures",
+                "attributs": {
+                    "BLESSURE_INCONSCIENCE": {
+                        "designation": "Inconscience",
+                        "type": "cells",
+                        "data": {
+                            "max": "12"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 0,
+                        "jet": 0
+                    },
+                    "BLESSURE_LEGERE": {
+                        "designation": "Blessures légères",
+                        "type": "cells",
+                        "data": {
+                            "max": "8"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 0,
+                        "jet": 0
+                    },
+                    "BLESSURE_GRAVE": {
+                        "designation": "Blessures graves",
+                        "type": "cells",
+                        "data": {
+                            "max": "6"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 0,
+                        "jet": 0
+                    },
+                    "BLESSURE_CRITIQUE": {
+                        "designation": "Blessures critiques",
+                        "type": "cells",
+                        "data": {
+                            "max": "4"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 0,
+                        "jet": 0
+                    },
+                    "BLESSURE_FATAL": {
+                        "designation": "Blessures fatales",
+                        "type": "cells",
+                        "data": {
+                            "max": "2"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 0,
+                        "jet": 0
+                    },
+                    "BLESSURE_MORT": {
+                        "designation": "Mort",
+                        "type": "cells",
+                        "data": {
+                            "max": "1"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 0,
+                        "jet": 0
+                    }
+                }
+            },
+            "SEUILSBLESSURES": {
+                "designation": "Seuils de blessure",
+                "attributs": {
+                    "SEUIL_INCONSCIENCE": {
+                        "designation": "Inconscience",
+                        "type": "caracsec",
+                        "data": {
+                            "total": "round(({ATTR:RES}+{ATTR:GAB}+{ATTR:VOL})/4)"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 0,
+                        "modifiable": 0,
+                        "jet": 0
+                    },
+                    "SEUIL_LEGERE": {
+                        "designation": "Blessure légère",
+                        "type": "caracsec",
+                        "data": {
+                            "total": "round(({ATTR:RES}+{ATTR:GAB}+{ATTR:VOL})/6)"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 0,
+                        "modifiable": 0,
+                        "jet": 0
+                    },
+                    "SEUIL_GRAVE": {
+                        "designation": "Blessure grave",
+                        "type": "caracsec",
+                        "data": {
+                            "total": "round(({ATTR:RES}+{ATTR:GAB}+{ATTR:VOL})/3)"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 0,
+                        "modifiable": 0,
+                        "jet": 0
+                    },
+                    "SEUIL_CRITIQUE": {
+                        "designation": "Inconscience",
+                        "type": "caracsec",
+                        "data": {
+                            "total": "round(({ATTR:RES}+{ATTR:GAB}+{ATTR:VOL})/2)"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 0,
+                        "modifiable": 0,
+                        "jet": 0
+                    },
+                    "SEUIL_FATAL": {
+                        "designation": "Fatal",
+                        "type": "caracsec",
+                        "data": {
+                            "total": "round(({ATTR:RES}+{ATTR:GAB}+{ATTR:VOL})/1)"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 0,
+                        "modifiable": 0,
+                        "jet": 0
+                    },
+                    "SEUIL_MORT": {
+                        "designation": "Mort",
+                        "type": "caracsec",
+                        "data": {
+                            "total": "round(({ATTR:RES}+{ATTR:GAB}+{ATTR:VOL})*1.5)"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 0,
+                        "modifiable": 0,
+                        "jet": 0
+                    }
 
-		}
-	    },
-	    "GENERAL": {
-		"designation": "Informations générales",
-		"attributs": {
-		    "NOM": {
-			"designation": "Nom",
-			"type": "Simple",
-			"jet": 0
-		    },
-		    "DATENAISSANCE": {
-			"designation": "Date de naissance",
-			"type": "Simple",
-			"jet": 0
-		    },
-		    "AGE": {
-			"designation": "Age",
-			"type": "Simple",
-			"jet": 0
-		    },
-		    "SEXE": {
-			"designation": "Sexe",
-			"type": "Simple",
-			"jet": 0
-		    },
-		    "YEUX": {
-			"designation": "Yeux",
-			"type": "Simple",
-			"jet": 0
-		    },
-		    "CHEVEUX": {
-			"designation": "Cheveux",
-			"type": "Simple",
-			"jet": 0
-		    },
-		    "RACE": {
-			"designation": "Race",
-			"type": "Simple",
-			"jet": 0
-		    },
-		    "TAILLE": {
-			"designation": "Taille",
-			"type": "Simple",
-			"jet": 0
-		    },
-		    "POIDS": {
-			"designation": "Poids",
-			"type": "Simple",
-			"jet": 0
-		    },
-		    "LIEUNAISSANCE": {
-			"designation": "Lieu de naissance",
-			"type": "Simple",
-			"jet": 0
-		    }
-		}
-	    },
-	    "CARACTERISTIQUES": {
-		"designation": "Caractéristiques",
-		"attributs": {
-		    "FOR": {
-			"designation": "Force",
-			"type": "Carac",
-			"data": {
-			    "total": "{VAL:initial}+{SPE:MODIFIER}"
-			},
-			"defaultValue": {
-			    "initial": 0
-			},
-			"modificateur": 1
-		    },
-		    "GAB": {
-			"designation": "Gabarit",
-			"type": "Carac",
-			"data": {
-			    "total": "{VAL:initial}+{SPE:MODIFIER}"
-			},
-			"defaultValue": {
-			    "initial": 0
-			},
-			"modificateur": 1
-		    },
-		    "CHA": {
-			"designation": "Charisme",
-			"type": "Carac",
-			"data": {
-			    "total": "{VAL:initial}+{SPE:MODIFIER}"
-			},
-			"defaultValue": {
-			    "initial": 0
-			},
-			"modificateur": 1
-		    },
-		    "INT": {
-			"designation": "Intelligence",
-			"type": "Carac",
-			"data": {
-			    "total": "{VAL:initial}+{SPE:MODIFIER}"
-			},
-			"defaultValue": {
-			    "initial": 0
-			},
-			"modificateur": 1
-		    },
-		    "VOL": {
-			"designation": "Volonté",
-			"type": "Carac",
-			"data": {
-			    "total": "{VAL:initial}+{SPE:MODIFIER}"
-			},
-			"defaultValue": {
-			    "initial": 0
-			},
-			"modificateur": 1
-		    },
-		    "RES": {
-			"designation": "Résistance",
-			"type": "Carac",
-			"data": {
-			    "total": "{VAL:initial}+{SPE:MODIFIER}"
-			},
-			"defaultValue": {
-			    "initial": 0
-			},
-			"modificateur": 1
-		    },
-		    "AGI": {
-			"designation": "Agilité",
-			"type": "Carac",
-			"data": {
-			    "total": "{VAL:initial}+{SPE:MODIFIER}"
-			},
-			"defaultValue": {
-			    "initial": 0
-			},
-			"modificateur": 1
-		    },
-		    "SGF": {
-			"designation": "Sang-froid",
-			"type": "Carac",
-			"data": {
-			    "total": "{VAL:initial}+{SPE:MODIFIER}"
-			},
-			"defaultValue": {
-			    "initial": 0
-			},
-			"modificateur": 1
-		    },
-		    "INS": {
-			"designation": "Instinct",
-			"type": "Carac",
-			"data": {
-			    "total": "{VAL:initial}+{SPE:MODIFIER}"
-			},
-			"defaultValue": {
-			    "initial": 0
-			},
-			"modificateur": 1
-		    },
-		    "RAP": {
-			"designation": "Rapidité",
-			"type": "Carac",
-			"data": {
-			    "total": "{VAL:initial}+{SPE:MODIFIER}"
-			},
-			"defaultValue": {
-			    "initial": 0
-			},
-			"modificateur": 1
-		    }
-		}
-	    },
-	    "CARACSEC": {
-		"designation": "Caractéristiques secondaires",
-		"attributs": {
-		    "PERCEPTION": {
-			"designation": "Perception",
-			"type": "caracsec",
-			"data": {
-			    "total": "round(({ATTR:INT}+{ATTR:INS})/2)+{SPE:MODIFIER}"
-			},
-			"defaultValue": 0,
-			"modificateur": 1,
-			"modifiable": 0,
-			"jet": 0
-		    },
-		    "BONUSDEGATS": {
-			"designation": "Bonus aux dégats",
-			"type": "caracsec",
-			"data": {
-			    "total": "round({ATTR:FOR}+({ATTR:GAB}/2))+{SPE:MODIFIER}"
-			},
-			"defaultValue": 0,
-			"modificateur": 1,
-			"modifiable": 0,
-			"jet": 0
-		    },
-		    "CHANCE" : {
-			"designation" : "Chance",
-			"type" : "Simple",
-			"defaultValue" : 50,
-			"modificateur": 1,
-			"modifiable" : 1,
-			"jet" : 0
-		    }
-		}
-	    },
-	    "TALENTS": {
-		"designation": "Talents",
-		"attributs": {
-		    "TALENT_ABSENCE": {
-			"designation": "Absence",
-			"type": "Talent",
-			"data": {
-			    "bonus": "{ATTR:AGI}+{ATTR:FOR}",
-			    "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
-			    "niveau" : "(floor({DATA:total}/10))"
-			},
-			"defaultValue": {
-			    "initial": 7
-			},
-			"modificateur": 1
-		    },
-		    
-		    "TALENT_ARMES_1MAIN": {
-			"designation": "Arme à une main",
-			"type": "Talent",
-			"data": {
-			    "bonus": "{ATTR:AGI}+{ATTR:FOR}",
-			    "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
-			    "niveau" : "(floor({DATA:total}/10))"
-			},
-			"defaultValue": {
-			    "initial": 7
-			},
-			"modificateur": 1
-		    },
-		    
-		    "TALENT_ARMES_POING": {
-			"designation": "Armes de poing",
-			"type": "Talent",
-			"data": {
-			    "bonus": "{ATTR:AGI}+{ATTR:FOR}",
-			    "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
-			    "niveau" : "(floor({DATA:total}/10))"
-			},
-			"defaultValue": {
-			    "initial": 7
-			},
-			"modificateur": 1
-		    }
-		    ,
-		    
-		    "TALENT_ESQUIVE": {
-			"designation": "Esquive",
-			"type": "Talent",
-			"data": {
-			    "bonus": "{ATTR:AGI}+{ATTR:FOR}",
-			    "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
-			    "niveau" : "(floor({DATA:total}/10))"
-			},
-			"defaultValue": {
-			    "initial": 7
-			},
-			"modificateur": 1
-		    }
-		    
-		}
-	    }
-	},
-	"attributs" : {
-	    "INCONSCIENT" : {
-		"designation" : "Inconscient",
-		"type" : "Simple",
-		"defaultValue" : 0
-	    }
-	},
-	"entites": [
-	    {
-		"NOM": "Joueur 1",
-		"FOR": {
-		    "initial": 15
-		},
-		"GAB": {
-		    "initial": 17
-		},
-		"CHA": {
-		    "initial": 19
-		},
-		"INT": {
-		    "initial": 13
-		},
-		"VOL": {
-		    "initial": 17
-		},
-		"RES": {
-		    "initial": 11
-		},
-		"AGI": {
-		    "initial": 14
-		},
-		"SGF": {
-		    "initial": 13
-		},
-		"INS": {
-		    "initial": 9
-		},
-		"RAP": {
-		    "initial": 10
-		}
-	    },
-	    {
-		"NOM": "Joueur 2",
-		"FOR": {
-		    "initial": 20
-		},
-		"AGI": {
-		    "initial": 10
-		}
-	    }
-	]
+                }
+            },
+            "GENERAL": {
+                "designation": "Informations générales",
+                "attributs": {
+                    "NOM": {
+                        "designation": "Nom",
+                        "type": "Simple",
+                        "jet": 0
+                    },
+                    "DATENAISSANCE": {
+                        "designation": "Date de naissance",
+                        "type": "Simple",
+                        "jet": 0
+                    },
+                    "AGE": {
+                        "designation": "Age",
+                        "type": "Simple",
+                        "jet": 0
+                    },
+                    "SEXE": {
+                        "designation": "Sexe",
+                        "type": "Simple",
+                        "jet": 0
+                    },
+                    "YEUX": {
+                        "designation": "Yeux",
+                        "type": "Simple",
+                        "jet": 0
+                    },
+                    "CHEVEUX": {
+                        "designation": "Cheveux",
+                        "type": "Simple",
+                        "jet": 0
+                    },
+                    "RACE": {
+                        "designation": "Race",
+                        "type": "Simple",
+                        "jet": 0
+                    },
+                    "TAILLE": {
+                        "designation": "Taille",
+                        "type": "Simple",
+                        "jet": 0
+                    },
+                    "POIDS": {
+                        "designation": "Poids",
+                        "type": "Simple",
+                        "jet": 0
+                    },
+                    "LIEUNAISSANCE": {
+                        "designation": "Lieu de naissance",
+                        "type": "Simple",
+                        "jet": 0
+                    }
+                }
+            },
+            "CARACTERISTIQUES": {
+                "designation": "Caractéristiques",
+                "attributs": {
+                    "FOR": {
+                        "designation": "Force",
+                        "type": "Carac",
+                        "data": {
+                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "GAB": {
+                        "designation": "Gabarit",
+                        "type": "Carac",
+                        "data": {
+                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "CHA": {
+                        "designation": "Charisme",
+                        "type": "Carac",
+                        "data": {
+                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "INT": {
+                        "designation": "Intelligence",
+                        "type": "Carac",
+                        "data": {
+                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "VOL": {
+                        "designation": "Volonté",
+                        "type": "Carac",
+                        "data": {
+                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "RES": {
+                        "designation": "Résistance",
+                        "type": "Carac",
+                        "data": {
+                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "AGI": {
+                        "designation": "Agilité",
+                        "type": "Carac",
+                        "data": {
+                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "SGF": {
+                        "designation": "Sang-froid",
+                        "type": "Carac",
+                        "data": {
+                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "INS": {
+                        "designation": "Instinct",
+                        "type": "Carac",
+                        "data": {
+                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "RAP": {
+                        "designation": "Rapidité",
+                        "type": "Carac",
+                        "data": {
+                            "total": "{VAL:initial}+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    }
+                }
+            },
+            "CARACSEC": {
+                "designation": "Caractéristiques secondaires",
+                "attributs": {
+                    "PERCEPTION": {
+                        "designation": "Perception",
+                        "type": "caracsec",
+                        "data": {
+                            "total": "round(({ATTR:INT}+{ATTR:INS})/2)+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 1,
+                        "modifiable": 0,
+                        "jet": 0
+                    },
+                    "BONUSDEGATS": {
+                        "designation": "Bonus aux dégats",
+                        "type": "caracsec",
+                        "data": {
+                            "total": "round({ATTR:FOR}+({ATTR:GAB}/2))+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 1,
+                        "modifiable": 0,
+                        "jet": 0
+                    },
+                    "CHANCE": {
+                        "designation": "Chance",
+                        "type": "Simple",
+                        "defaultValue": 50,
+                        "modificateur": 1,
+                        "modifiable": 1,
+                        "jet": 0
+                    },
+                    "APPRENTISSAGE": {
+                        "designation": "Apprentissage",
+                        "type": "caracsec",
+                        "data": {
+                            "total": "round(({ATTR:INT}+{ATTR:VOL}+{ATTR:SGF}+{ATTR:INS})/8)+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 1,
+                        "modifiable": 0,
+                        "jet": 1
+                    },
+                    "COURSE": {
+                        "designation": "Course",
+                        "type": "caracsec",
+                        "data": {
+                            "total": "round(({ATTR:FOR}+{ATTR:AGI}-{ATTR:GAB}))+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 1,
+                        "modifiable": 0,
+                        "jet": 0
+                    },
+                    "ESCALADE": {
+                        "designation": "Escalade",
+                        "type": "caracsec",
+                        "data": {
+                            "total": "round(({ATTR:FOR}+{ATTR:AGI}-{ATTR:GAB}))+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 1,
+                        "modifiable": 0,
+                        "jet": 0
+                    },
+                    "LANCERJET": {
+                        "designation": "Lancer / jet",
+                        "type": "caracsec",
+                        "data": {
+                            "total": "round(({ATTR:FOR}+{ATTR:AGI})/5)+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 1,
+                        "modifiable": 0,
+                        "jet": 0
+                    },
+                    "NAGE": {
+                        "designation": "Nage",
+                        "type": "caracsec",
+                        "data": {
+                            "total": "round(({ATTR:FOR}+{ATTR:RAP}-{ATTR:GAB}))+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 1,
+                        "modifiable": 0,
+                        "jet": 0
+                    },
+                    "NARCODOMMAGES": {
+                        "designation": "Narco-dommages",
+                        "type": "Simple",
+                        "defaultValue": 0,
+                        "modificateur": 1,
+                        "modifiable": 0,
+                        "jet": 0
+                    },
+                    "REACTION": {
+                        "designation": "Réaction",
+                        "type": "caracsec",
+                        "data": {
+                            "total": "round((({ATTR:AGI}+{ATTR:SGF})/2+{ATTR:RAP})/4)+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 1,
+                        "modifiable": 0,
+                        "jet": 0
+                    },
+                    "RECUL": {
+                        "designation": "Recul",
+                        "type": "caracsec",
+                        "data": {
+                            "total": "round(({ATTR:FOR}+{ATTR:GAB}))+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 1,
+                        "modifiable": 0,
+                        "jet": 0
+                    },
+                    "RESISTANCEPOIS": {
+                        "designation": "Resistance aux poisons/maladies/drogues.",
+                        "type": "caracsec",
+                        "data": {
+                            "total": "round(({ATTR:RES}+{ATTR:VOL})/2)+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 1,
+                        "modifiable": 0,
+                        "jet": 1
+                    },
+                    "SAUT": {
+                        "designation": "Saut",
+                        "type": "caracsec",
+                        "data": {
+                            "total": "round(({ATTR:FOR}+{ATTR:AGI}-{ATTR:GAB}))+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 1,
+                        "modifiable": 0,
+                        "jet": 0
+                    },
+                    "SOUFFLE": {
+                        "designation": "Souffle",
+                        "type": "caracsec",
+                        "data": {
+                            "total": "round(({ATTR:VOL}+{ATTR:RES}+{ATTR:GAB})/3)+{SPE:MODIFIER}"
+                        },
+                        "defaultValue": 0,
+                        "modificateur": 1,
+                        "modifiable": 0,
+                        "jet": 0
+                    }
+                }
+            },
+            "TALENTS_PHYSIQUES": {
+                "designation": "Talents physiques",
+                "attributs": {
+                    "TALENT_ACROBATIE": {
+                        "designation": "Acrobatie / gymnastique",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "({ATTR:AGI}+{ATTR:INS}-{ATTR:GAB})",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr": "4"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_APNEE": {
+                        "designation": "Apnée",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "({ATTR:VOL}+{ATTR:INT}+{ATTR:SGF})/3",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr": "4"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+  
+                    "TALENT_CHUTER": {
+                        "designation": "Chuter",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "({ATTR:INS}+{ATTR:AGI}+{ATTR:INT})/3",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr": "4"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_CONTORSION": {
+                        "designation": "Contorsion",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "({ATTR:AGI}+{ATTR:INS}-{ATTR:GAB})",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr": "8"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_COURSE": {
+                        "designation": "Course",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "({ATTR:RAP}+{ATTR:VOL}+{ATTR:INS})/3",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr": "2"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_ENDURANCE": {
+                        "designation": "Endurance",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "({ATTR:VOL}+{ATTR:INS}+{ATTR:INT})/3",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr": "4"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_EQUILIBRE": {
+                        "designation": "Equilibre",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "({ATTR:INS}+{ATTR:AGI})",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr": "4"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_ESCALADE": {
+                        "designation": "Escalade",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "({ATTR:AGI}+{ATTR:INS}-{ATTR:GAB})",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr": "4"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_MONTURE": {
+                        "designation": "Monture",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "({ATTR:AGI}+{ATTR:SGF}+{ATTR:VOL})/3",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr": "4"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_NAGER": {
+                        "designation": "Nager",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "({ATTR:INS}+{ATTR:AGI}+{ATTR:VOL})/3",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr": "2"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_SAUTER": {
+                        "designation": "Sauter",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "({ATTR:INS}+{ATTR:AGI}-{ATTR:GAB})",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr": "2"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_SURVIE": {
+                        "designation": "Survie",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "({ATTR:INS}+{ATTR:INT}+{ATTR:VOL})/3",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr": "4"
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    }
+                }
+            },
+            "TALENTS_COMBAT" : {
+                "designation" : "Talents de combat",
+                "attributs" : {
+                    "TALENT_ARMES_1MAIN": {
+                        "designation": "Armes blanches à 1 main",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:INS}+{ATTR:SGF})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_ARMES_2MAIN": {
+                        "designation": "Armes blanches à 2 mains",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:INS}+{ATTR:SGF})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_ARMES_EPAULE": {
+                        "designation": "Armes d'épaule",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:INS}+{ATTR:SGF})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_ARMES_CONTACT": {
+                        "designation": "Armes de contact",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:INS}+{ATTR:SGF})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_ARMES_JET": {
+                        "designation": "Armes de jet",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:INS}+{ATTR:SGF})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_ARMES_POING": {
+                        "designation": "Armes de poing",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:INS}+{ATTR:SGF})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_ARMES_TRAIT": {
+                        "designation": "Armes de trait",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:INS}+{ATTR:SGF})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_ARMES_LOURDES_CONTACT": {
+                        "designation": "Armes lourdes de contact",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:INS}+{ATTR:SGF})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_ARMES_LOURDES_TIR": {
+                        "designation": "Armes lourdes de tir",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:INS}+{ATTR:SGF})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_ARMES_SATELLITE": {
+                        "designation": "Armes satellite",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:INS}+{ATTR:SGF})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_ARMURE": {
+                        "designation": "Utilisation d'armures",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INT}+{ATTR:AGI}+{ATTR:INS})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_ATE": {
+                        "designation": "Assistance au tir electronique (ATE)",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INT}+{ATTR:AGI}+{ATTR:INS})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_ATM": {
+                        "designation": "Assistance au tir mécanie (ATM)",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INT}+{ATTR:AGI}+{ATTR:INS})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_BOUCLIER": {
+                        "designation": "Utilisation de boucliers",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:RAP}+{ATTR:INS})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_CHASSER": {
+                        "designation": "Chasser",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:INS}+{ATTR:INT})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_COMBATACROBATIQUE": {
+                        "designation": "Combat acrobatique",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:INS}+{ATTR:INT})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_COMBATMONTE": {
+                        "designation": "Combat monté",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:INS}+{ATTR:INT})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_CORPSACORPS": {
+                        "designation": "Corps à corps",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:FOR}+{ATTR:INS}+{ATTR:SGF})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_DEMOLITION": {
+                        "designation": "Démolition (utilisation d'explosifs)",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:INS}+{ATTR:INT})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_ESQUIVE": {
+                        "designation": "Esquive",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round((({ATTR:AGI}+{ATTR:RAP}+{ATTR:INS})-{ATTR:GAB})/2)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_LANCER": {
+                        "designation": "Lancer",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:INS}+{ATTR:INT})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_PUGILAT": {
+                        "designation": "Pugilat",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:INS}+{ATTR:SGF})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    }
+                }
+            },
+            "TALENTS_SOCIAUX" : {
+                "designation" : "",
+                "attributs" : {
+                    "TALENT_BARATIN": {
+                        "designation": "Baratin",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INT}+{ATTR:VOL}+{ATTR:INS})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_ANALYSEEMP": {
+                        "designation": "Analyse des sensations empatiques",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INS}+{ATTR:VOL}+{ATTR:INT})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_CHARME": {
+                        "designation": "Charme",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:CHA}+{ATTR:VOL}+{ATTR:INS})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_COMMANDEMENT": {
+                        "designation": "Commandement",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:CHA}+{ATTR:INS}+{ATTR:VOL})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_PERSUASION": {
+                        "designation": "Persuasion",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:CHA}+{ATTR:INS}+{ATTR:INT})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_DIPLOMATIE": {
+                        "designation": "Diplomatie",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:CHA}+{ATTR:INS}+{ATTR:VOL})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    }
+                }
+                
+            },
+            "TALENTS_COMMERCIAUX" : {
+                "designation" : "Talents commerciaux",
+                "attributs" : {
+                    "TALENT_ACQUISITIONMATERIEL": {
+                        "designation": "Acquisition de materiel",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INS}+{ATTR:INT}+{ATTR:CHA})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_ESTIMATIONQUALITE": {
+                        "designation": "Estimation de qualité",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INS}+{ATTR:INT}+{ATTR:SGF})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_ESTIMATIONVALEUR": {
+                        "designation": "Estimation de valeur",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INS}+{ATTR:INT}+{ATTR:SGF})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_GESTION": {
+                        "designation": "Gestion",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INT}+{ATTR:INS}+{ATTR:SGF})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_NEGOCIATION": {
+                        "designation": "Negociation",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INS}+{ATTR:SGF}+{ATTR:VOL})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_PROSPECTION": {
+                        "designation": "Prospection",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INT}+{ATTR:INS}+{ATTR:VOL})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    }
+                }
+            },
+            "TALENTS_ARTISANAUX" : {
+                "designation" : "Talents artisanaux",
+                "attributs" : {
+                    "TALENT_AGILITEMANUELLE": {
+                        "designation": "Agilité manuelle",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:INS}+{ATTR:SGF})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_CREATIONFAUX": {
+                        "designation": "Création de faux",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INT}+{ATTR:INS}+{ATTR:AGI})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_DROGUES": {
+                        "designation": "Drogues",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:INS}+{ATTR:INT})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_ONGUENTS": {
+                        "designation": "Onguents",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:INS}+{ATTR:INT})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_POISONS": {
+                        "designation": "Poisons",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:INS}+{ATTR:INT})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    }
+                }
+            },
+            "TALENTS_CONNAISSANCES" : {
+                "designation" : "Connaissances / langages",
+                "attributs" : {
+                    "TALENT_BUREAUCRATIE": {
+                        "designation": "Connaissance de la bureaucratie",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:SGF}+{ATTR:VOL}+{ATTR:INT})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_CARTOGRAPHIE": {
+                        "designation": "Cartographie",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INS}+{ATTR:INT}+{ATTR:AGI})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_LANGAGESIGNES": {
+                        "designation": "Langage des signes",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:INT}+{ATTR:INS})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_SCIENCES": {
+                        "designation": "Connaissances en sciences",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INT}))",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_CONNAISSANCES": {
+                        "designation": "Connaissances générales",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INT}))",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_LANGAGES": {
+                        "designation": "Langages",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INT}))",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    }
+                }
+            },
+            "TALENTS_ARTISTIQUES" : {
+                "designation" : "Talents artistiques",
+                "attributs" : {
+                    "TALENT_CHANT": {
+                        "designation": "Chant",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:CHA}+{ATTR:INS}+{ATTR:VOL})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_COMEDIE": {
+                        "designation": "Comédie",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INS}+{ATTR:INT}+{ATTR:VOL})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_CUISINE": {
+                        "designation": "Cuisine",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INS}+{ATTR:AGI}+{ATTR:INT})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_DANSE": {
+                        "designation": "Danse",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:CHA}+{ATTR:INS}+{ATTR:AGI})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    }
+                }
+            },
+            "TALENTS_MENTAUX" : {
+                "designation" : "Talents intellectuels",
+                "attributs" : {
+                    "TALENT_DISCIPLINEMENTALE": {
+                        "designation": "Discipline mentale",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:VOL}+{ATTR:INS}+{ATTR:INT})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_DOMPTAGE": {
+                        "designation": "Domptage",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INS}+{ATTR:CHA}+{ATTR:VOL})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_ENSEIGNEMENT": {
+                        "designation": "Enseignement",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:VOL}+{ATTR:SGF}+{ATTR:INS})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_ENTRAINEMENT": {
+                        "designation": "Entrainement",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:VOL}+{ATTR:INS}+{ATTR:INT})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_ESQUIVEMENTALE": {
+                        "designation": "Esquive mentale",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:VOL}+{ATTR:INS}+{ATTR:SGF})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_HYPNOSE": {
+                        "designation": "hypnose",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:VOL}+{ATTR:INS}+{ATTR:SGF})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_JEU": {
+                        "designation": "Jeux",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INS}+{ATTR:SGF}+{ATTR:INT})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_LECTURESURLESLEVRES": {
+                        "designation": "Lecture sur les lèvres",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INT}+{ATTR:INS}+{ATTR:VOL})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_MEDITATION": {
+                        "designation": "Méditation",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:VOL}+{ATTR:INS}+{ATTR:SGF})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_MEMOIRE": {
+                        "designation": "Mémoire",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INT}+{ATTR:VOL}+{ATTR:INS})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_ORIENTATION": {
+                        "designation": "Orientation",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INT}+{ATTR:INS}+{ATTR:SGF})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_STRATEGIE": {
+                        "designation": "Stratégie / tactique",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INT}+{ATTR:INS}+{ATTR:SGF})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    }
+                    
+                }
+            },
+            "TALENTS_NAVIGATION" : {
+                "designation" : "",
+                "attributs" : {
+                    "TALENT_LECTURERADAR": {
+                        "designation": "Lecture radar",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INT}+{ATTR:INS}+{ATTR:VOL})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_LECTURESONAR": {
+                        "designation": "Lecture sonar",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INT}+{ATTR:INS}+{ATTR:VOL})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_NAVIGATION": {
+                        "designation": "Navigation",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INT}+{ATTR:INS}+{ATTR:SGF})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_RESPFLUIDES": {
+                        "designation": "Respiration de fluides",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:VOL}+{ATTR:SGF}+{ATTR:INT})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_PILOTAGE": {
+                        "designation": "Pilotage",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:INS}+{ATTR:SGF})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    }
+                }
+            },
+            "TALENTS_INVESTIGATION" : {
+                "designation" : "Talents d'investigation",
+                "attributs" : {
+                    "TALENT_ABSENCE": {
+                        "designation": "Absence",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INS}+{ATTR:VOL}-{ATTR:CHA}))",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_CROCHETAGE": {
+                        "designation": "Crochetage",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:INT}+{ATTR:INS})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_DEGUISEMENT": {
+                        "designation": "Deguisement",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INS}+{ATTR:INT}-{ATTR:CHA}))",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_DISCRETION": {
+                        "designation": "Discretion",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:INS}-{ATTR:GAB}))",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_DISSIMULATION": {
+                        "designation": "Dissimulation",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INS}+{ATTR:INT}-{ATTR:GAB}))",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_EVASION": {
+                        "designation": "Evasion",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:INS}+{ATTR:SGF})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_IMITATION": {
+                        "designation": "Imitation",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INT}+{ATTR:INS}+{ATTR:VOL})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_INTERROGATION": {
+                        "designation": "Interrogation",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:CHA}+{ATTR:SGF}+{ATTR:VOL})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_PERCEPTIONINDICES": {
+                        "designation": "Perception des indices",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INS}+{ATTR:INT}+{ATTR:SGF})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_PIEGES": {
+                        "designation": "Pièges",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:INS}+{ATTR:SGF})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_PISTER": {
+                        "designation": "Pister",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INS}+{ATTR:INT}+{ATTR:VOL})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_SYSTEMESSECURITE": {
+                        "designation": "Systèmes de sécurité",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INT}+{ATTR:INS}+{ATTR:SGF})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_USURPATION": {
+                        "designation": "Usurpation",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:INT}+{ATTR:INS}+{ATTR:AGI})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    }
+                }
+            },
+            "TALENTS_MEDICAUX" : {
+                "designation" : "Talents médicaux",
+                "attributs" : {
+                    "TALENT_PREMIERSSOINS": {
+                        "designation": "Premiers soins",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:INS}+{ATTR:INT})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    },
+                    "TALENT_CHIRURGIE": {
+                        "designation": "Chirurgie",
+                        "type": "Talent",
+                        "data": {
+                            "bonus": "round(({ATTR:AGI}+{ATTR:SGF}+{ATTR:INT})/3)",
+                            "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                            "niveau": "(floor({DATA:total}/10))",
+                            "diffappr" : ""
+                        },
+                        "defaultValue": {
+                            "initial": 0
+                        },
+                        "modificateur": 1
+                    }
+                }
+            }
+        },
+        "attributs": {
+            "INCONSCIENT": {
+                "designation": "Inconscient",
+                "type": "Simple",
+                "defaultValue": 0
+            }
+        },
+        "entites": [
+            {
+                "NOM": "Joueur 1",
+                "FOR": {
+                    "initial": 15
+                },
+                "GAB": {
+                    "initial": 17
+                },
+                "CHA": {
+                    "initial": 19
+                },
+                "INT": {
+                    "initial": 13
+                },
+                "VOL": {
+                    "initial": 17
+                },
+                "RES": {
+                    "initial": 11
+                },
+                "AGI": {
+                    "initial": 14
+                },
+                "SGF": {
+                    "initial": 13
+                },
+                "INS": {
+                    "initial": 9
+                },
+                "RAP": {
+                    "initial": 10
+                }
+            },
+            {
+                "NOM": "Joueur 2",
+                "FOR": {
+                    "initial": 20
+                },
+                "AGI": {
+                    "initial": 10
+                }
+            }
+        ]
     },
     "MAINMENU": {
-	"designation": "Menu principal",
-	"attributs": {
-	    "NOMMENU": {
-		"designation": "Nom affiché du menu",
-		"type": "Simple"
-	    },
-	    "CODEAPPZ": {
-		"designation": "Code de l'applicatif",
-		"type": "Simple"
-	    }
-	},
-	"entites": [
-	    {
-		"NOMMENU": "Gestion du jeu",
-		"CODEAPPZ": "gestion"
-	    },
-	    {
-		"NOMMENU": "Joueurs",
-		"CODEAPPZ": "game"
-	    },
-	    {
-		"NOMMENU": "Combats sous-marin",
-		"CODEAPPZ": "submarine"
-	    },
-	    {
-		"NOMMENU": "Journal",
-		"CODEAPPZ": "journal"
-	    },
-	    {
-		"NOMMENU": "Aventure",
-		"CODEAPPZ": "aventure"
-	    },
-	    {
-		"NOMMENU": "Encyclopédie sous-marine",
-		"CODEAPPZ": "encyclopedie"
-	    }
-	]
+        "designation": "Menu principal",
+        "attributs": {
+            "NOMMENU": {
+                "designation": "Nom affiché du menu",
+                "type": "Simple"
+            },
+            "CODEAPPZ": {
+                "designation": "Code de l'applicatif",
+                "type": "Simple"
+            }
+        },
+        "entites": [
+            {
+                "NOMMENU": "Gestion du jeu",
+                "CODEAPPZ": "gestion"
+            },
+            {
+                "NOMMENU": "Joueurs",
+                "CODEAPPZ": "game"
+            },
+            {
+                "NOMMENU": "Combats sous-marin",
+                "CODEAPPZ": "submarine"
+            },
+            {
+                "NOMMENU": "Journal",
+                "CODEAPPZ": "journal"
+            },
+            {
+                "NOMMENU": "Aventure",
+                "CODEAPPZ": "aventure"
+            },
+            {
+                "NOMMENU": "Encyclopédie sous-marine",
+                "CODEAPPZ": "encyclopedie"
+            }
+        ]
 
 
     },
     "ACTIONMENU": {
-	"designation": "Menu d'action (GAME)",
-	"attributs": {
-	    "ACTIONMENU_NOM": {
-		"designation": "Nom affiché du menu",
-		"type": "Simple"
-	    },
-	    "ACTIONMENU_CODE": {
-		"designation": "Code du panel",
-		"type": "Simple"
-	    }
-	},
-	"entites": [
-	    {
-		"ACTIONMENU_NOM": "Caractéristiques principales",
-		"ACTIONMENU_CODE": "caracs"
-	    },
-	    {
-		"ACTIONMENU_NOM": "Caractéristiques secondaires",
-		"ACTIONMENU_CODE": "caracssec"
-	    },
-	    {
-		"ACTIONMENU_NOM": "Talents",
-		"ACTIONMENU_CODE": "talents"
-	    },
-	    {
-		"ACTIONMENU_NOM": "Modificateurs",
-		"ACTIONMENU_CODE": "modificateurs"
-	    },
-	    {
-		"ACTIONMENU_NOM": "Etat de santé",
-		"ACTIONMENU_CODE": "blessures"
-	    },
-	    {
-		"ACTIONMENU_NOM": "Historique",
-		"ACTIONMENU_CODE": "historique"
-	    },
-	    {
-		"ACTIONMENU_NOM": "Equipement",
-		"ACTIONMENU_CODE": "equipement"
-	    },
-	    {
-		"ACTIONMENU_NOM": "Véhicule",
-		"ACTIONMENU_CODE": "vehicule"
-	    },
-	    {
-		"ACTIONMENU_NOM": "Ennemis / alliés / contacts",
-		"ACTIONMENU_CODE": "contacts"
-	    },
-	    {
-		"ACTIONMENU_NOM": "Notes",
-		"ACTIONMENU_CODE": "notes"
-	    },
-	    {
-		"ACTIONMENU_NOM": "Imprimer la fiche",
-		"ACTIONMENU_CODE": "print"
-	    }
+        "designation": "Menu d'action (GAME)",
+        "attributs": {
+            "ACTIONMENU_NOM": {
+                "designation": "Nom affiché du menu",
+                "type": "Simple"
+            },
+            "ACTIONMENU_CODE": {
+                "designation": "Code du panel",
+                "type": "Simple"
+            }
+        },
+        "entites": [
+            {
+                "ACTIONMENU_NOM": "Caractéristiques principales",
+                "ACTIONMENU_CODE": "caracs"
+            },
+            {
+                "ACTIONMENU_NOM": "Caractéristiques secondaires",
+                "ACTIONMENU_CODE": "caracssec"
+            },
+            {
+                "ACTIONMENU_NOM": "Talents",
+                "ACTIONMENU_CODE": "talents"
+            },
+            {
+                "ACTIONMENU_NOM": "Modificateurs",
+                "ACTIONMENU_CODE": "modificateurs"
+            },
+            {
+                "ACTIONMENU_NOM": "Etat de santé",
+                "ACTIONMENU_CODE": "blessures"
+            },
+            {
+                "ACTIONMENU_NOM": "Historique",
+                "ACTIONMENU_CODE": "historique"
+            },
+            {
+                "ACTIONMENU_NOM": "Equipement",
+                "ACTIONMENU_CODE": "equipement"
+            },
+            {
+                "ACTIONMENU_NOM": "Véhicule",
+                "ACTIONMENU_CODE": "vehicule"
+            },
+            {
+                "ACTIONMENU_NOM": "Ennemis / alliés / contacts",
+                "ACTIONMENU_CODE": "contacts"
+            },
+            {
+                "ACTIONMENU_NOM": "Notes",
+                "ACTIONMENU_CODE": "notes"
+            },
+            {
+                "ACTIONMENU_NOM": "Imprimer la fiche",
+                "ACTIONMENU_CODE": "print"
+            }
 
-	]
+        ]
 
 
     }

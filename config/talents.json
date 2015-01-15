@@ -1,0 +1,191 @@
+{
+    "TALENTS_PHYSIQUES": {
+        "designation": "Talents physiques",
+        "attributs": {
+            "TALENT_ACROBATIE": {
+                "designation": "Acrobatie / gymnastique",
+                "type": "Talent",
+                "data": {
+                    "bonus": "round(({ATTR:AGI}+{ATTR:INS}-{ATTR:GAB}))",
+                    "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                    "niveau": "(floor({DATA:total}/10))",
+                    "diffappr" : "4"
+                },
+                "defaultValue": {
+                    "initial": 0
+                },
+                "modificateur": 1
+            },
+            "TALENT_APNEE": {
+                "designation": "Apnée",
+                "type": "Talent",
+                "data": {
+                    "bonus": "round(({ATTR:VOL}+{ATTR:INT}+{ATTR:SGF})/3)",
+                    "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                    "niveau": "(floor({DATA:total}/10))",
+                    "diffappr" : "4"
+                },
+                "defaultValue": {
+                    "initial": 0
+                },
+                "modificateur": 1
+            },
+            "TALENT_CHASSER": {
+                "designation": "Chasser",
+                "type": "Talent",
+                "data": {
+                    "bonus": "round(({ATTR:INS}+{ATTR:VOL}+{ATTR:SGF})/3)",
+                    "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                    "niveau": "(floor({DATA:total}/10))",
+                    "diffappr" : "6"
+                },
+                "defaultValue": {
+                    "initial": 0
+                },
+                "modificateur": 1
+            },
+            "TALENT_CHUTER": {
+                "designation": "Chuter",
+                "type": "Talent",
+                "data": {
+                    "bonus": "round(({ATTR:INS}+{ATTR:AGI}+{ATTR:INT})/3)",
+                    "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                    "niveau": "(floor({DATA:total}/10))",
+                    "diffappr" : "4"
+                },
+                "defaultValue": {
+                    "initial": 0
+                },
+                "modificateur": 1
+            },
+            "TALENT_CONTORSION": {
+                "designation": "Contorsion",
+                "type": "Talent",
+                "data": {
+                    "bonus": "round(({ATTR:AGI}+{ATTR:INS}-{ATTR:GAB}))",
+                    "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                    "niveau": "(floor({DATA:total}/10))",
+                    "diffappr" : "8"
+                },
+                "defaultValue": {
+                    "initial": 0
+                },
+                "modificateur": 1
+            },
+            "TALENT_COURSE": {
+                "designation": "Course",
+                "type": "Talent",
+                "data": {
+                    "bonus": "round(({ATTR:RAP}+{ATTR:VOL}+{ATTR:INS})/3)",
+                    "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                    "niveau": "(floor({DATA:total}/10))",
+                    "diffappr" : "2"
+                },
+                "defaultValue": {
+                    "initial": 0
+                },
+                "modificateur": 1
+            },
+            "TALENT_ENDURANCE": {
+                "designation": "Endurance",
+                "type": "Talent",
+                "data": {
+                    "bonus": "round(({ATTR:VOL}+{ATTR:INS}+{ATTR:INT})/3)",
+                    "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                    "niveau": "(floor({DATA:total}/10))",
+                    "diffappr" : "4"
+                },
+                "defaultValue": {
+                    "initial": 0
+                },
+                "modificateur": 1
+            },
+            "TALENT_EQUILIBRE": {
+                "designation": "Equilibre",
+                "type": "Talent",
+                "data": {
+                    "bonus": "round(({ATTR:INS}+{ATTR:AGI}))",
+                    "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                    "niveau": "(floor({DATA:total}/10))",
+                    "diffappr" : "4"
+                },
+                "defaultValue": {
+                    "initial": 0
+                },
+                "modificateur": 1
+            },
+            "TALENT_ESCALADE": {
+                "designation": "Escalade",
+                "type": "Talent",
+                "data": {
+                    "bonus": "round(({ATTR:AGI}+{ATTR:INS}-{ATTR:GAB}))",
+                    "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                    "niveau": "(floor({DATA:total}/10))",
+                    "diffappr" : "4"
+                },
+                "defaultValue": {
+                    "initial": 0
+                },
+                "modificateur": 1
+            },
+            "TALENT_MONTURE": {
+                "designation": "Monture",
+                "type": "Talent",
+                "data": {
+                    "bonus": "round(({ATTR:AGI}+{ATTR:SGF}+{ATTR:VOL})/3)",
+                    "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                    "niveau": "(floor({DATA:total}/10))",
+                    "diffappr" : "4"
+                },
+                "defaultValue": {
+                    "initial": 0
+                },
+                "modificateur": 1
+            },
+            "TALENT_NAGER": {
+                "designation": "Nager",
+                "type": "Talent",
+                "data": {
+                    "bonus": "round(({ATTR:INS}+{ATTR:AGI}+{ATTR:VOL})/3)",
+                    "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                    "niveau": "(floor({DATA:total}/10))",
+                    "diffappr" : "2"
+                },
+                "defaultValue": {
+                    "initial": 0
+                },
+                "modificateur": 1
+            },
+            "TALENT_SAUTER": {
+                "designation": "Sauter",
+                "type": "Talent",
+                "data": {
+                    "bonus": "round(({ATTR:INS}+{ATTR:AGI}-{ATTR:GAB}))",
+                    "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                    "niveau": "(floor({DATA:total}/10))",
+                    "diffappr" : "2"
+                },
+                "defaultValue": {
+                    "initial": 0
+                },
+                "modificateur": 1
+            },
+            "TALENT_SURVIE": {
+                "designation": "Survie",
+                "type": "Talent",
+                "data": {
+                    "bonus": "round(({ATTR:INS}+{ATTR:INT}+{ATTR:VOL})/3))",
+                    "total": "({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})",
+                    "niveau": "(floor({DATA:total}/10))",
+                    "diffappr" : "4"
+                },
+                "defaultValue": {
+                    "initial": 0
+                },
+                "modificateur": 1
+            }
+            
+
+        }
+    }
+}
