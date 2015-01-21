@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost:8889
--- Généré le :  Ven 16 Janvier 2015 à 07:37
+-- Généré le :  Mer 21 Janvier 2015 à 13:20
 -- Version du serveur :  5.5.38
 -- Version de PHP :  5.6.2
 
@@ -403,7 +403,7 @@ CREATE TABLE `entite` (
   `fk_entitetype` int(11) NOT NULL,
   `fk_categorie` int(11) NOT NULL,
   `fk_entite` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6373 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6397 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `entite`
@@ -621,7 +621,6 @@ INSERT INTO `entite` (`pk_entite`, `fk_entitetype`, `fk_categorie`, `fk_entite`)
 (6348, 927, 0, 6220),
 (6349, 927, 0, 6220),
 (6350, 927, 0, 6220),
-(6351, 920, 0, 6220),
 (6352, 928, 0, 6221),
 (6353, 928, 0, 6221),
 (6354, 928, 0, 6221),
@@ -640,7 +639,18 @@ INSERT INTO `entite` (`pk_entite`, `fk_entitetype`, `fk_categorie`, `fk_entite`)
 (6367, 939, 0, 0),
 (6370, 926, 0, 6222),
 (6371, 939, 0, 0),
-(6372, 939, 0, 0);
+(6372, 939, 0, 0),
+(6382, 925, 0, 6222),
+(6383, 926, 0, 6223),
+(6384, 925, 0, 6223),
+(6388, 926, 0, 6220),
+(6390, 926, 0, 6221),
+(6391, 926, 0, 6223),
+(6392, 931, 0, 0),
+(6393, 931, 0, 0),
+(6394, 931, 0, 0),
+(6395, 931, 0, 0),
+(6396, 931, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -856,7 +866,7 @@ CREATE TABLE `valeur` (
   `fk_attribut` int(11) NOT NULL,
   `tt_valeur` text NOT NULL,
   `fk_entite` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=33955 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=34178 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `valeur`
@@ -2302,9 +2312,6 @@ INSERT INTO `valeur` (`pk_valeur`, `fk_attribut`, `tt_valeur`, `fk_entite`) VALU
 (33057, 10127, '85 kg', 6220),
 (33058, 10156, '8', 6220),
 (33059, 10157, '2', 6220),
-(33065, 10011, 'Belle action !', 6351),
-(33066, 10012, '', 6351),
-(33067, 10013, 'ACTION', 6351),
 (33068, 10119, 'Lanna Zorael', 6220),
 (33070, 10081, '0', 6343),
 (33072, 10079, '20', 6346),
@@ -2427,11 +2434,11 @@ INSERT INTO `valeur` (`pk_valeur`, `fk_attribut`, `tt_valeur`, `fk_entite`) VALU
 (33241, 10210, '{"initial":2}', 6221),
 (33242, 10211, '{"initial":9}', 6221),
 (33244, 10213, '{"initial":5}', 6221),
-(33245, 10214, '{"initial":3}', 6221);
-INSERT INTO `valeur` (`pk_valeur`, `fk_attribut`, `tt_valeur`, `fk_entite`) VALUES
+(33245, 10214, '{"initial":3}', 6221),
 (33246, 10198, '{"initial":4}', 6221),
 (33247, 10199, '{"initial":8}', 6221),
-(33248, 10200, '{"initial":2}', 6221),
+(33248, 10200, '{"initial":2}', 6221);
+INSERT INTO `valeur` (`pk_valeur`, `fk_attribut`, `tt_valeur`, `fk_entite`) VALUES
 (33249, 10201, '{"initial":2}', 6221),
 (33250, 10202, '{"initial":2}', 6221),
 (33251, 10203, '{"initial":1}', 6221),
@@ -2469,7 +2476,6 @@ INSERT INTO `valeur` (`pk_valeur`, `fk_attribut`, `tt_valeur`, `fk_entite`) VALU
 (33285, 10248, '{"initial":2}', 6221),
 (33292, 10249, '{"initial":58}', 6221),
 (33297, 10250, '{"initial":56}', 6221),
-(33298, 10232, '{"initial":19}', 6221),
 (33299, 10233, '{"initial":11}', 6221),
 (33302, 10212, '{"initial":40}', 6221),
 (33304, 10207, '{"initial":26}', 6221),
@@ -2695,7 +2701,6 @@ INSERT INTO `valeur` (`pk_valeur`, `fk_attribut`, `tt_valeur`, `fk_entite`) VALU
 (33619, 10182, '{"initial":59}', 6223),
 (33622, 10180, '{"initial":38}', 6223),
 (33623, 10177, '{"initial":19}', 6223),
-(33629, 10173, '{"initial":65}', 6223),
 (33633, 10165, '{"initial":49}', 6223),
 (33634, 10164, '{"initial":20}', 6223),
 (33639, 10188, '{"initial":55}', 6223),
@@ -2788,7 +2793,6 @@ INSERT INTO `valeur` (`pk_valeur`, `fk_attribut`, `tt_valeur`, `fk_entite`) VALU
 (33739, 10309, '1', 6365),
 (33740, 10310, '6', 6365),
 (33741, 10311, '0', 6365),
-(33742, 10313, '0', 6365),
 (33743, 10282, 'Requin camÃ©lÃ©on', 6366),
 (33744, 10283, '1', 6366),
 (33745, 10284, '', 6366),
@@ -2927,7 +2931,92 @@ INSERT INTO `valeur` (`pk_valeur`, `fk_attribut`, `tt_valeur`, `fk_entite`) VALU
 (33951, 10309, '1', 6372),
 (33952, 10310, '8', 6372),
 (33953, 10311, '0', 6372),
-(33954, 10313, '5', 6372);
+(33954, 10313, '5', 6372),
+(34039, 10060, 'Dague thermique', 6382),
+(34040, 10061, 'Arme de contact', 6382),
+(34041, 10062, 'TALENT_ARMES_CONTACT', 6382),
+(34042, 10063, '6', 6382),
+(34043, 10064, '0', 6382),
+(34044, 10065, '16', 6382),
+(34045, 10066, 'NÃ©cessite des recharges. N''endommage pas les armures.', 6382),
+(34046, 10067, '1', 6382),
+(34047, 10067, '1', 6360),
+(34048, 10068, 'Pistolet', 6383),
+(34049, 10069, 'Armes de poing', 6383),
+(34050, 10070, 'TALENT_ARMES_POING', 6383),
+(34051, 10071, 'Surface', 6383),
+(34052, 10072, '3', 6383),
+(34053, 10073, '0', 6383),
+(34054, 10074, '12m', 6383),
+(34055, 10075, '50m', 6383),
+(34056, 10076, '100m', 6383),
+(34057, 10077, '200m', 6383),
+(34058, 10078, '4', 6383),
+(34059, 10080, '6', 6383),
+(34060, 10060, 'Dague', 6384),
+(34061, 10061, 'Arme de contact', 6384),
+(34062, 10062, 'TALENT_ARMES_CONTACT', 6384),
+(34063, 10063, '3', 6384),
+(34064, 10064, '0', 6384),
+(34065, 10065, '12', 6384),
+(34066, 10066, '', 6384),
+(34067, 10067, '1', 6384),
+(34068, 10313, '10', 6365),
+(34100, 10109, '1', 6223),
+(34102, 10014, 'LEGERE', 6386),
+(34107, 10068, 'Mitrailleuse', 6388),
+(34108, 10069, 'Armes d''Ã©paule', 6388),
+(34109, 10070, 'TALENT_ARMES_EPAULE', 6388),
+(34110, 10071, 'Surface', 6388),
+(34111, 10072, '6', 6388),
+(34112, 10073, '0', 6388),
+(34113, 10074, '30m', 6388),
+(34114, 10075, '90m', 6388),
+(34115, 10076, '180m', 6388),
+(34116, 10077, '360m', 6388),
+(34117, 10078, '4', 6388),
+(34118, 10080, '20', 6388),
+(34131, 10068, 'Fusil de prÃ©cision', 6390),
+(34132, 10069, 'Armes d''Ã©paule', 6390),
+(34133, 10070, 'TALENT_ARMES_EPAULE', 6390),
+(34134, 10071, 'Surface', 6390),
+(34135, 10072, '8', 6390),
+(34136, 10073, '0', 6390),
+(34137, 10074, '90m', 6390),
+(34138, 10075, '240m', 6390),
+(34139, 10076, '800m', 6390),
+(34140, 10077, '1600m', 6390),
+(34141, 10078, '1', 6390),
+(34142, 10080, '10', 6390),
+(34143, 10068, 'Fusil', 6391),
+(34144, 10069, 'Armes d''Ã©paule', 6391),
+(34145, 10070, 'TALENT_ARMES_EPAULE', 6391),
+(34146, 10071, 'Surface', 6391),
+(34147, 10072, '4', 6391),
+(34148, 10073, '0', 6391),
+(34149, 10074, '60m', 6391),
+(34150, 10075, '180m', 6391),
+(34151, 10076, '380m', 6391),
+(34152, 10077, '760m', 6391),
+(34153, 10078, '1', 6391),
+(34154, 10080, '20', 6391),
+(34161, 10081, '1', 6383),
+(34162, 10232, '{"initial":"22"}', 6221),
+(34163, 10173, '{"initial":"70"}', 6223),
+(34164, 10155, '0.25', 6221),
+(34165, 10155, '0.25', 6222),
+(34166, 10155, '1.25', 6223),
+(34167, 10155, '0.5', 6220),
+(34168, 10103, 'Les PJS sont embauchÃ©s sur Solar VI, petite exploitation miniÃ¨re et agricole indÃ©pendante perdue au milieu de l''OcÃ©an Atlantique Ã  6600m de profondeur dans la rÃ©gion de la Zone de Fractur Chain. Ils sont embauchÃ©s avec 36 autres travailleurs indÃ©pendants de provenance diverses. Lors de leur arrivÃ©e ils rencontrent Kryss Vanal, commandant de la base, Yvorn Guls, mÃ©decin en chef et Piotr Tristeln, responsable de la sÃ©curitÃ©.\r\nOn leur prÃ©sente leurs quartier - un dortoir commun - et leur affecte un poste de travail.', 6392),
+(34169, 10104, '7 juin 569', 6392),
+(34170, 10103, 'Les Pjs prennent leurs habitudes et en apprennent un peu plus sur Solar VI.\r\nLa base Solar VI est une station classique oÃ¹ vivent 400 individus dont 120 travailleurs indÃ©pendants. Elle est en relation commerciale avec les communautÃ©s de Rogue, Meya et HÃ©lÃ¨ne. Sa plus proche voisine est la base Valar, une petite station de recherche ocÃ©anographique Ã©tudiant la zone de fracture financÃ©e par une entreprise privÃ©e : Valco INC.\r\nSolar VI tire ses principales ressources de l''hydroculture et de l''exploitation de mines de cyclast et de tri-terranium. De plus elle est sous contrat pour s''occuper d''une station Ã©nergÃ©tique hÃ©gÃ©monienne et reÃ§oit des subventions de la sociÃ©tÃ© Valco INC pour rÃ©pondre aux moindres besoins de la base Valar.\r\n\r\nLa base comporte les modules suivants :\r\n            Module central (poste contrÃ´le, cabine du commandant, salle de rÃ©union, armurerie)\r\n            Clinique\r\n            Complexe informatique\r\n            Salles de dÃ©tente\r\n            Poste de sÃ©curitÃ©\r\n            Dortoirs\r\n            Central de communication\r\n            Stations de dÃ©fense\r\n            Laboratoire\r\n            Infirmerie\r\n            Cuisines / rÃ©fectoire\r\n            Hangar Ã  vÃ©hicules\r\n            GÃ©nÃ©rateur de champ\r\n            Complexe de dÃ©tection\r\n            Hangar Ã  armures sous-marines\r\n            EntrepÃ´ts Ã  marchandises\r\n            Usine de traitement\r\n            Centrale Ã  fusion, centrale de secours, gÃ©nÃ©rateur d''air principal, gÃ©nÃ©rateur de secours, filtreur d''eau, accumulateur de gaz carbonique, systÃ¨me de chauffage, pressurisateur / depressurisateur\r\n\r\nIls rencontrent Ã©galement progressivement les personnes suivantes :\r\n            Kryss Vanal : commandant de la base. Autoritaire.\r\n            Anna Vanal : femme du commandant.\r\n            Yvorn Guls : mÃ©decin-chef. TrÃ¨s calme.\r\n            Piotr Tristeln : responsable de la sÃ©curitÃ©.\r\n            Jacob Lossoc : cuisinier\r\n            Ulben Fadoris : superviseur gÃ©nÃ©ral des entrepÃ´ts\r\n            Cedr Lisensky : superviseur gÃ©nÃ©ral de l''usine\r\n            Candal Gorin : chef mecanicien. 44 ans. DouÃ©.\r\n            Stan : pilote de fugur\r\n            Lemond Tyr : ouvrier. RenfermÃ© et lunatique.\r\n            Victor Vanez : ouvrier. Sympathique.\r\n            Listur Gill : chef du conseil.\r\n            AlÃ©a Stell : scientifique\r\n            Vera Dynetir : commandant en second. Maniaque de la propretÃ©.\r\n', 6393),
+(34171, 10104, 'du 7 au 16 juin 569', 6393),
+(34172, 10103, 'La station Valar est supposÃ©e donner des informations Ã  Salor VI toutes les semaines. Or celle-ci ne rÃ©pond plus depuis plus d''une semaine. Le commandant est trÃ¨s inquiet. \r\nIl propose l''envoi d''une mission de reconnaissance / sauvetage Ã  laquelle participent en volontaires.', 6394),
+(34173, 10104, '16 juin 569', 6394),
+(34174, 10103, 'DÃ©part de l''expÃ©dition. A cette expÃ©dition participent :\r\n- 12 pilotes\r\n- 8 mineurs\r\n- 6 agents de sÃ©curitÃ©\r\n- un informaticien\r\n- un mÃ©cano\r\n- 4 infirmiers\r\n- VÃ©ra (second de la station)\r\n- Les pJS\r\n\r\nLes navires affectÃ©s :\r\n- Un nÃ©olith\r\n- 2 Vestal\r\n- 6 chasseurs Fulgur\r\n- Le navire des Pjs', 6395),
+(34175, 10104, '17 juin 569', 6395),
+(34176, 10103, 'ArrivÃ©e sur Valar. La station ne rÃ©pond pas aux tentatives de communication. Les systÃ¨mes de dÃ©fense automatique attaquent l''Ã©quipe de secours. Ils sont dÃ©truits par les chasseurs de l''expÃ©dition.\r\nL''Ã©quipe pÃ©nÃ¨tre dans la station Valar sur laquelle ils ne rencontrent pas Ã¢me qui vive mÃªme si tous les systÃ¨mes semblent opÃ©rationnels.\r\n\r\nVisite du module central\r\nSystÃ¨me de survie, poste de contrÃ´le principal, salles de confÃ©rence et salles de dÃ©tente.\r\nIls dÃ©couvrent des traces de lutte un peu partout. Un cadavre est allongÃ© au sous-sol prÃ¨s de la centrale Ã  fusion. Il porte une blouse blanche de scientifique.\r\nDans une des zones de dÃ©tente un homme a Ã©tÃ© Ã©tranglÃ© avec un filin d''acier.\r\nAu niveau 3 le commandant de la base s''est suicidÃ© devant son ordinateur. Son ordinateur est encore allumÃ© mais les fichiers sont encodÃ©s.\r\nLes Pjs emportent le disque dur de l''ordinateur.\r\n\r\nVisite d''un poste de detection\r\nEquipÃ© du materiel le plus performant que les Pjs n''aient jamais vu. Tout a Ã©tÃ© cependant dÃ©truit par des combats particuliÃ¨rement violents. 6 cadavres sont rÃ©partis sur les 3 niveaux du module.\r\n\r\nVisite du laboratoire de recherche\r\nLes cadavres de quatre scientifiques sont rassemblÃ©s au niveau 2. Ils semblent avoir Ã©tÃ© abattus.\r\nLes Pjs y dÃ©couvrent des caisses contenant des tubes sur lesquelles est Ã©crit "ZETAN ZD 345". Ils essaient de respirer le gaz d''un des tubes, l''un des Pjs semblent pris d''un Ã©trange malaise.\r\n\r\nFIN DE SESSION', 6396),
+(34177, 10104, '25 juin 569', 6396);
 
 --
 -- Index pour les tables exportées
@@ -2993,7 +3082,7 @@ MODIFY `pk_categorie` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1050;
 -- AUTO_INCREMENT pour la table `entite`
 --
 ALTER TABLE `entite`
-MODIFY `pk_entite` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6373;
+MODIFY `pk_entite` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6397;
 --
 -- AUTO_INCREMENT pour la table `entitetype`
 --
@@ -3013,7 +3102,7 @@ MODIFY `pk_palier` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5776;
 -- AUTO_INCREMENT pour la table `valeur`
 --
 ALTER TABLE `valeur`
-MODIFY `pk_valeur` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=33955;
+MODIFY `pk_valeur` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=34178;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

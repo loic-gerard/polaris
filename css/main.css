@@ -30,6 +30,12 @@ a.bluelink{
     padding-top: 5px;
 }
 
+.ennemiName{
+     font-weight: bold;
+    color:white;
+    margin-left: 10px;
+}
+
 .clear{
     clear: both;
 }

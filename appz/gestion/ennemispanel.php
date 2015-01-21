@@ -14,7 +14,7 @@ echo '<div id="ennemisPanel">';
 echo '<div style="height:10px;"></div>';
 foreach($view AS $viewItem){
     
-    echo '<div class="playerName">'.$viewItem['PNJ_NOM'].'</div>';
+    echo '<div class="ennemiName">'.$viewItem['PNJ_NOM'].'</div>';
     echo '<div class="player">';
     
 	echo '<div class="col1">';

@@ -240,9 +240,8 @@ if(isset($_GET['deletePnj'])){
 //Ajout journal
 if(isset($_POST['valid']) && $_GET['actpane'] == 'aventure/actpane.php'){
     $data = array();
-    $now = new \DateTime;
     $data['JOURNAL_TEXTE'] = $_POST['journal'];
-    $data['JOURNAL_DATE'] = $now->format('d/m/Y');
+    $data['JOURNAL_DATE'] = $_POST['date'];
     Entite::addEntite('JOURNAL', $data);
     
     header('Location: '.PolarisCore::getUrl(array(), true, array('actpane')));
