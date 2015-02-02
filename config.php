@@ -2,7 +2,7 @@
 
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'polaris');
-define('DB_USER', 'root');
-define('DB_PASS', 'root');
-define('DB_PORT', 8889);
+define('DB_USER', 'polaris');
+define('DB_PASS', 'devadmin');
+define('DB_PORT', 5432);
 

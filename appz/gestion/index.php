@@ -4,6 +4,10 @@ use \PolarisCore;
 use polarisapi\data\View;
 use polarisapi\data\attribut\Attribut;
 
+
+
+
+
 include 'playerpanel.php';
 include 'ennemispanel.php';
 

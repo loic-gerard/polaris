@@ -8,6 +8,7 @@ include 'common/actions.php';
     <?php include 'common/head.php'; ?>
     
     <body>
+	<?php include 'appz/gestion/spepopup.php'; ?>
         <?php include 'common/attributmodifier.php'; ?>
         <?php include 'common/entiteadd.php'; ?>
         <?php include 'common/custompopup.php'; ?>

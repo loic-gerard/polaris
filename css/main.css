@@ -396,16 +396,12 @@ textArea{
 
 #customWindow{
     background-color: white;
-    width: 900px;
-    height: 550px;
+    width: calc(100% - 40px);
+    height: 100vh;
     position: fixed;
-    top:50%;
-    left:50%;
-    margin-top: -295px;
-    margin-left: -470px;
     z-index: 1000;
-    overflow: scroll;
-    padding: 20px;
+    overflow:scroll;
+    padding:20px;
 }
 
 .encycloPanel{

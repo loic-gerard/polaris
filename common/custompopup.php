@@ -12,4 +12,6 @@
         </div>
     </div>
 
-<?php } ?>
+<?php 
+exit;
+} ?>

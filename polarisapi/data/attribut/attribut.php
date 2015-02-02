@@ -7,6 +7,7 @@ use jin\query\QueryResult;
 use jin\dataformat\Json;
 use jin\lang\StringTools;
 use jin\log\Debug;
+use jin\cache\Cache;
 
 class Attribut {
 
@@ -27,7 +28,7 @@ class Attribut {
         if ($attributId) {
             $q->addToRequest('WHERE pk_attribut=' . $q->argument($attributId, Query::$SQL_NUMERIC));
         }
-        $q->execute();
+        $q->execute(true);
         $qr = $q->getQueryResults();
 	
 	if($qr->count() == 0){
@@ -51,7 +52,7 @@ class Attribut {
         $q = new Query();
         $q->setRequest('SELECT * FROM attribut '
                 . 'WHERE tt_code=' . $q->argument($attributCode, Query::$SQL_STRING));
-        $q->execute();
+        $q->execute(true);
         $qr = $q->getQueryResults();
 
         $this->attributName = $qr->getValueAt('tt_designation');
@@ -69,7 +70,7 @@ class Attribut {
                 $q->setRequest('SELECT * FROM valeur '
                         . 'WHERE fk_attribut=' . $q->argument($this->attributId, Query::$SQL_NUMERIC) . ' '
                         . 'AND fk_entite=' . $q->argument($this->entiteId, Query::$SQL_NUMERIC));
-                $q->execute();
+                $q->execute(true);
                 $qr2 = $q->getQueryResults();
 
                 if ($qr2->count() == 1) {
@@ -137,7 +138,7 @@ class Attribut {
                 . 'FROM modificateur '
                 . 'WHERE fk_entite=' . $q->argument($this->entiteId, Query::$SQL_NUMERIC) . ' '
                 . 'AND fk_attribut=' . $q->argument($this->attributId, Query::$SQL_NUMERIC));
-        $q->execute();
+        $q->execute(true);
         $qr = $q->getQueryResults();
         $mod = $qr->getValueAt('modif');
 
@@ -242,6 +243,9 @@ class Attribut {
                 . $q->argument($this->entiteId, Query::$SQL_NUMERIC) . ','
                 . $q->argument($val, Query::$SQL_STRING) . ')');
         $q->execute();
+	
+	Cache::clearCache();
+	
     }
 
     public function setValue($value, $key = null) {
@@ -275,6 +279,8 @@ class Attribut {
                 . $q->argument($this->entiteId, Query::$SQL_NUMERIC) . ','
                 . $q->argument($val, Query::$SQL_STRING) . ')');
         $q->execute();
+	
+	Cache::clearCache();
     }
 
 }
