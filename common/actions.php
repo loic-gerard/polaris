@@ -107,7 +107,10 @@ if (isset($_GET['modAttr']) && isset($_GET['modId']) && isset($_POST['attributMo
 if(isset($_GET['addEntite']) && isset($_POST['entiteAddFormValid'])){
     $toEdit = Json::decode($_GET['toEdit']);
     $toSet = Json::decode($_GET['toSet']);
-    $parent = $_GET['parent'];
+    $parent = 0;
+    if(isset($_GET['parent'])){
+        $parent = $_GET['parent'];
+    }
     $entiteType = $_GET['addEntite'];
     
     if($parent == 0){

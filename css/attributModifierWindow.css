@@ -1,13 +1,9 @@
 #attributModifierWindow{
     background-color: white;
-    width: 300px;
-    height: 300px;
-    position: fixed;
-    top:50%;
-    left:50%;
-    margin-top: -150px;
-    margin-left: -150px;
-    z-index: 1000;
+width: calc(100%);
+height: 100vh;
+position: fixed;
+z-index: 1000;
 }
 
 #attributModifierMask{
@@ -31,4 +27,91 @@
 
 #attributModifierWindow .content{
     padding: 20px;
+}
+
+.bloclist{
+    border: 1px solid #63718a;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.bloclist .smallButtonsContainer{
+    margin-bottom: 15px;
+}
+
+.n1, .n1 a{
+    font-weight: bold;
+    font-size: 14px;
+    color:#63718a;
+    padding-bottom: 15px !important;
+    text-decoration: none;
+}
+
+.itemCellLabel,
+.itemCellLabel a{
+    float:left;
+    width:50%;
+    text-decoration: none;
+    color:black;
+    clear: both;
+    
+}
+
+.itemCellLabel{
+    margin-bottom: 3px;
+}
+
+
+.itemCellValue{
+    float: left;
+    width: 50%;
+    margin-bottom: 3px;
+}
+
+
+
+.cell30{
+    float: left;
+    width: 30%;
+    border-right: 1px solid #63718a;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+.itemCellLabel,
+.itemCellLabel a{
+    font-weight: bold;
+    text-decoration: none;
+    color:black;
+}
+
+.itemCellValue a,
+.itemCellLineValue a{
+    text-decoration: none;
+    color:black;
+}
+
+.bloclistac{
+    width:100px;
+    height: calc(100% - 20px);
+    position: absolute;
+    top:0px;
+    right:0px;
+    background-color: #e6e6e6;
+    padding: 10px;
+}
+
+.itemCellLineLabel,
+.itemCellLineLabel a{
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color:black;
+}
+
+.itemCell{
+    margin-top: 3px;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 3px;
 }

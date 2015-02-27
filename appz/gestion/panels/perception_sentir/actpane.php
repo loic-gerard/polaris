@@ -54,6 +54,7 @@ if($confirm){
 </div>
 
 
+<a class="actBlueButton" href="javascript:calculateJetPerceptionSentir();">Calculer</a>
 
 
 

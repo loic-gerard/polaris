@@ -53,6 +53,7 @@ if($confirm){
         <input type="text" name="difficulte" id="difficulte" value="0" onkeyup="javascript:calculateJetPerceptionEcouter();">
     </div>
 </div>
+<a class="actBlueButton" href="javascript:calculateJetPerceptionEcouter();">Calculer</a>
 
 
 

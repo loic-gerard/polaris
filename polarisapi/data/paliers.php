@@ -78,14 +78,21 @@ class Paliers{
         $output .= '</tr>';
         $first = true;
         foreach($palier['marges'] AS $marge){
-            $output .= '<tr>';
+            $uid = uniqid();
+            if($onclick){
+                $output .= '<tr class="modifiable" >';
+
+            }else{
+                $output .= '<tr class="modifiable" onClick="javascript:if(document.getElementById(\'marge_'.$uid.'\').checked){ document.getElementById(\'marge_'.$uid.'\').checked = false; }else{ document.getElementById(\'marge_'.$uid.'\').checked = true; }">';
+
+            }
             if($formName){
                 $checked = '';
                 if($first){
                     $first = false;
                     $checked = 'checked="checked"';
                 }
-                $output .= '<td width="10"><input type="radio" '.$checked.' value="'.$marge['marge'].'" name="'.$formName.'" id="'.$formName.'_'.$marge['marge'].'"></td>';
+                $output .= '<td width="10"><input id="marge_'.$uid.'" type="radio" '.$checked.' value="'.$marge['marge'].'" name="'.$formName.'" id="'.$formName.'_'.$marge['marge'].'"></td>';
             }
 	    if($onclick){
 		$url = StringTools::replaceAll($onclick, '%marge%', $marge['marge']);

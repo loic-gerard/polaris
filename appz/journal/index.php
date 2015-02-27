@@ -5,7 +5,7 @@ use polarisapi\ui\utils\ViewTable;
 use polarisapi\ui\categorie\FreeCategorie;
 use \PolarisCore;
 
-$v = new View('JOURNAL', 'pk_entite', 'DESC', '', array('JOURNAL_DATE', 'JOURNAL_TEXTE'));
+$v = new View('JOURNAL', 'pk_entite', 'ASC', '', array('JOURNAL_DATE', 'JOURNAL_TEXTE'));
 
 $output = '<table>';
 $output .= '<tr class="header">';

@@ -33,5 +33,6 @@ if (isset($_GET['modAttr']) && isset($_GET['modId'])) {
         </div>
     </div>
     <?php
+    exit;
 }
 ?>

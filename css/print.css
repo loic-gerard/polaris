@@ -72,3 +72,67 @@ table, td, tr, th{
     width:calc(50% - 20px);
     margin-right:20px;
 }
+
+
+.bloclist{
+    border: 1px solid #63718a;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.bloclist a{
+    display: block !important;
+}
+
+.bloclist .smallButtonsContainer{
+    margin-bottom: 15px;
+}
+
+.n1, .n1 a{
+    font-weight: bold;
+    font-size: 14px;
+    color:#63718a;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.itemCellLabel,
+.itemCellLabel a{
+    float:left;
+    width:50%;
+    text-decoration: none;
+    color:black;
+}
+
+.cell30{
+    float: left;
+    width: 30%;
+    border-right: 1px solid #63718a;
+    margin-right: 10px;
+}
+
+.itemCellLabel,
+.itemCellLabel a{
+    font-weight: bold;
+    text-decoration: none;
+    color:black;
+}
+
+.itemCellValue a,
+.itemCellLineValue a{
+    text-decoration: none;
+    color:black;
+}
+
+.bloclistac{
+    display: none;
+}
+
+.itemCellLineLabel,
+.itemCellLineLabel a{
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color:black;
+}

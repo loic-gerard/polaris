@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost:8889
--- Généré le :  Mer 21 Janvier 2015 à 13:20
+-- Généré le :  Ven 27 Février 2015 à 08:07
 -- Version du serveur :  5.5.38
 -- Version de PHP :  5.6.2
 
@@ -39,7 +39,7 @@ CREATE TABLE `attribut` (
   `in_modifiable` int(1) DEFAULT '1',
   `in_modificateur` int(1) NOT NULL DEFAULT '0',
   `in_jet` int(1) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB AUTO_INCREMENT=10314 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10315 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `attribut`
@@ -73,7 +73,7 @@ INSERT INTO `attribut` (`pk_attribut`, `tt_code`, `tt_designation`, `fk_entitety
 (10035, 'PNJ_PERCEPTION', 'Perception', 924, 0, 0, 'Simple', '{}', '', 1, 0, 0),
 (10036, 'PNJ_SEUIL_INCONSCIENCE', 'Seuil d''inconscience', 924, 0, 0, 'Simple', '{}', '', 1, 0, 0),
 (10037, 'PNJ_SEUIL_LEGERE', 'Seuil blessure lÃ©gÃ¨re', 924, 0, 0, 'Simple', '{}', '', 1, 0, 0),
-(10038, 'PNJ_SEUIL_GRAVE', 'Seuil blessure lÃ©gÃ¨re', 924, 0, 0, 'Simple', '{}', '', 1, 0, 0),
+(10038, 'PNJ_SEUIL_GRAVE', 'Seuil blessure grave', 924, 0, 0, 'Simple', '{}', '', 1, 0, 0),
 (10039, 'PNJ_SEUIL_CRITIQUE', 'Seuil blessure critique', 924, 0, 0, 'Simple', '{}', '', 1, 0, 0),
 (10040, 'PNJ_SEUIL_FATAL', 'Seuil blessure fatale', 924, 0, 0, 'Simple', '{}', '', 1, 0, 0),
 (10041, 'PNJ_SEUIL_MORT', 'Seuil mort', 924, 0, 0, 'Simple', '{}', '', 1, 0, 0),
@@ -151,7 +151,7 @@ INSERT INTO `attribut` (`pk_attribut`, `tt_code`, `tt_designation`, `fk_entitety
 (10113, 'SEUIL_INCONSCIENCE', 'Inconscience', 932, 1035, 0, 'caracsec', '{"total":"round(({ATTR:RES}+{ATTR:GAB}+{ATTR:VOL})\\/4)"}', '0', 0, 0, 0),
 (10114, 'SEUIL_LEGERE', 'Blessure lÃ©gÃ¨re', 932, 1035, 0, 'caracsec', '{"total":"round(({ATTR:RES}+{ATTR:GAB}+{ATTR:VOL})\\/6)"}', '0', 0, 0, 0),
 (10115, 'SEUIL_GRAVE', 'Blessure grave', 932, 1035, 0, 'caracsec', '{"total":"round(({ATTR:RES}+{ATTR:GAB}+{ATTR:VOL})\\/3)"}', '0', 0, 0, 0),
-(10116, 'SEUIL_CRITIQUE', 'Inconscience', 932, 1035, 0, 'caracsec', '{"total":"round(({ATTR:RES}+{ATTR:GAB}+{ATTR:VOL})\\/2)"}', '0', 0, 0, 0),
+(10116, 'SEUIL_CRITIQUE', 'Blessure critique', 932, 1035, 0, 'caracsec', '{"total":"round(({ATTR:RES}+{ATTR:GAB}+{ATTR:VOL})\\/2)"}', '0', 0, 0, 0),
 (10117, 'SEUIL_FATAL', 'Fatal', 932, 1035, 0, 'caracsec', '{"total":"round(({ATTR:RES}+{ATTR:GAB}+{ATTR:VOL})\\/1)"}', '0', 0, 0, 0),
 (10118, 'SEUIL_MORT', 'Mort', 932, 1035, 0, 'caracsec', '{"total":"round(({ATTR:RES}+{ATTR:GAB}+{ATTR:VOL})*1.5)"}', '0', 0, 0, 0),
 (10119, 'NOM', 'Nom', 932, 1036, 0, 'Simple', '{}', '', 1, 0, 0),
@@ -191,8 +191,8 @@ INSERT INTO `attribut` (`pk_attribut`, `tt_code`, `tt_designation`, `fk_entitety
 (10153, 'SAUT', 'Saut', 932, 1038, 0, 'caracsec', '{"total":"round(({ATTR:FOR}+{ATTR:AGI}-{ATTR:GAB}))+{SPE:MODIFIER}"}', '0', 0, 1, 0),
 (10154, 'SOUFFLE', 'Souffle', 932, 1038, 0, 'caracsec', '{"total":"round(({ATTR:VOL}+{ATTR:RES}+{ATTR:GAB})\\/3)+{SPE:MODIFIER}"}', '0', 0, 1, 0),
 (10155, 'EVOLUTION', 'Points d''Ã©volution', 932, 1038, 0, 'Simple', '{}', '0', 1, 0, 0),
-(10156, 'CELEBRITE', 'CÃ©lÃ©britÃ©', 932, 1038, 0, 'Simple', '{}', '0', 1, 1, 0),
-(10157, 'INFLUENCE', 'Influence', 932, 1038, 0, 'Simple', '{}', '0', 1, 1, 0),
+(10156, 'CELEBRITE', 'CÃ©lÃ©britÃ©', 932, 1038, 0, 'Simple', '{}', '0', 1, 0, 0),
+(10157, 'INFLUENCE', 'Influence', 932, 1038, 0, 'Simple', '{}', '0', 1, 0, 0),
 (10158, 'TALENT_ACROBATIE', 'Acrobatie / gymnastique', 932, 1039, 0, 'Talent', '{"bonus":"({ATTR:AGI}+{ATTR:INS}-{ATTR:GAB})","total":"({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})","niveau":"(floor({DATA:total}\\/10))","diffappr":"4"}', '{"initial":0}', 1, 1, 1),
 (10159, 'TALENT_APNEE', 'ApnÃ©e', 932, 1039, 0, 'Talent', '{"bonus":"({ATTR:VOL}+{ATTR:INT}+{ATTR:SGF})\\/3","total":"({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})","niveau":"(floor({DATA:total}\\/10))","diffappr":"4"}', '{"initial":0}', 1, 1, 1),
 (10160, 'TALENT_CHUTER', 'Chuter', 932, 1039, 0, 'Talent', '{"bonus":"({ATTR:INS}+{ATTR:AGI}+{ATTR:INT})\\/3","total":"({VAL:initial}+{DATA:bonus}+{SPE:MODIFIER})","niveau":"(floor({DATA:total}\\/10))","diffappr":"4"}', '{"initial":0}', 1, 1, 1),
@@ -348,7 +348,8 @@ INSERT INTO `attribut` (`pk_attribut`, `tt_code`, `tt_designation`, `fk_entitety
 (10310, 'REF_PNJ_ARMURE', 'Armure', 939, 0, 0, 'Simple', '{}', '', 1, 0, 1),
 (10311, 'REF_PNJ_BLINDAGE', 'Blindage', 939, 0, 0, 'Simple', '{}', '', 1, 0, 1),
 (10312, 'REF_PNJ_SPE', 'SpÃ©cifique', 939, 0, 0, 'Simple', '{}', '', 1, 0, 1),
-(10313, 'REF_PNJ_RES_ARME', 'Resistance de l''arme utilisÃ©e', 939, 0, 0, 'Simple', '{}', '', 1, 0, 1);
+(10313, 'REF_PNJ_RES_ARME', 'Resistance de l''arme utilisÃ©e', 939, 0, 0, 'Simple', '{}', '', 1, 0, 1),
+(10314, 'ARMEDISTANCE_SPECIAL', 'Special', 926, 0, 0, 'Simple', '{}', '', 1, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -403,7 +404,7 @@ CREATE TABLE `entite` (
   `fk_entitetype` int(11) NOT NULL,
   `fk_categorie` int(11) NOT NULL,
   `fk_entite` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6397 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6402 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `entite`
@@ -650,7 +651,9 @@ INSERT INTO `entite` (`pk_entite`, `fk_entitetype`, `fk_categorie`, `fk_entite`)
 (6393, 931, 0, 0),
 (6394, 931, 0, 0),
 (6395, 931, 0, 0),
-(6396, 931, 0, 0);
+(6396, 931, 0, 0),
+(6399, 927, 0, 6222),
+(6400, 927, 0, 6223);
 
 -- --------------------------------------------------------
 
@@ -742,118 +745,118 @@ CREATE TABLE `palier` (
   `max` int(11) NOT NULL,
   `marge` int(11) NOT NULL,
   `palier` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5776 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6301 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `palier`
 --
 
 INSERT INTO `palier` (`pk_palier`, `min`, `max`, `marge`, `palier`) VALUES
-(5671, 2, 9, 1, 1),
-(5672, 2, 9, 2, 1),
-(5673, 2, 9, 3, 1),
-(5674, 2, 9, 4, 1),
-(5675, 2, 9, 5, 1),
-(5676, 2, 9, 6, 1),
-(5677, 1, 1, 11, 1),
-(5678, 10, 19, 1, 2),
-(5679, 9, 9, 2, 2),
-(5680, 8, 8, 3, 2),
-(5681, 7, 7, 4, 2),
-(5682, 6, 6, 5, 2),
-(5683, 5, 5, 6, 2),
-(5684, 4, 4, 7, 2),
-(5685, 3, 3, 8, 2),
-(5686, 2, 2, 9, 2),
-(5687, 1, 1, 11, 2),
-(5688, 20, 29, 1, 3),
-(5689, 18, 19, 2, 3),
-(5690, 16, 17, 3, 3),
-(5691, 14, 15, 4, 3),
-(5692, 12, 13, 5, 3),
-(5693, 10, 11, 6, 3),
-(5694, 8, 9, 7, 3),
-(5695, 6, 7, 8, 3),
-(5696, 4, 5, 9, 3),
-(5697, 2, 3, 10, 3),
-(5698, 1, 1, 11, 3),
-(5699, 30, 39, 1, 4),
-(5700, 27, 29, 2, 4),
-(5701, 24, 26, 3, 4),
-(5702, 21, 23, 4, 4),
-(5703, 18, 20, 5, 4),
-(5704, 15, 17, 6, 4),
-(5705, 12, 14, 7, 4),
-(5706, 9, 11, 8, 4),
-(5707, 6, 8, 9, 4),
-(5708, 3, 5, 10, 4),
-(5709, 1, 2, 11, 4),
-(5710, 40, 49, 1, 5),
-(5711, 36, 39, 2, 5),
-(5712, 32, 35, 3, 5),
-(5713, 28, 31, 4, 5),
-(5714, 24, 27, 5, 5),
-(5715, 20, 23, 6, 5),
-(5716, 16, 19, 7, 5),
-(5717, 12, 15, 8, 5),
-(5718, 8, 11, 9, 5),
-(5719, 4, 7, 10, 5),
-(5720, 1, 3, 11, 5),
-(5721, 50, 59, 1, 6),
-(5722, 45, 49, 2, 6),
-(5723, 40, 44, 3, 6),
-(5724, 35, 39, 4, 6),
-(5725, 30, 34, 5, 6),
-(5726, 25, 29, 6, 6),
-(5727, 20, 24, 7, 6),
-(5728, 15, 19, 8, 6),
-(5729, 10, 14, 9, 6),
-(5730, 5, 9, 10, 6),
-(5731, 1, 4, 11, 6),
-(5732, 60, 69, 1, 7),
-(5733, 54, 59, 2, 7),
-(5734, 48, 53, 3, 7),
-(5735, 42, 47, 4, 7),
-(5736, 36, 41, 5, 7),
-(5737, 30, 35, 6, 7),
-(5738, 24, 29, 7, 7),
-(5739, 18, 23, 8, 7),
-(5740, 12, 17, 9, 7),
-(5741, 6, 11, 10, 7),
-(5742, 1, 5, 11, 7),
-(5743, 70, 79, 1, 8),
-(5744, 63, 69, 2, 8),
-(5745, 56, 62, 3, 8),
-(5746, 49, 55, 4, 8),
-(5747, 42, 48, 5, 8),
-(5748, 35, 41, 6, 8),
-(5749, 28, 34, 7, 8),
-(5750, 21, 27, 8, 8),
-(5751, 14, 20, 9, 8),
-(5752, 7, 13, 10, 8),
-(5753, 1, 6, 11, 8),
-(5754, 80, 89, 1, 9),
-(5755, 72, 79, 2, 9),
-(5756, 64, 71, 3, 9),
-(5757, 56, 63, 4, 9),
-(5758, 48, 55, 5, 9),
-(5759, 40, 47, 6, 9),
-(5760, 32, 39, 7, 9),
-(5761, 24, 31, 8, 9),
-(5762, 16, 23, 9, 9),
-(5763, 8, 15, 10, 9),
-(5764, 1, 7, 11, 9),
-(5765, 90, 99, 1, 10),
-(5766, 81, 89, 2, 10),
-(5767, 72, 80, 3, 10),
-(5768, 63, 71, 4, 10),
-(5769, 54, 62, 5, 10),
-(5770, 45, 53, 6, 10),
-(5771, 36, 44, 7, 10),
-(5772, 27, 35, 8, 10),
-(5773, 18, 26, 9, 10),
-(5774, 9, 17, 10, 10),
-(5775, 1, 8, 11, 10);
+(6196, 2, 9, 1, 1),
+(6197, 2, 9, 2, 1),
+(6198, 2, 9, 3, 1),
+(6199, 2, 9, 4, 1),
+(6200, 2, 9, 5, 1),
+(6201, 2, 9, 6, 1),
+(6202, 1, 1, 11, 1),
+(6203, 10, 19, 1, 2),
+(6204, 9, 9, 2, 2),
+(6205, 8, 8, 3, 2),
+(6206, 7, 7, 4, 2),
+(6207, 6, 6, 5, 2),
+(6208, 5, 5, 6, 2),
+(6209, 4, 4, 7, 2),
+(6210, 3, 3, 8, 2),
+(6211, 2, 2, 9, 2),
+(6212, 1, 1, 11, 2),
+(6213, 20, 29, 1, 3),
+(6214, 18, 19, 2, 3),
+(6215, 16, 17, 3, 3),
+(6216, 14, 15, 4, 3),
+(6217, 12, 13, 5, 3),
+(6218, 10, 11, 6, 3),
+(6219, 8, 9, 7, 3),
+(6220, 6, 7, 8, 3),
+(6221, 4, 5, 9, 3),
+(6222, 2, 3, 10, 3),
+(6223, 1, 1, 11, 3),
+(6224, 30, 39, 1, 4),
+(6225, 27, 29, 2, 4),
+(6226, 24, 26, 3, 4),
+(6227, 21, 23, 4, 4),
+(6228, 18, 20, 5, 4),
+(6229, 15, 17, 6, 4),
+(6230, 12, 14, 7, 4),
+(6231, 9, 11, 8, 4),
+(6232, 6, 8, 9, 4),
+(6233, 3, 5, 10, 4),
+(6234, 1, 2, 11, 4),
+(6235, 40, 49, 1, 5),
+(6236, 36, 39, 2, 5),
+(6237, 32, 35, 3, 5),
+(6238, 28, 31, 4, 5),
+(6239, 24, 27, 5, 5),
+(6240, 20, 23, 6, 5),
+(6241, 16, 19, 7, 5),
+(6242, 12, 15, 8, 5),
+(6243, 8, 11, 9, 5),
+(6244, 4, 7, 10, 5),
+(6245, 1, 3, 11, 5),
+(6246, 50, 59, 1, 6),
+(6247, 45, 49, 2, 6),
+(6248, 40, 44, 3, 6),
+(6249, 35, 39, 4, 6),
+(6250, 30, 34, 5, 6),
+(6251, 25, 29, 6, 6),
+(6252, 20, 24, 7, 6),
+(6253, 15, 19, 8, 6),
+(6254, 10, 14, 9, 6),
+(6255, 5, 9, 10, 6),
+(6256, 1, 4, 11, 6),
+(6257, 60, 69, 1, 7),
+(6258, 54, 59, 2, 7),
+(6259, 48, 53, 3, 7),
+(6260, 42, 47, 4, 7),
+(6261, 36, 41, 5, 7),
+(6262, 30, 35, 6, 7),
+(6263, 24, 29, 7, 7),
+(6264, 18, 23, 8, 7),
+(6265, 12, 17, 9, 7),
+(6266, 6, 11, 10, 7),
+(6267, 1, 5, 11, 7),
+(6268, 70, 79, 1, 8),
+(6269, 63, 69, 2, 8),
+(6270, 56, 62, 3, 8),
+(6271, 49, 55, 4, 8),
+(6272, 42, 48, 5, 8),
+(6273, 35, 41, 6, 8),
+(6274, 28, 34, 7, 8),
+(6275, 21, 27, 8, 8),
+(6276, 14, 20, 9, 8),
+(6277, 7, 13, 10, 8),
+(6278, 1, 6, 11, 8),
+(6279, 80, 89, 1, 9),
+(6280, 72, 79, 2, 9),
+(6281, 64, 71, 3, 9),
+(6282, 56, 63, 4, 9),
+(6283, 48, 55, 5, 9),
+(6284, 40, 47, 6, 9),
+(6285, 32, 39, 7, 9),
+(6286, 24, 31, 8, 9),
+(6287, 16, 23, 9, 9),
+(6288, 8, 15, 10, 9),
+(6289, 1, 7, 11, 9),
+(6290, 90, 99, 1, 10),
+(6291, 81, 89, 2, 10),
+(6292, 72, 80, 3, 10),
+(6293, 63, 71, 4, 10),
+(6294, 54, 62, 5, 10),
+(6295, 45, 53, 6, 10),
+(6296, 36, 44, 7, 10),
+(6297, 27, 35, 8, 10),
+(6298, 18, 26, 9, 10),
+(6299, 9, 17, 10, 10),
+(6300, 1, 8, 11, 10);
 
 -- --------------------------------------------------------
 
@@ -866,7 +869,7 @@ CREATE TABLE `valeur` (
   `fk_attribut` int(11) NOT NULL,
   `tt_valeur` text NOT NULL,
   `fk_entite` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=34178 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=34281 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `valeur`
@@ -1511,7 +1514,6 @@ INSERT INTO `valeur` (`pk_valeur`, `fk_attribut`, `tt_valeur`, `fk_entite`) VALU
 (32234, 10270, '50m', 6278),
 (32235, 10271, '100m', 6278),
 (32236, 10272, '200m', 6278),
-(32237, 10273, '4', 6278),
 (32238, 10274, '6', 6278),
 (32239, 10263, 'Pistolet choc', 6279),
 (32240, 10264, 'Armes de poing', 6279),
@@ -1523,7 +1525,6 @@ INSERT INTO `valeur` (`pk_valeur`, `fk_attribut`, `tt_valeur`, `fk_entite`) VALU
 (32246, 10270, '16m', 6279),
 (32247, 10271, '40m', 6279),
 (32248, 10272, '80m', 6279),
-(32249, 10273, '2', 6279),
 (32250, 10274, '2', 6279),
 (32251, 10263, 'Lance-filet', 6280),
 (32252, 10264, 'Armes d''Ã©paule', 6280),
@@ -1595,7 +1596,6 @@ INSERT INTO `valeur` (`pk_valeur`, `fk_attribut`, `tt_valeur`, `fk_entite`) VALU
 (32318, 10270, '90m', 6285),
 (32319, 10271, '180m', 6285),
 (32320, 10272, '360m', 6285),
-(32321, 10273, '4', 6285),
 (32322, 10274, '20', 6285),
 (32323, 10263, 'Mitrailleuse lourde', 6286),
 (32324, 10264, 'Armes d''Ã©paule', 6286),
@@ -2254,7 +2254,6 @@ INSERT INTO `valeur` (`pk_valeur`, `fk_attribut`, `tt_valeur`, `fk_entite`) VALU
 (32998, 10075, '50m', 6343),
 (32999, 10076, '100m', 6343),
 (33000, 10077, '200m', 6343),
-(33001, 10078, '4', 6343),
 (33002, 10080, '6', 6343),
 (33003, 10060, 'Dague', 6344),
 (33004, 10061, 'Arme de contact', 6344),
@@ -2313,7 +2312,6 @@ INSERT INTO `valeur` (`pk_valeur`, `fk_attribut`, `tt_valeur`, `fk_entite`) VALU
 (33058, 10156, '8', 6220),
 (33059, 10157, '2', 6220),
 (33068, 10119, 'Lanna Zorael', 6220),
-(33070, 10081, '0', 6343),
 (33072, 10079, '20', 6346),
 (33073, 10079, '60', 6343),
 (33074, 10089, '', 6352),
@@ -2381,7 +2379,6 @@ INSERT INTO `valeur` (`pk_valeur`, `fk_attribut`, `tt_valeur`, `fk_entite`) VALU
 (33181, 10075, '50m', 6359),
 (33182, 10076, '100m', 6359),
 (33183, 10077, '200m', 6359),
-(33184, 10078, '4', 6359),
 (33185, 10080, '6', 6359),
 (33186, 10060, 'Dague', 6360),
 (33187, 10061, 'Arme de contact', 6360),
@@ -2391,7 +2388,6 @@ INSERT INTO `valeur` (`pk_valeur`, `fk_attribut`, `tt_valeur`, `fk_entite`) VALU
 (33191, 10065, '12', 6360),
 (33192, 10066, '', 6360),
 (33193, 10079, '40', 6358),
-(33194, 10079, '60', 6359),
 (33195, 10158, '{"initial":8}', 6221),
 (33196, 10159, '{"initial":4}', 6221),
 (33197, 10160, '{"initial":4}', 6221),
@@ -2437,13 +2433,13 @@ INSERT INTO `valeur` (`pk_valeur`, `fk_attribut`, `tt_valeur`, `fk_entite`) VALU
 (33245, 10214, '{"initial":3}', 6221),
 (33246, 10198, '{"initial":4}', 6221),
 (33247, 10199, '{"initial":8}', 6221),
-(33248, 10200, '{"initial":2}', 6221);
-INSERT INTO `valeur` (`pk_valeur`, `fk_attribut`, `tt_valeur`, `fk_entite`) VALUES
+(33248, 10200, '{"initial":2}', 6221),
 (33249, 10201, '{"initial":2}', 6221),
 (33250, 10202, '{"initial":2}', 6221),
 (33251, 10203, '{"initial":1}', 6221),
 (33252, 10215, '{"initial":5}', 6221),
-(33253, 10216, '{"initial":9}', 6221),
+(33253, 10216, '{"initial":9}', 6221);
+INSERT INTO `valeur` (`pk_valeur`, `fk_attribut`, `tt_valeur`, `fk_entite`) VALUES
 (33254, 10217, '{"initial":7}', 6221),
 (33255, 10218, '{"initial":2}', 6221),
 (33256, 10219, '{"initial":4}', 6221),
@@ -2869,7 +2865,6 @@ INSERT INTO `valeur` (`pk_valeur`, `fk_attribut`, `tt_valeur`, `fk_entite`) VALU
 (33880, 10078, '4', 6370),
 (33881, 10080, '20', 6370),
 (33882, 10081, '1', 6370),
-(33884, 10079, '56', 6370),
 (33889, 10282, 'Felorm', 6371),
 (33890, 10283, '', 6371),
 (33891, 10284, '', 6371),
@@ -2951,7 +2946,6 @@ INSERT INTO `valeur` (`pk_valeur`, `fk_attribut`, `tt_valeur`, `fk_entite`) VALU
 (34055, 10075, '50m', 6383),
 (34056, 10076, '100m', 6383),
 (34057, 10077, '200m', 6383),
-(34058, 10078, '4', 6383),
 (34059, 10080, '6', 6383),
 (34060, 10060, 'Dague', 6384),
 (34061, 10061, 'Arme de contact', 6384),
@@ -3016,7 +3010,32 @@ INSERT INTO `valeur` (`pk_valeur`, `fk_attribut`, `tt_valeur`, `fk_entite`) VALU
 (34174, 10103, 'DÃ©part de l''expÃ©dition. A cette expÃ©dition participent :\r\n- 12 pilotes\r\n- 8 mineurs\r\n- 6 agents de sÃ©curitÃ©\r\n- un informaticien\r\n- un mÃ©cano\r\n- 4 infirmiers\r\n- VÃ©ra (second de la station)\r\n- Les pJS\r\n\r\nLes navires affectÃ©s :\r\n- Un nÃ©olith\r\n- 2 Vestal\r\n- 6 chasseurs Fulgur\r\n- Le navire des Pjs', 6395),
 (34175, 10104, '17 juin 569', 6395),
 (34176, 10103, 'ArrivÃ©e sur Valar. La station ne rÃ©pond pas aux tentatives de communication. Les systÃ¨mes de dÃ©fense automatique attaquent l''Ã©quipe de secours. Ils sont dÃ©truits par les chasseurs de l''expÃ©dition.\r\nL''Ã©quipe pÃ©nÃ¨tre dans la station Valar sur laquelle ils ne rencontrent pas Ã¢me qui vive mÃªme si tous les systÃ¨mes semblent opÃ©rationnels.\r\n\r\nVisite du module central\r\nSystÃ¨me de survie, poste de contrÃ´le principal, salles de confÃ©rence et salles de dÃ©tente.\r\nIls dÃ©couvrent des traces de lutte un peu partout. Un cadavre est allongÃ© au sous-sol prÃ¨s de la centrale Ã  fusion. Il porte une blouse blanche de scientifique.\r\nDans une des zones de dÃ©tente un homme a Ã©tÃ© Ã©tranglÃ© avec un filin d''acier.\r\nAu niveau 3 le commandant de la base s''est suicidÃ© devant son ordinateur. Son ordinateur est encore allumÃ© mais les fichiers sont encodÃ©s.\r\nLes Pjs emportent le disque dur de l''ordinateur.\r\n\r\nVisite d''un poste de detection\r\nEquipÃ© du materiel le plus performant que les Pjs n''aient jamais vu. Tout a Ã©tÃ© cependant dÃ©truit par des combats particuliÃ¨rement violents. 6 cadavres sont rÃ©partis sur les 3 niveaux du module.\r\n\r\nVisite du laboratoire de recherche\r\nLes cadavres de quatre scientifiques sont rassemblÃ©s au niveau 2. Ils semblent avoir Ã©tÃ© abattus.\r\nLes Pjs y dÃ©couvrent des caisses contenant des tubes sur lesquelles est Ã©crit "ZETAN ZD 345". Ils essaient de respirer le gaz d''un des tubes, l''un des Pjs semblent pris d''un Ã©trange malaise.\r\n\r\nFIN DE SESSION', 6396),
-(34177, 10104, '25 juin 569', 6396);
+(34177, 10104, '25 juin 569', 6396),
+(34185, 10143, '50', 6220),
+(34211, 10088, '1', 6347),
+(34212, 10082, 'Protection en cuir', 6399),
+(34213, 10083, 'BUSTE', 6399),
+(34214, 10084, '10', 6399),
+(34215, 10085, '20', 6399),
+(34216, 10086, '', 6399),
+(34217, 10082, 'Protection en cuir', 6400),
+(34218, 10083, 'BUSTE', 6400),
+(34219, 10084, '10', 6400),
+(34220, 10085, '20', 6400),
+(34221, 10086, '', 6400),
+(34222, 10081, '1', 6343),
+(34223, 10067, '1', 6344),
+(34224, 10081, '1', 6359),
+(34257, 10079, '52', 6359),
+(34268, 10079, '44', 6370),
+(34273, 10078, '1', 6359),
+(34274, 10273, '1', 6285),
+(34275, 10273, '1', 6278),
+(34276, 10273, '1', 6279),
+(34277, 10079, '12', 6383),
+(34278, 10079, '10', 6391),
+(34279, 10078, '1', 6383),
+(34280, 10078, '1', 6343);
 
 --
 -- Index pour les tables exportées
@@ -3072,7 +3091,7 @@ ALTER TABLE `valeur`
 -- AUTO_INCREMENT pour la table `attribut`
 --
 ALTER TABLE `attribut`
-MODIFY `pk_attribut` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10314;
+MODIFY `pk_attribut` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10315;
 --
 -- AUTO_INCREMENT pour la table `categorie`
 --
@@ -3082,7 +3101,7 @@ MODIFY `pk_categorie` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1050;
 -- AUTO_INCREMENT pour la table `entite`
 --
 ALTER TABLE `entite`
-MODIFY `pk_entite` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6397;
+MODIFY `pk_entite` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6402;
 --
 -- AUTO_INCREMENT pour la table `entitetype`
 --
@@ -3097,12 +3116,12 @@ MODIFY `pk_modificateur` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=30;
 -- AUTO_INCREMENT pour la table `palier`
 --
 ALTER TABLE `palier`
-MODIFY `pk_palier` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5776;
+MODIFY `pk_palier` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6301;
 --
 -- AUTO_INCREMENT pour la table `valeur`
 --
 ALTER TABLE `valeur`
-MODIFY `pk_valeur` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=34178;
+MODIFY `pk_valeur` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=34281;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

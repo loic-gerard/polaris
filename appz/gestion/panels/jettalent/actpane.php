@@ -50,6 +50,7 @@ if($confirm){
         </select>
     </div>
 </div>
+
 </div>
 <div class="rightPane" id="resultatCalcul"></div>
 

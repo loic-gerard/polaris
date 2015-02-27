@@ -52,5 +52,6 @@ if (isset($_GET['addEntite'])) {
         </div>
     </div>
     <?php
+    exit;
 }
 ?>
